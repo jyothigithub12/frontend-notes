@@ -1,0 +1,289 @@
+*{
+    padding:0px;
+    margin:0px;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Courier New', Courier, monospace;
+}
+nav{
+
+    height:80px;
+    width:100%;
+    /* position: fixed; */
+
+}
+label.logo {
+    color: white;
+    font-size : 35px;
+    line-height: 80px;
+    padding:0 100px;
+    font-weight: bold;
+    float:left;
+}
+nav ul{
+    float:right;
+    margin-right:20px;
+}
+nav ul li{
+    display:inline-block;
+    line-height: 80px;
+    margin: 0 5px;
+    
+}
+nav ul li a{
+    color:rgb(255, 252, 252);
+    font-size:17px;
+    text-decoration: none;
+    text-transform: uppercase;
+    border-radius:3px;
+    padding: 7px 13px;
+}
+a:hover{
+    background-color: rgb(154, 152, 152);
+    color: white;
+    transition: 0.5s;
+    
+}
+.checkbtn{
+    font-size:30px;
+    color:white;
+    float:right;
+    line-height: 80px;
+    margin-right:40px;
+    cursor:pointer;
+    display: none;
+}
+#check{
+    display:none;
+}
+
+
+@media (max-width:952px){
+    label.logo{
+        font-size:30px;
+        padding-left:50px;
+    }
+    nav ul li a{
+        font-size:16px;
+    }
+}
+@media (max-width:858px){
+    .checkbtn{
+        display:block;
+    }
+    nav ul{
+        position:fixed;
+        width:50%;
+        height:100vh;
+        background: white;
+        top:80px;
+        right:-100%;
+        transition: all .5s;
+        text-align: center;
+        
+    
+
+    }
+    nav ul li{
+        display:block;
+        margin:20px 0px;
+        line-height:30px;
+        
+    }
+
+    nav .about us{
+        color: black;
+    }
+    nav ul li a {
+        font-size:20px;
+        color: black;
+
+    }
+    a:hover{
+        background: none;
+        color:#0082e6;
+
+    }
+    #check:checked ~ ul{
+        right:0;
+
+
+    }
+}
+
+body{
+    font-family: 'Poppins', sans-serif;
+    font-size: 1rem;
+    color: gray;
+    font-weight: 250;
+    margin:0px;
+    padding:0px;
+    line-height:1.7 ;
+    height:100lvh;
+}
+
+
+.background{
+    background-image: url('https://preview.colorlib.com/theme/banker/images/hero_2.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    /* opacity: 0.8; */
+    height:750px;
+}
+.overlay{
+    position: relative;
+    top:0px;
+    left:0px;
+    width: 100%;
+    height: 100%;
+    opacity: 0.4;
+    background-color: rgba(108, 106, 106, 0.8);
+
+    
+
+
+}
+
+
+#my-navbar{
+    padding: 0 200px;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 0.2px solid white;
+    position: fixed;
+}
+.nav-heading{
+    color:white;
+    font-size: 2rem;
+   line-height: 3.5;
+}
+
+.my-nav-list{
+    margin-left: 550px ;
+}
+
+.my-nav-list li{
+    display: inline;
+    margin-right: 20px;
+    padding: 5px;
+}
+.my-nav-list li a:hover{
+    color:#fe7e16
+    
+}
+.nav-content{
+    height:700px;
+    padding:30px;
+}
+
+.min-para-width{
+    width: 630px;
+}
+
+.input-class{
+    background-color: #fe7e16;
+    color:white;
+}
+.header-h1{
+    color:#fe7e16;
+    font-size: 35px;
+    font-weight: bold;
+}
+.header-h3{
+    color:black;
+    
+}
+
+.img-li{
+    background-color: rgb(246, 245, 244);
+    color: black;
+}
+
+.img-li:hover{
+    background-color: #fe7e16;
+    color: white;
+}
+.carousel-indicators .active{
+    background-color: #f00;
+    
+
+}
+.span-class{
+    color: #fe7e16;
+    font-size: 30px;
+}
+.remove {
+    text-decoration: line-through;
+    color: #dee2e6;
+}
+.p-text {
+    color: gray;
+    font-size: 25px;
+}
+.icon-class{
+    font-size: 40px;
+    color:#fe7e16;
+}
+.anchor-tag{
+    color:#fe7e16;
+    text-decoration: none;
+    /* padding: 10px;
+    margin-top: 20px; */
+}
+
+.large-input {
+    width: 100%;
+    height: 250px;
+    border-radius: 20px;
+}
+
+footer {
+    
+        padding: 4em 0;
+        background: #343a40;
+        width:100%;
+        padding:10px;
+        bottom:0px;
+        position: relative;
+        font-size: 1rem;
+        
+}
+footer ul li a{
+    margin:5px 5px;
+    color: white;
+}
+        
+   
+
+
+.buttons {
+    margin-bottom: 20px;
+}
+.buttons button {
+    padding: 10px 20px;
+    margin: 5px;
+    border: none;
+    cursor: pointer;
+    /* background: orange; */
+    /* color: white; */
+    font-size: 16px;
+    border-radius: 5px;
+}
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.gallery img {
+    width: 200px;
+    height: 150px;
+    margin: 10px;
+    display: none;
+}
+.all img, .events img, .party img, .holidays img {
+    display: inline-block;
+}

@@ -1,0 +1,30 @@
+post-entry-2 h2{
+    font-size: .9rem;
+}
+h4{
+    font-size: 0.9rem;
+}
+
+.icon{
+    color: rgb(215, 209, 209);
+    font-size: 14px;
+}
+
+.number{
+    font-size: 2rem;
+    color: rgb(215, 209, 209);
+}
+.font-size{
+    font-size: 0.9rem;
+
+}
+
+.post-entry-2 .thumbnail {
+    background-size: cover;
+    background-position: center;
+    width: 30%;
+}
+.img{
+    width: 25%;
+    height: 70px;
+}

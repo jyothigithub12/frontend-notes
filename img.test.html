@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile Card</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f4f4f4;
+        }
+        .profile-card {
+            position: relative;
+            background: white;
+            padding: 20px;
+            text-align: center;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px #d4262633;
+            overflow: hidden;
+            transition: 0.3s;
+            width: 280px;
+        }
+        .profile-card img {
+            width: 100%;
+            border-radius: 10px;
+            transition: 0.3s;
+        }
+        .profile-card:hover img {
+            opacity: 0.8;
+        }
+        .social-icons {
+            position: absolute;
+            left: 0;
+            top: 0;
+            height: 100%;
+            width: 60px;
+            background: orange;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 20px;
+            border-top-left-radius: 10px;
+            border-bottom-left-radius: 10px;
+            transform: translateX(-100%);
+            transition: transform 0.3s ease-in-out;
+        }
+        .profile-card:hover .social-icons {
+            transform: translateX(0);
+        }
+        .social-icons a {
+            color: rgb(211, 62, 62); /* Changed to black for visibility */
+            font-size: 20px;
+            text-decoration: none;
+            transition: 0.3s;
+        }
+        .social-icons a:hover {
+            color: rgb(110, 37, 189); /* Turns white on hover for contrast */
+            transform: scale(1.2);
+        }
+        .profile-info {
+            margin-top: 10px;
+        }
+        .profile-info h2 {
+            margin: 10px 0 5px;
+        }
+        .profile-info p {
+            color: gray;
+        }
+    </style>
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="profile-card">
+        <div class="social-icons">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+        </div>
+        <img src="https://preview.colorlib.com/theme/banker/images/person_2.jpg" alt="bankers" class="img-fluid"
+        width="95%;" />
+        <div class="profile-info">
+            <h2>Dave Simpson</h2>
+            <p>BANK TELLER</p>
+        </div>
+    </div>
+</body>
+</html>

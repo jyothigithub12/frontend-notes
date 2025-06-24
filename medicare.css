@@ -1,0 +1,239 @@
+body{
+    font-family: Source Sans Pro;
+
+}
+
+header img,nav ,li {
+    display:inline-block;
+}
+header img{
+    padding: 60px;
+    margin-right: 20px;
+}
+nav{
+    padding-left: 550px;
+}
+nav li a{
+        /* height:20px;
+        width:336px;
+        top:40px;
+        left:667px; */
+    
+    padding:20px;
+    text-decoration: none;
+    font-size: larger;
+}
+.contact{
+    border: 1px solid blue;
+    border-radius: 60px;
+    background-color: blue;
+    
+    color:white;
+    font-size: larger;
+    
+}
+.contact a{
+    text-decoration: none;
+    color:white;
+    padding:25px;
+    
+}
+.hero{
+    margin-bottom: 100px;
+}
+.text-content {
+    max-width: 50%;
+    padding:60px;
+    margin: 10px;
+}
+.text-content h4 {
+    font-size: 20px;
+    font-weight: bold;
+    font-family: Source Sans Pro;
+    color:#002348;
+   
+}
+.text-content h1 {
+    font-size: 48px;
+    
+    color: #003B79;
+   
+    padding:15px 0px;
+}
+.text-content p {
+    
+    color:#002348;
+    letter-spacing: 0px;
+    line-height: 39px;
+    
+   
+    
+}
+.buttons {
+    margin-top: 20px;
+}
+.btn {
+        text-decoration: none;
+        padding: 10px 20px;
+        border-radius: 20px;
+        font-weight: bold;
+        display: inline-block;
+    }
+.primary {
+    background-color: #007bff;
+    color: white;
+}
+.secondary {
+    background-color: #f0f0f0;
+    color: #007bff;
+    margin-left: 10px;
+}
+.our-services {
+    text-align: center;
+    
+}
+.our-services h2{
+    color:#003B79;
+    font-family: Source Sans Pro;
+    font-weight:600px;
+    font-size: 54px;
+    line-height: 78px;
+    letter-spacing: 0px;
+
+}
+.our-services p{
+    color:#002348;
+    font-family: Source Sans Pro;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 39px;
+    letter-spacing: 0px;
+}
+.service-card{
+    box-shadow: 2px 2px 50px lightblue;
+    margin: 20px;
+    width:15%;
+    height: 300px;
+    border-radius: 10px;
+    text-align: center;
+    padding:40px;
+
+    
+}
+.service-card:hover{
+    background-color: #007bff;
+}
+.service-card1{
+    box-shadow: 2px 2px 50px lightblue;
+    margin: 20px;
+    width:15%;
+    height: 300px;
+    border-radius: 10px;
+    text-align: center;
+    padding:40px;
+    position: relative;
+
+    
+}
+women-img{
+    position:absolute;
+    left:500px;
+}
+
+.shadow-prop{
+    box-shadow: 20px 20px 100px rgb(4, 83, 157),-20px -20px 100px rgb(4, 83, 157);
+    width:20%;
+    margin: 20px;
+    background-color: rgb(8, 143, 188);
+    height: 300px;
+    border-radius: 30px;
+
+    
+}
+
+.Specialist-main{
+    opacity: 0.2;
+    align-items: center;
+    text-align: center;
+    justify-content: space-evenly;
+    padding: 50px 80px;
+    /* column-gap: 30px; */
+    
+
+}
+
+.Specialist{
+    /* border: 1px solid rgb(8, 143, 188);   */
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
+    background-color: rgb(10, 121, 158);
+    height: 200px;
+    
+}
+
+.Specialist-name{
+    /* border: 1px solid white; */
+    background-color: white;
+    height: 100px;
+     border-bottom-right-radius: 30px;
+     border-bottom-left-radius: 30px;
+}
+
+
+.col-gap{
+    column-gap: 40px;
+    
+}
+
+.patient{
+    display: inline-block;
+    padding: 10px ;
+
+}
+
+.patient p{
+    margin: 0px 30px;
+    
+}
+
+.reviews{
+    width: 35%;
+    box-shadow: 10px 10px 50px lightblue, -10px -10px 50px lightblue;
+    border-radius: 25px;
+}
+.footer-section{
+    margin:100px;
+    padding: 100px;
+    background-color: #007bff;
+}
+.footer-section h1{
+    color:white;
+}
+.footer-section p{
+    color:white;
+}
+.email-form{
+    padding:20px 200px;
+    
+}
+footer img{
+    padding: 60px;
+    margin-right: 20px;
+}
+
+.icons{
+    height: 150px;
+}
+
+.icons li{
+    background-color: white;
+    border-radius: 50%;
+    margin: 5px;
+}
+
+
+
+
+
+
+
