@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+
+        const trainInfo = {
+            trainNumber: "12951",
+            trainName: "Mumbai Rajdhani Express",
+            sourceStation: {
+                code: "BCT",
+                name: "Mumbai Central"
+            },
+            destinationStation: {
+                code: "NDLS",
+                name: "New Delhi"
+            },
+            departureTime: "17:00",
+            arrivalTime: "08:35",
+            travelDuration: "15h 35m",
+        };
+
+        const additionalTrainInfo = {
+            runningDays: ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"],
+            classesAvailable: ["1A", "2A", "3A"],
+            route: [
+                { stationCode: "BCT", stationName: "Mumbai Central", arrival: null, departure: "17:00", halt: 0 },
+                { stationCode: "BRC", stationName: "Vadodara Jn", arrival: "20:03", departure: "20:08", halt: 5 },
+                { stationCode: "RTM", stationName: "Ratlam Jn", arrival: "22:35", departure: "22:40", halt: 5 },
+                { stationCode: "KOTA", stationName: "Kota Jn", arrival: "01:20", departure: "01:30", halt: 10 },
+                { stationCode: "NZM", stationName: "Hazrat Nizamuddin", arrival: "08:10", departure: "08:12", halt: 2 },
+                { stationCode: "NDLS", stationName: "New Delhi", arrival: "08:35", departure: null, halt: 0 }
+            ],
+            lastUpdated: "2025-04-15T12:00:00Z"
+        }
+
+        let consolidatedTrainInfo = {};
+
+        consolidatedTrainInfo = { operatingState: 'Telangana', ...trainInfo, ...additionalTrainInfo, country: 'India' };
+
+        consolidatedTrainInfo.trainName = 'XYA';
+
+        console.log(consolidatedTrainInfo);
+
+        var id = 'DE-901';
+
+        var name = 'Rahul';
+
+        var salary = 60000;
+
+        var officeLocation = 'Hyderabad';
+
+        var mobileNo = 9012312389;
+
+        var employeeInfo = {
+            id,
+            salary,
+            name,
+            officeLocation,
+            phoneNo: mobileNo,
+            getFormattedMobileNo() {
+                const [n1, n2, n3, n4, n5, n6, n7, n8, n9, n10] = mobileNo.toString().split('');
+                return `+91 ${n1}${n2}${n3}${n4}${n5} ${n6}${n7}${n8}${n9}${n10}`;
+            },
+            ['id_' + id]: id,
+        };
+
+        console.log(employeeInfo);
+
+        var employees = ['Venkatesh', 'Shoubhik', 'Maheshwaran', 'Murali'];
+
+        const modifiedEmployees = employees.map(function (employee, index) {
+            return employee.toUpperCase();
+        });
+
+        console.log(employees);
+
+        const products = [
+            { name: "Wireless Mouse", price: 899, discount: 10 },  // price in INR
+            { name: "Bluetooth Speaker", price: 2499, discount: 15 },
+            { name: "Smartphone Stand", price: 299, discount: 5 },
+            { name: "USB-C Charger", price: 1499, discount: 20 },
+            { name: "Noise Cancelling Headphones", price: 4999, discount: 25 },
+            { name: "Laptop Sleeve 15-inch", price: 799, discount: 12 },
+            { name: "Mechanical Keyboard", price: 3499, discount: 18 },
+            { name: "Fitness Tracker", price: 1999, discount: 22 },
+            { name: "Smart LED Bulb", price: 599, discount: 8 },
+            { name: "External SSD 1TB", price: 7999, discount: 30 }
+        ];
+
+        const modifiedProducts = products.map(function(product, index) {
+            const discountedPrice = product.price - ((product.price * product.discount) / 100);
+
+            return { 
+                discountedPrice,
+                ...product
+            };
+        });
+
+        console.log(modifiedProducts);
+
+        const filteredProducts = products.filter(function(product, index) {
+            return product.price > 1000 && product.price < 7000;
+        });
+
+        console.log(filteredProducts);
+        
+        const filteredProduct = products.find(function(product, index) {
+            return product.name === 'Wireless Mouse';
+        });
+
+        console.log(filteredProduct);
+
+        const totalAmount = products.reduce(function(acculumator, product) {
+            const discountedPrice = product.price - ((product.price * product.discount) / 100);
+
+            return acculumator + discountedPrice;
+        }, 0);
+
+        console.log(totalAmount);
+    
+    </script>
+
+</body>
+
+</html>

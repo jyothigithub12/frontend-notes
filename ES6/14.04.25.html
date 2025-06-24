@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+
+        const users = [
+            { id: 1, name: "Alice", age: 25 },
+            { id: 2, name: "Bob", age: 30 },
+            { id: 3, name: "Charlie", age: 22 },
+            { id: 4, name: "Diana", age: 28 },
+            { id: 5, name: "Ethan", age: 35 }
+        ];
+
+        users.forEach(function (user, index) {
+            console.log(user.id, user.name, user.age);
+        });
+
+        users.forEach((user, index) => console.log(user.id, user.name, user.age));
+
+        const user = {
+            id: 1,
+            name: {
+                first: "Jane",
+                last: "Doe"
+            },
+            username: "jane.doe",
+            email: "jane.doe@example.com",
+            isActive: true,
+            age: 29,
+            roles: ["user", "editor"],
+            address: {
+                street: "123 Maple Ave",
+                city: "Springfield",
+                state: "IL",
+                zip: "62704",
+                coordinates: {
+                    lat: 39.7817,
+                    lng: -89.6501
+                }
+            },
+            preferences: {
+                language: "en",
+                theme: "dark",
+                notifications: {
+                    email: true,
+                    sms: false,
+                    push: true
+                }
+            },
+            social: {
+                twitter: "@janedoe",
+                github: "janedoe",
+                website: "https://janedoe.dev"
+            },
+            createdAt: "2025-04-14T12:00:00Z",
+            lastLogin: "2025-04-13T22:45:00Z"
+        };
+
+        console.log(user);
+
+
+        // const id = user.id;
+
+        // const name = user.name;
+
+        // const age = user.age;
+
+        const { id, name, age } = user;
+
+        console.log('User Details', id, name, age);
+
+        const { address: { street, state }, roles: [ role1, role2 ], preferences: { notifications: { email } } } = user;
+
+        console.log(street, state, email, role2);
+
+
+        let marks = [89, 78, 67, 89, 90, 45];
+
+        let [ subject1, , , , , subject6 ] = marks;
+
+        subject4 = 64;
+
+        console.log(subject4);
+        console.log(marks);
+
+        marks = undefined;
+
+        function calculateTotalMarks(marks = []) {
+            let sum = 0;
+            marks.forEach((mark) => sum+= mark);
+
+            console.log(sum);
+
+        }
+
+        calculateTotalMarks(marks);
+
+        function storeValues(value1, ...restValues) {
+
+            console.log(value1, restValues);
+        }
+
+        storeValues(10, 56, 45, 32, 12);
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,57 @@
+Spread Operator: Expands iterables like array and object into individual values.
+    Syntax:
+        ...iterable - array/object
+    Note: Using spread Operator, we can extract key-value pairs from one object into another object.
+        Copying data from one object to another object.
+Object Literal Enhancements:
+1. Having same key and variable name.
+2. Creating method
+3. Creating dynamic keys
+1. Having same key and variable name.
+    Syntax:
+        var employeeName = 'Venkatesh';
+        var employeeInfo = {
+            employeeName
+        };
+2. Creating method
+    Syntax:
+        var objectName = {
+            keyName() {
+            }
+        };
+3. Creating dynamic keys
+    Syntax:
+        var objectName = {
+            [expression]: value
+        }
+Array Methods (map, filter, reduce)
+1. forEach
+2. map
+3. filter
+4. find
+5. reduce
+2. Map Method: Using map, we can manipulate data present in the array. 
+> It creates new array with modified data, without modifying the original array.
+    Syntax:
+        arrayName.map(callbackFunction);
+        arrayName.map(function(value, index) {
+            
+            logic...
+            return value;
+        });
+        price - ((price * discount) / 100)
+        10 - (( 10 * 10)/ 100) = 9
+3. Filter Method: Using filter, we can filter data based on condition.
+    If condition is true, value will be added to newly created array, otherwise it will be ignored.
+        arrayName.filter(function(value, index) {
+            return condition;
+        });
+4. Find method: Using find, we can find a value based on condition from array.
+    Syntax:
+        arrayName.find(function(value, index) {
+            return condition;
+        });
+5. reduce
+        Syntax:
+            array.reduce(function(acculamator, value) {
+            }, initialValue);

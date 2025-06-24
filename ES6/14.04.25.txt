@@ -1,0 +1,34 @@
+ES6 (ECMA Script)
+Arrow Functions:
+> If there is only line of statement inside the function, no need of adding curly braces and return keyword.
+    Syntax:
+        const variableName = function() {
+            
+            return value;
+        }
+        Using arrow function:
+        const variableName = () => value;
+Destructuring: Extracting values into individual variables.
+Array:
+    const [ variableName1, variableName2, ..., variableNameN] = arrayName;
+    Note: First value in the array will be used in first variable.
+Object:
+    const { variableName1, variableName2, ..., variableNameN } = objectName;
+    Note: Variable name and key name inside object should match.
+Default Parameters: Assigning default value to a parameter of a function.
+    Syntax:
+        function functionName(param1 = defaultValue1, param2 = defaultValue2) {
+            Statements...
+        }
+        functionName(value1);
+    Note: If value is not passed from function call, then value present in default value will 
+          be assigned for parameter.
+Rest Operator: Used to store remaining values passed to function in one variable as an array.
+    Syntax:
+        function functionName(param1 = defaultValue1, param2 = defaultValue2, ...restValues) {
+            Statements...
+        }
+        functionName(value1);
+        functionName(value1, value2);
+        functionName(value1, value2, value3);
+        functionName(value1, value2, value3, value4);
