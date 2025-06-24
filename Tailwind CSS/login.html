@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+    <div class="h-screen">
+        <div class="flex justify-between p-3 mb-8 items-center">
+
+            <div>
+                <img width="150px" src="https://www.digital-lync.com/images/logo-digital-lync.webp" />
+            </div>
+            <p>Don't have an account? <a href="Register.html" class="text-gray-500 underline">Register</a></p>
+
+        </div>
+
+        <div class ="flex justify-center items-center">
+            <div class="w-1/4 shadow-xl p-4 rounded">
+                <div class="flex justify-center">
+                    <div class="inline p-3 border border-gray-300 bg-gray-100 rounded-full mx-auto">
+                        <i class="fa-solid fa-user-plus p-3 border border-gray-300 rounded-full bg-white"></i>
+                    </div>
+                </div>
+                <h1 class="text-3xl text-center mt-3">Login To Your account</h1>
+                <p class="text-md text-center my-2">Enter your details to Login</p>
+                <div class="my-3">
+                   
+                    <div class="my-3">
+                        <label class="block">Email</label>
+                        <input type="text" placeholder="Ex.john.doe@financial.com" class="border border-gray-300 rounded-md w-full px-2 py-1">
+                    </div>
+                    <div class="my-3 relative">
+                        <label class="block">Password</label>
+                        <input type="password" placeholder="Enter your password" class="border border-gray-300 rounded-md w-full px-2 py-1">
+                        <i class="fa-regular fa-eye absolute right-3 top-8 text-gray-500"></i>
+                        <!-- <p class="text-[10px] text-gray-400 mt-1">Must contain 1uppercase, 1lowercase, 1number, min 8 characters</p> -->
+                    </div>
+                    <div class ="flex justify-between ">
+                        <div>
+                            <input type="checkbox"/><span><label>Remember</label></span>
+                        </div>
+                        <a class="text-gray-500 underline" >Forget Password</a>
+                    </div>
+                     <button class="w-full bg-gray-400 text-white rounded py-1.5 my-3 hover:bg-gray-500 cursor-pointer">Sign Up</button>
+                    
+            </div>
+
+        </div>
+    </div>
+
+</body>
+
+</html>

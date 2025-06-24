@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Email Verification</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+
+    <div>
+        <div class="flex justify-between items-center">
+            <div>
+                <img width="150px" src ="https://www.digital-lync.com/images/logo-digital-lync.webp"/>
+            </div>
+            <div>
+                <ol class="flex justify-between items-center gap-x-8 ">
+                    <li class="flex  items-center space-x-1 list-decimal border-2 rounded-full border-gray-300 px-3 py-1  text-green-600 ">
+                        <span><i class="fa-solid fa-circle-check text-xs "></i></span>
+                        <span>Email</span>
+                    </li>
+                    <li class="flex  items-center space-x-1 list-decimal border-2 rounded-full border-gray-300 px-3 py-1 text-green-600 ">
+                        <span><i class="fa-solid fa-circle-check text-xs color-green"></i></span>
+                        <span>Account Type</span>
+                    </li>
+                    <li class="flex  items-center space-x-1 list-decimal border-2 rounded-full border-gray-300 px-3 py-1  ">
+                        <span> <i class="fa-solid fa-flag text-xs"></i></span>
+                        <span>Country</span>
+                    </li>
+                    <li class="flex  items-center space-x-1 list-decimal border-2 rounded-full border-gray-300 px-3 py-1  ">
+                        <span><i class="fa-solid fa-user-lock text-xs"></i></span>
+                        <span>2FA</span>
+                    </li>
+                    
+                </ol>
+            </div>
+            <div>
+                <select class="px-3 py-1 mx-auto">
+                    <option>English</option>
+                    <option>Telugu</option>
+                    <option>Hindi</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="flex justify-center items-center mt-20">
+            <div class="w-1/4 shadow-xl p-4 rounded">
+                <div class="flex justify-center">
+                    <div class="inline p-3 border border-gray-300 bg-gray-100 rounded-full mx-auto">
+                        <i class="fa-solid fa-flag text-md"></i>
+                    </div>
+                </div>
+                <h1 class="text-3xl text-center mt-3">Your Country of Residence</h1>
+                <p class="text-md text-center my-2">You can Add another account on later too</p>
+
+                <div class="w-full max-w-sm bg-white p-6 rounded-lg shadow-md">
+                    <label for="country" class="block text-sm font-medium text-gray-700 mb-2">Choose Country</label>
+                    <div class="relative">
+                      <select id="countryDropdown" class="block w-full appearance-none bg-white border border-gray-300 rounded-md py-2 pl-3 pr-8 shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500">
+                        <!-- Options will be populated here -->
+                      </select>
+                      <!-- <div class="absolute inset-y-0 right-0 flex items-center pr-2 pointer-events-none">
+                        <svg class="h-4 w-4 text-gray-400" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 20" stroke="currentColor">
+                          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 7l3-3 3 3m0 6l-3 3-3-3"/>
+                        </svg>
+                      </div> -->
+                    </div>
+                
+                    <button class="mt-6 w-full bg-black text-white py-2 rounded-md font-medium hover:bg-gray-900">
+                      Continue
+                    </button>
+                  </div>
+
+            </div>
+
+        </div>
+
+
+    </div>
+
+
+    <script>
+        const countries = [
+          { name: "United States", code: "US", flag: "🇺🇸" },
+          { name: "Canada", code: "CA", flag: "🇨🇦" },
+          { name: "United Kingdom", code: "GB", flag: "🇬🇧" },
+          { name: "Australia", code: "AU", flag: "🇦🇺" },
+          { name: "India", code: "IN", flag: "🇮🇳" },
+          { name: "Germany", code: "DE", flag: "🇩🇪" }
+        ];
+    
+        const dropdown = document.getElementById('countryDropdown');
+    
+        countries.forEach(country => {
+          const option = document.createElement('option');
+          option.value = country.code;
+          option.textContent = `${country.flag} ${country.name}`;
+          dropdown.appendChild(option);
+        });
+      </script>
+    
+</body>
+</html>

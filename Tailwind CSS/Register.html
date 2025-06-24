@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Page</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+    <div class="h-screen">
+        <div class="flex justify-between items-center">
+            <div>
+                <img width="150px" src="https://www.digital-lync.com/images/logo-digital-lync.webp" />
+            </div>
+            <div>
+                <ol class="  flex justify-between items-center gap-x-8">
+                    <li class=" flex items-center space-x-1 list-decimal border rounded-full px-3 py-1 cursor-pointer
+                    hover:bg-gray-300 transition">
+                    <span>
+                        <i class="fa-solid fa-circle-check text-xs"></i>
+                    </span>
+                    <span>Email</span>
+                    </li>
+                    <li
+                        class="flex items-center space-x-1  list-decimal  border rounded-full px-3 py-1 cursor-pointer hover:bg-gray-300 transition ">
+                        <span>
+                            <i class="fa-solid fa-circle-user text-xs"></i>
+                        </span>
+                        <span>Account Type</span>
+                    </li>
+                    <li
+                        class="flex items-center space-x-1  list-decimal  border rounded-full px-3 py-1 cursor-pointer hover:bg-gray-300 transition ">
+                        <span>
+                            <i class="fa-solid fa-flag text-xs"></i>
+                        </span>
+                        <span>Country</span>
+                    </li>
+                    <li
+                        class="flex items-center space-x-1  list-decimal  border rounded-full px-3 py-1 cursor-pointer hover:bg-gray-300 transition ">
+                        <span>
+                            <i class="fa-solid fa-user-lock text-xs"></i>
+                        </span>
+                        <span>2FA</span>
+                    </li>
+
+                </ol>
+            </div>
+            <div>
+                <select class="px-3 py-1 mx-auto">
+                    <option>English</option>
+                    <option>Telugu</option>
+                    <option>Hindi</option>
+
+
+                </select>
+            </div>
+
+
+        </div>
+
+        <div class="flex justify-center items-center mt-10">
+            <div class="w-1/4 shadow-xl p-4 rounded">
+                <div class="flex justify-center">
+                    <div class="inline p-3 border border-gray-300 bg-gray-100 rounded-full mx-auto">
+                        <i class="fa-solid fa-user-plus p-3 border border-gray-300 rounded-full bg-white"></i>
+                    </div>
+                </div>
+                <h1 class="text-3xl text-center mt-3">What Kind Of Account You Want To Open Today?</h1>
+                <p class="text-md text-center my-2">You can Add another account on later too</p>
+                <div class="my-3">
+
+                    <div class="flex items-center justify-between p-4 border-2 border-gray-500 rounded-xl hover:bg-gray-200 transition  cursor-pointer">
+                        <div class="flex items-center space-x-4">
+                            <div class="bg-gray-200 p-3 rounded-full">
+                                <i class="fa-solid fa-user text-xl text-black-600"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-semibold text-gray-900">Personal</h3>
+                                <p class="text-sm text-gray-500">Send, spend, and receive around the world for less</p>
+                            </div>
+                        </div>
+                        <div >
+                           <input type ="checkbox" />
+                        </div>
+                    </div>
+                    <div class="flex justify-between items-center p-4 border-2  border-gray-500 rounded-xl my-5 hover:bg-gray-200 transition cursor-pointer">
+                        <div class="flex items-center  space-x-4">
+                            <div  class=" p-3 bg-gray-200 rounded-full ">
+                                <i class="fa-solid fa-briefcase text-xl text-black-600"></i>
+
+                            </div>
+                            <div>
+                                <h3 class="font-semibold text-gray-900">Business</h3>
+                                <p class="text-sm text-gray-500">Do Business or freelance work Internationally</p>
+                            </div>
+                        </div>
+                        <div>
+                            <input type="checkbox" />
+                        </div>
+                    </div>
+                   
+
+                    <button
+                        class="w-full bg-gray-400 text-white rounded py-1.5 my-3 hover:bg-gray-800 cursor-pointer">Continue</button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+</body>
+
+</html>
