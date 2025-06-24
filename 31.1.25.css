@@ -1,0 +1,21 @@
+body {
+    margin: 0px;
+    font-family: 'Courier New', Courier, monospace;
+}
+#meetings-report {
+    border-collapse: collapse;
+    background-color: hsl(56, 76%, 47%);
+    margin: 10px;
+}
+#meetings-report:hover{
+    background-color: aqua;
+}
+#meetings-report th, #meetings-report td {
+    text-align: center;
+    padding: 12px 18px;
+    border-bottom: 1.5px solid hsl(0, 68%, 65%);
+}
+
+#meetings-report tbody tr:nth-child(even), #meetings-report thead tr:nth-child(1) {
+    background-color: hwb(120 95% 3%);
+}

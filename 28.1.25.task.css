@@ -1,0 +1,61 @@
+body{
+    margin:0px;
+}
+
+#background-img{
+    background-image:url('https://preview.colorlib.com/theme/furn/assets/img/gallery/visit_bg.png');
+    padding:250px 200px ;
+    background-position: center center ; /*#first center will align vertical and second center will align horizontal.*/
+    background-size: cover;
+    background-repeat:no-repeat;
+}
+
+
+
+#best-furniture{
+    border:1px solid rgb(243,226,221);
+    background-color: rgb(243,226,221);
+    padding:130px 105px;
+
+    
+    
+}
+a{
+    border:1px solid black;
+    background-color: tomato;
+    padding: 10px;
+    margin-left: 30px;
+    
+    
+    
+}
+
+.divide-page{
+    float:left;
+    width:29%;
+}
+
+.clear{
+    clear:both;
+}
+
+.chairs{
+    border: 1px solid white;
+    margin:10px;
+    padding: 20px;
+    float:left;
+    width:29%;
+    text-align: center ;
+    text-decoration: underline;
+}
+
+#center{
+    text-align: center;
+}
+
+#paragraph{
+    margin-bottom: 50px;
+
+
+
+}

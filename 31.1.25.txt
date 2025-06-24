@@ -1,0 +1,17 @@
+Table: Displays the content in rows and columns format.
+    Syntax:
+        <table>
+            <thead>
+                <tr> - Table Row (Row)
+                    <th>Topic</th> - Table Header (Column)
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>React-2412 7 AM</td> - Table data (Column)
+                </tr>
+            </tbody>
+        
+        </table>
+Task: Design Coupons Table.
+https://cdn.prod.website-files.com/61e937f2d571bee58ee9e397/62cb5def38027f99341b318d_Coupons-p-800.jpeg

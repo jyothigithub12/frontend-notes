@@ -1,0 +1,20 @@
+Flexbox: Used to display the content side by side or one below another.
+    
+    
+    <div>  - Parent Container 
+        <div></div> - Child Container
+        <div></div> - Child Container
+        <div></div> - Child Container
+    </div>
+    
+    
+    
+    Parent Container
+    Child Container
+Reference:
+https://css-tricks.com/snippets/css/a-guide-to-flexbox/
+Task:
+https://n8n.io/?ps_partner_key=YmlubmJiMTAzMQ&ps_xid=SAVrZj1NSZxORC&gsxid=SAVrZj1NSZxORC&gspk=YmlubmJiMTAzMQ&gad_source=1&gclid=CjwKCAiAkc28BhB0EiwAM001TWcP26LG1BwTwsoKvbnBCkR1VoLY_Uz3u-fyka-EB7tx7f3qyMcIShoCL08QAvD_BwE
+
+>by default visited website :purple color.
+>by default unvisited website :blue color.

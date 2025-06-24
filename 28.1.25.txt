@@ -1,0 +1,45 @@
+
+Background properties:
+    background-color: applies color as a  background.
+    background-image: applies image  as a background.
+    background-repeat: to control the repeation.
+    background-position: to control the position.
+    background-size: to control the size of background.
+
+            syntax:
+                background-color: 
+
+                background-image: 
+
+                background-repeat: 
+
+                background-position: 
+
+                background-size:
+
+
+> img tag is meant for displaying the image on the for ground.
+> whereas background image can be used to display content on top of the image in background.
+
+
+types of elements:
+1.Block Level elements: it occupies parente element size.
+2.Inline element: occupies content size.
+
+>each division is a Block level element which occupy whole body tag space/size.
+
+>img tag is a inline element it occupies content size .
+
+
+Float:converts block level elements into inline elements and displays elements side by side.
+    syntax:
+
+        float  left :start displaying elements from left.
+        
+        float right :start displaying elements from right.
+
+
+
+        width: it is calculated using all the properties.like content padding margin border.
+
+

@@ -1,0 +1,28 @@
+#furniture-cost-outer{
+
+    background-image:url('https://preview.colorlib.com/theme/furn/assets/img/hero/h1_hero.png.webp');
+    padding:180px ;
+    background-position: center center ; /*#first center will align vertical and second center will align horizontal.*/
+    background-size: cover;
+    background-repeat:no-repeat;
+}
+
+body{
+    margin:0px;
+    font-family: times new roman;
+    
+}
+
+#furniture-cost-inner{
+    background-color: white;
+    width: 400px;
+    padding:30px;
+    
+}
+.popular-products{
+    border: 2px solid black;
+    margin:10px;
+    padding: 20px;
+    float:right;
+    width:29%;
+}

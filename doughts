@@ -1,0 +1,11 @@
+difference between position properties:sticky,relative,absolute
+difference between transition duration and delay
+ transition-timing-function;
+animation-timing-function: ease | ease-in | ease-out | ease-in-out | linear;
+
+
+
+Z-index: Ranking for the element.
+    Syntax:
+        z-index: 1 - 99999;
+        Element which is having greater z-index will display in foreground and other element will display background.

@@ -1,0 +1,72 @@
+#register-now {
+    background-color: aqua;
+    padding: 10px 20px;
+    border-radius: 8px;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+
+    transition-property: background-color, border;
+    transition-duration: 1s, 1s;
+    transition-delay: 0.5s,0.5s;
+    transition-timing-function: ease-in, ease-in;
+
+}
+#register-now:hover {
+    background-color: lightblue;
+    border: 2px solid black;
+}
+
+#enroll-now {
+    background-color: blue;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 8px;
+    border: none;
+}
+#enroll-now:hover {
+    /* transform: scale(0.9); */
+    /* transform: translate(10px, 10px); x, y - Moves the element in x and y axis direction. */
+
+    /* transform: rotate(90deg); */
+    transform: skew(0deg, 20deg);
+}
+
+#login {
+    background-color: green;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 8px;
+    border: none;
+    animation-name: login-animation;
+    animation-duration: 5s;
+    animation-delay: 0s;
+    animation-iteration-count: infinite;
+    animation-direction:alternate;
+    animation-timing-function: ease-out;
+}
+
+@keyframes login-animation {
+    from {
+        background-color: green;
+    }
+    to {
+        background-color: red;
+    }
+
+    /* 0% {
+        background-color: green;
+    }
+    25% {
+        background-color: red;
+    }
+    50% {
+        background-color: blue;
+    }
+    75% {
+        background-color: yellow;
+    }
+    100% {
+        background-color: green;
+    } */
+}

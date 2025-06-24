@@ -1,0 +1,73 @@
+
+Division :Division divides the  web page into different portion or parts.
+> in other words , it groups set of elments.
+
+syntax:
+        <div>
+            <h1></h1>
+            <p> </p>
+            <div>
+                <h1></h1>
+                <p> </p>
+            </div>
+        </div>
+
+        <div>
+            <h1></h1>
+            <p> </p>
+        </div>
+
+Padding:applies empyty space between content and border.
+    
+    syntax:
+        padding:20px; (this syntax : 20px same value appplies in four diffrent direction)
+
+        padding:top right botton left;(clockwise direction) 
+                
+                ex:padding: 20px 30px 40px 50px  (clockwise direction)
+
+ 
+       > to specify different values in four different direction 
+
+                padding-left:20px;
+
+                padding-right:20px;
+
+                padding-top:20px;
+
+                padding-bottom:20px;
+
+Margin: applies empty space between border and other element.
+
+
+                Margin-left:20px;
+
+                Margin-right:20px;
+    	        
+                Margin-top:20px;
+
+                Margin-bottom:20px
+
+Border: 
+    syntax:
+            border:border-width border-style border-color;
+
+            border:1px solid black
+
+            border-style can be solid/dashed/dotted.
+
+            if we want to give border in specified direction we can use 
+
+                    border-left:1px solid black
+
+                    border-right:1px solid black
+
+                    border-top:1px solid black
+                    
+                    border-bottom:1px solid black
+
+
+
+
+
+

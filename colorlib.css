@@ -1,0 +1,119 @@
+body{
+    margin:0px;
+}
+#main-container{
+    background-image: url('https://preview.colorlib.com/theme/courses/assets/img/hero/h1_hero.png.webp');
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height:800px;
+
+}
+#nav-bar, #nav-links ,ul ,#features ,.feature{
+    display:flex;
+    list-style-type:none;
+
+}
+#nav-bar{
+    justify-content: space-between;
+    align-items: center;
+    padding:30px 30px;
+    margin-right:20px;
+    margin-bottom: 100px;
+}
+
+ul>li{
+    padding:0px 15px;
+    margin:0px 15px;
+    text-align: center;
+    font-size: 16px;
+    color:white;
+}
+.join{
+    font-family: "Josefin Sans", sans-serif;
+    padding:17px 40px;
+    margin:0px 0px;
+    border-radius: 5px;
+    background-color:#ff9f67;
+    border:none;
+    cursor: pointer;
+    letter-spacing: 1px;
+    color:white;
+}
+.join:hover{
+    background-color:violet;
+}
+
+#log-in{
+    padding:17px 35px;
+    margin:0px 15px ;
+    border:1px solid white;
+    border-radius:5px;
+    background-color: transparent;
+    color:white;
+    cursor: pointer;
+    letter-spacing: 1px;
+}
+
+
+#log-in:hover{
+    background-color:#ff9f67;
+}
+#learning{
+    padding:45px 90px;
+    margin-left: 60px;
+}
+#learning h1{
+    /* padding:0px 150px; */
+    font-family: "Josefin Sans", sans-serif;
+    font-size: 60px;
+    font-weight: 700px;
+    color:white;
+    margin-bottom: 10px;
+    
+}
+#learning p{
+    font-family: "Mulish", sans-serif;
+    color:white;
+    /* padding:0px 150px; */
+    font-weight:normal;
+    font-size: 20px;
+    
+}
+#features{
+    
+    justify-content: space-between;
+    padding:0px 10px;
+    margin:80px 100px;
+    column-gap: 20px;
+}
+.feature{
+    border:1px solid none;
+    background-color: white;
+    border-radius: 16px;
+    align-items: center;
+    padding:29px 24px;
+}
+.feature h2{
+    padding:10px;
+    color:#4255A4;
+    margin-top:0px;
+    font-style:normal;
+}
+.feature p{
+    color:#10285d;
+    font-size:20.5px;
+    letter-spacing: 0.5px;
+    word-spacing: 5px;
+    font-family: "Mulish", sans-serif;
+}
+.img{
+    padding:5px 10px;
+}
+#image{
+    background-image: url("https://preview.colorlib.com/theme/courses/assets/img/gallery/topic2.png");
+    height:50px;
+    width:50px;
+}
+
+    

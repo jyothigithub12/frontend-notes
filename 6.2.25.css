@@ -1,0 +1,27 @@
+#para {
+    text-shadow: 2px 2px 3px #FF0000;
+    font-size: 25px;
+}
+#div1, #div2 {
+    display: block;
+    border: 1px solid black;
+    padding: 30px;
+}
+
+#div1:hover p {
+    display: none;
+}
+
+#div2:hover p {
+    visibility: hidden;
+}
+#privacy-policy {
+    padding: 20px;
+    color: gray;
+    background-color: #f4f4f4;
+    margin: 20px;
+    height: 300px;
+    border: 1px solid gray;
+    overflow: scroll;
+   
+}
