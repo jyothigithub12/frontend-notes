@@ -1,0 +1,118 @@
+React-2503 - Agenda 
+
+Typescript - Programming Language - Superset of Javascript (which means it going to have all the features of javascript and along with that it has its own features. )
+
+Tailwind CSS - CSS Library
+
+ES6 & ES7 (ECMA Script)
+
+React Js + Vite Js
+React Js + Next Js
+
+>TypeScript is abbreviated as TS .
+
+> It's a free and open source programming language developed by Microsoft.
+
+> It adds static typing to Javascript.
+
+> It is designed to develop large scale appplications and transpiles the source code to Javascript.
+
+Typings:
+
+1. Static Typing: Assigning the data type to the variable during variable creation time.
+    Eg. Java, Go, Typescript, C, C++ etc...
+
+2. Dynamic Typing: Assigning the data type to the variable during execution time.
+    Eg. Javascript, Python etc...
+
+Transpilation: Converting the source code from one programming language to another.
+
+    Eg. Typescript(we are going to write thr souce code in the typescript but browser doesnot understand the typescript language so for browser compartibility we are converting from typescript to javascript.)
+
+    > for developer perspective writing code in typescript and for browser compartibility converting to javascript.
+
+compilation:converting source code from  high level language to low level language which is byte code.
+
+> For executing the source code of TypeScript.
+
+    1. Transpilation: Converts the source code from Typescript to Javascript. Also if there are any syntax errors it shows to us.
+          
+            tsc filename.ts
+
+    2. Execution Phase: Typescript Complier takes source code as an input, execute it and shows output to the user.
+           
+            node filename.js
+
+> usually TypeScript has Transpilation and Execution phase to execute the typescript source code . (usually programming language has two phase execution.)
+
+> whereas javascript has only direct Execution phase to execute the javascript source code.(where as scripting languages or interpreted language follow line  by line execution of source code.)
+
+> TypeScript may be used to develop JavaScript applications for both client-side(reactjs) and server-side execution(nodejs,express js and mongo db) (as with Node.js).
+    
+    TypeScript Compiler  tsc (default compiler for TypeScript).
+
+> TypeScript introduced in 1st october 2012 by Microsoft.
+
+> Latest version of TypeScript:
+    
+    v5.8.2
+
+> File extension for TypeScript:
+
+    .ts - Typescript
+    .tsx - TypeScript + XML (Extensible Markup Language) It supports writing html source code in typescript file.
+
+> File extension for TypeScript:
+
+    .js -JavaScript 
+    .jsx -Javascript + XML (Extensible Markup Language)It supports writing html source code in javascript file.
+
+Note: For developer compartibility we are writing the source code in typescript.
+
+    For browser compartibility we are converting the source code from TypeScript to JavaScript.
+
+
+npm (node package manager): It manages all the packages which are available in node js(nodejs has javascript browser internally).
+
+    To install all the packages which are available in package.json
+
+        npm install
+
+    To install a package globally, includes it should be available across the machine(laptop which is accesible in all the folders).
+       
+        npm install -global package-name
+    
+    To install a package:
+
+        npm install package-name
+
+    To uninstall a package:
+
+        npm uninstall package-name
+
+> To install typescript across the machine(laptop which is accesible in all the folders).
+
+    npm install -global typescript
+
+ 
+> To verify typescript installation:
+
+    tsc -version
+
+
+  >every Library or framework will come in the form of package.(like react,next js ,bootstarp etc.. this all will come as a package)
+
+
+Static Typing:
+
+    var variableName: dataType = value;
+        Predefined data types - Number, Boolean or String
+        Userdefined data types - Array, Object.
+
+Interface: It defines the shape of the object.
+    Syntax:
+        interface InterfaceName {
+            property1: value1;
+            property2: value2;
+            propertyN: valueN;
+        }
