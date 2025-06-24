@@ -1,0 +1,100 @@
+1. Directory Structure (suggested):
+css
+Copy
+Edit
+src/
+├── App.tsx
+├── pages/
+│   └── PersonalDetails/
+│       ├── PersonalInfo.tsx
+│       ├── ContactDetails.tsx
+│       ├── NextOfKin.tsx
+│       ├── Education.tsx
+│       ├── GuardianDetails.tsx
+│       ├── FamilyDetails.tsx
+│       ├── JobDetails.tsx
+│       ├── FinancialDetails.tsx
+│       └── PersonalDetailsLayout.tsx
+2. PersonalDetailsLayout.tsx (parent component):
+tsx
+Copy
+Edit
+import { NavLink, Outlet } from "react-router-dom";
+
+function PersonalDetailsLayout() {
+  return (
+    <div className="max-w-5xl mx-auto my-8 p-6 bg-white rounded-lg shadow-md">
+      <h1 className="text-3xl font-bold mb-6 text-center text-blue-700">Employee Personal Details</h1>
+
+      <div className="flex flex-wrap gap-4 justify-center mb-6">
+        <NavLink to="personal" className="btn">Personal Info</NavLink>
+        <NavLink to="contact" className="btn">Contact Details</NavLink>
+        <NavLink to="next-of-kin" className="btn">Next of Kin</NavLink>
+        <NavLink to="education" className="btn">Education</NavLink>
+        <NavLink to="guardian" className="btn">Guardian Details</NavLink>
+        <NavLink to="family" className="btn">Family Details</NavLink>
+        <NavLink to="job" className="btn">Job Details</NavLink>
+        <NavLink to="financial" className="btn">Financial Details</NavLink>
+      </div>
+
+      <Outlet />
+    </div>
+  );
+}
+
+export default PersonalDetailsLayout;
+Add this CSS class to your global stylesheet or convert it to Tailwind class if preferred:
+
+css
+Copy
+Edit
+.btn {
+  @apply bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700;
+}
+3. Example Child Component (PersonalInfo.tsx):
+tsx
+Copy
+Edit
+function PersonalInfo() {
+  return (
+    <div className="p-4 border rounded shadow">
+      <h2 className="text-xl font-semibold mb-2">Personal Information</h2>
+      <p>Name: John Doe</p>
+      <p>Date of Birth: 01/01/1990</p>
+    </div>
+  );
+}
+export default PersonalInfo;
+(Repeat similar structure for all other components: ContactDetails, NextOfKin, etc.)
+
+4. Configure Routes in App.tsx:
+tsx
+Copy
+Edit
+import { Routes, Route } from "react-router-dom";
+import PersonalDetailsLayout from "./pages/PersonalDetails/PersonalDetailsLayout";
+import PersonalInfo from "./pages/PersonalDetails/PersonalInfo";
+import ContactDetails from "./pages/PersonalDetails/ContactDetails";
+import NextOfKin from "./pages/PersonalDetails/NextOfKin";
+import Education from "./pages/PersonalDetails/Education";
+import GuardianDetails from "./pages/PersonalDetails/GuardianDetails";
+import FamilyDetails from "./pages/PersonalDetails/FamilyDetails";
+import JobDetails from "./pages/PersonalDetails/JobDetails";
+import FinancialDetails from "./pages/PersonalDetails/FinancialDetails";
+
+function App() {
+  return (
+    <Routes>
+      <Route path="/personal-details" element={<PersonalDetailsLayout />}>
+        <Route path="personal" element={<PersonalInfo />} />
+        <Route path="contact" element={<ContactDetails />} />
+        <Route path="next-of-kin" element={<NextOfKin />} />
+        <Route path="education" element={<Education />} />
+        <Route path="guardian" element={<GuardianDetails />} />
+        <Route path="family" element={<FamilyDetails />} />
+        <Route path="job" element={<JobDetails />} />
+        <Route path="financial" element={<FinancialDetails />} />
+      </Route>
+    </Routes>
+  );
+}

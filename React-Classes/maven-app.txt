@@ -1,0 +1,52 @@
+Roles & Responsibilities:
+
+?Created Infra By using Terraform with Jenkins Pipeline.
+?Base machine Deployment & Autoscaling Backend Deployment by using Jenkins Pipeline In Test (QA) env, Preprod, Prod Env.  
+?Deploying end product in tomcat web server and other application servers before production.
+?create custom domain (subdomain) names for api gateway.
+?Setup of HAProxy for Load Balancing of incoming traffic evenly across multiple backend servers.
+?Creating public & private hosted zones (DB) in Route-53. 
+?Create CNAME , A Record with simple Routing policy and Latency Based Routing policy.
+?Creating Target group for load balancer front end as well as Backend.
+?Monitoring of all servers in all environments via Grafana Dashboard.
+?Creating Application Load balancer & security group piping mechanism.
+?Integrated many tools with Jenkins like Git, Maven, S3, Terraform , and Tomcat.
+?Checking application logs of backend api’s in cloud watch log groups.
+?Creating Launch template versions for Roll back to a previous, stable version.
+?Creating Bastion Host (Jump Server).
+?Creating ssh-keygen (id_rsa) in local machine, if keypair is missing, Its like backup of key pair.
+?Creating Linux normal users and giving specific permission to them via visudo.
+?Deploy Node.js , Java and Python applications.
+?Creating Read Replica of RDS database in different region.
+?Whitelist IP and Black list of IP.
+?Creating Security Group Piping Mechanism.
+?Raising a ticket to request SSL/TLS certificate renewal before expiration date to seniors via Jira.
+?Writing Python script for delete unused (orphan) ami and s3 buckets.
+?Static website hosting via S3 bucket with Load Balancer & Cloudfront.
+?AWS Transfer Family : transfer files to and from Amazon S3 or Amazon EFS using SFTP via filezilla.
+?Git clone by passing ssh keys to local machine instead of github token authentication.
+?Creating Roles and attaching to ec2-instance with attaching specific policy.
+?Create inline bucket policy for specific user, specific permissions.
+?Creating s3 bucket and upload files via AWS CLI.
+
+
+     
+? Creating cloufront for front end.
+?Deploying artifacts like JAR, and WAR, into application servers Apache Tomcat and storing it on Artifactories.
+?Deploying React.js front end application via Jenkins on s3 & cloudfront. 
+?process management, clustering, logging, and monitoring by pm2.
+?Taking backups of Instances as a ami.
+?AWS Transfer Family service for SFTP.
+?Making documentation for daily tasks.
+?Creating servers, AMIs, and storage blocks in S3 taking snapshots, VPCs, subnets, load balancing, and Auto-scaling in AWS.
+
+
+Declaration:
+I hereby declare that the information furnished above is true up to my knowledge and I bear the responsibility for the correctness of the above mention particulars.
+
+
+
+
+Place: Hyderabad
+Date: 	Name: Aadinath Tighare
+                                                                                                                   Mobile : 8551875543

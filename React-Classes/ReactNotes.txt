@@ -1,0 +1,1224 @@
+16/04/2025:
+
+
+React Js: It is a frontend library used to build web applications, that aims to make building 
+user interfaces based on components.
+
+> To Increase the developer efficiency and performance of the applications we are using React.Js
+
+> It is a free and open-source front-end JavaScript library.
+
+>Due to more performance and more features react they made it open source.
+
+> Prerequsite technologies: HTML, CSS, Javascript, TailwindCSS, Typescript (Optional)
+
+Component: Custom tag of html, which consists of html, css and javascript functionality.
+
+> It is maintained by Meta (formerly Facebook) and a community of individual developers and 
+companies.
+
+> Frontend web application can be build either using Angular or React Js or Vue Js(mostly used in US-based projects).(this are three different compitators used for the same purpose for building frontend applications.)
+
+> React can be used to develop single-page, mobile, or server-rendered applications with 
+  frameworks like Next.js and Remix[a].
+
+    >Single Page Application (SPA) indicates navigating from one page to another page without reloading the whole app By replacing HTML Code..
+     
+     >>by Using this performance of application will increase and loading time will Reduce.
+     >>SPA can be achived using three frameworks and library like Angular(framework) whereas React and Vue Js are Libraries.
+
+    > for building mobile application we need to learn a library called React native.
+
+    >For server-rendered application we need to learn a library called Next.js .
+
+    Library: If a technologies is providing only  Functionalities.
+        Eg. React Js, Jquery, Vue Js etc...
+
+    Framework: If a technologies is providing both   Functionalities + Template(Structure)
+        Eg. Angular, TailwindCSS, Bootstrap, Express Js(backend Framework) etc...
+
+> A key advantage of React is that it only re-renders those parts of the page that have changed,
+  avoiding unnecessary re-rendering of unchanged DOM elements. (Shadow DOM)
+
+ >Shadow DOM :in between our source code and DOM it will going to install one Shadow DOM (it will compare the HTML which we have written with the acutal DOM and it will give the changes which  has been done to the actual DOM) .
+
+> Original author(s) - Jordan Walke.
+
+> Developer(s) - Meta and community.
+
+> Initial Release: 2013.
+
+> Latest version : 19.0.0
+
+19 → Major version
+0 → Minor version
+0 → Patch version
+
+🔍 What each part means:
+
+MAJOR (19): Significant changes — possibly breaking backward compatibility.
+
+MINOR (0): New features, but backward-compatible.
+
+PATCH (0): Bug fixes or small improvements, backward-compatible.
+
+Node Js: Javascript Runtime environment (To execute javascript applications)
+
+    >Inside The Node Js we will be having JavaScript Compiler Internally.
+    JavaScript Complier - V8 Engine(developed by Chrome Browser).
+
+    Download Link: https://nodejs.org/en
+
+NPM (Node Package Manager): It manages all the packages(it may be library or framework) which available in Node Js.
+
+React Js with Vite Js(Vite Js is used for frontend  for providing servers to convert React Js source code into plain HTML,css and javascript).
+React Js with Next Js(Next Js is used for both frontend and backend for providing servers)
+
+    JSX - Javascript & XML (Extensible Markup Language)(writing HTML source Code in JavaScript Called JSX)
+    TSX - Typescript & XML (writing HTML source Code in TypeScript Called TSX)
+   
+    >in HTML(its a predeefined Markup Language having predeefined tags) we can not write custom Tags but Using XML we can write custome HTML source code. 
+    
+    >Browser can not understand JSX  or TSX source code we need to convert JSX or TSX source code into plain html,css and javascript that compiler is provideed by Vite Js or Next Js.
+
+Vite Js: It is build tool for building frontend web applications.
+The supported Libraries presets are:
+
+JavaScript	     TypeScript
+vanilla	          vanilla-ts
+vue	              vue-ts
+react	          react-ts(this we are going learn as part of our curriculum.)
+preact	          preact-ts
+lit	              lit-ts
+svelte	          svelte-ts
+solid	          solid-ts
+qwik	          qwik-ts
+
+install nodejs in laptop:
+
+check node -v to check the version.
+
+npm -v to check the version of node js it is installed by default when we install node js.
+
+# Command to create vite-app:
+
+  npm create vite@latest
+
+# To navigate to project folder:
+    cd project-name
+
+# To install all the packages required for the app:
+   npm install (it install all the packages which  are required for the project.)
+
+   npm install package name will install only particular package.
+
+# To execute the source code and start the server:
+    npm run dev
+
+vite-app Structure:
+
+    node_modules - Packages installed in the app will be downloaded to this folder.(if we install any library or frame work that source code will be downloaded into node_modules)
+
+    public - assets(images,videos etc..)
+
+            main.tsx => root TypeScript file of the project.it establish the connection between index.html and app.tsx.
+
+    src - Source - actual source code of app.
+
+    .gitignore - Files which needs to ignored in storing in cloud git needs to add here.
+
+    eslint.config.js - ES Linter Configuration(Es Lint is a monitoring Tool it will monitor whether te application is following ECMA script standards or not)
+
+    index.html - Root HTML file for the app.
+
+    package-lock.json - Consists of package names and versions of the packages used by application.
+
+    package.json - Consists of package names and versions of app.
+
+    README.md(Normal Text File having Set of steps to start the server of applications)(it tells about the complete project steps in  documentation).
+
+    tsconfig.app.json - Typescript Configuration
+
+    tsconfig.json - Typescript Configuration
+
+    tsconfig.node.json - Typescript + Node Js Configuration
+
+    vite.config.ts - Vite JS Configuration
+
+
+Vite App Structure – Explained in Easy Terms
+✅ node_modules/
+
+📦 This is where all your installed libraries and packages are stored.
+
+When you run npm install, Vite downloads packages like react, vite, eslint, etc. into this folder.
+
+Don’t touch this folder manually—it's automatically managed.
+
+✅ public/
+🖼️ This folder holds static assets (like images, icons, etc.) that won’t be changed by Vite.
+
+Everything here is served as-is.
+
+Example: if you have public/logo.png, you can access it in the browser with /logo.png.
+
+✅ src/ (Source Code)
+🧠 This is the heart of your app — where you write your code.
+
+You’ll create:
+
+Components (App.tsx, Header.tsx)
+
+Styles (App.css)
+
+Logic (functions, API calls)
+
+Think of it as your "workspace".
+
+✅ .gitignore
+❌ This file tells Git which files/folders should not be pushed to GitHub or any other Git repository.
+
+Common ignored files:
+
+node_modules/ (too big)
+
+.env (secrets)
+
+dist/ (build folder)
+
+✅ eslint.config.js
+👀 ESLint is a tool that checks your code to make sure it's clean and follows rules (based on ECMAScript standards).
+
+This file contains settings/rules like:
+
+"Use semicolons"
+
+"Use double quotes"
+
+"Avoid unused variables"
+
+Helps keep your code bug-free and consistent.
+
+✅ index.html
+🏠 This is the main HTML file (like the "skeleton" of your app).
+
+Inside, there's usually a <div id="root"></div>, where your React app is injected.
+
+Vite uses this file as a base when loading your app in the browser.
+
+✅ package-lock.json
+🔒 Created automatically when you install packages.
+
+It locks the versions of all packages and their sub-packages to avoid unexpected changes.
+
+Makes sure everyone gets the exact same versions when running the project.
+
+✅ package.json
+📋 The "blueprint" for your app.
+
+It contains:
+
+Your app’s name, version
+
+Installed packages (like React, Vite)
+
+Scripts to run or build the app (npm run dev, npm run build)
+
+Example:
+
+
+{
+  "name": "vite-app",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build"
+  },
+  "dependencies": {
+    "react": "^18.0.0"
+  }
+}
+
+✅ README.md
+📖 A markdown file for documentation.
+
+Usually includes:
+
+Project description
+
+How to install/run the app
+
+Developer notes
+
+When someone opens your project on GitHub, this is the first thing they’ll see.
+
+✅ tsconfig.json
+⚙️ Configuration file for TypeScript.
+
+Tells TypeScript how to check and compile your .ts and .tsx files.
+
+Controls things like:
+
+Which JavaScript version to output
+
+Whether to allow any types
+
+Module systems
+
+✅ tsconfig.app.json
+🔧 A more specific TypeScript config just for the app source code (like your files in src/).
+
+Often extends tsconfig.json and sets custom options like which files to include.
+
+✅ tsconfig.node.json
+🛠️ TypeScript config for Node.js-related files (like Vite config, server-side code, etc.)
+
+Helps make sure that TypeScript handles Node.js syntax correctly.
+
+✅ vite.config.ts
+⚙️ Configuration for Vite.
+
+This is where you can:
+
+Add plugins (e.g., for React, Tailwind)
+
+Set custom build settings
+
+Define aliases or environment variables
+
+File/Folder	                                                            Purpose
+node_modules/	                                                Stores all installed packages
+public/	                                                        Static assets (like images)
+src/	                                                        All your React app code
+.gitignore	                                                    Files to ignore when pushing to Git
+eslint.config.js	                                            Linter rules for clean code
+index.html	                                                    Base HTML page
+package.json	                                                Lists dependencies & run scripts
+package-lock.json	                                            Locks exact versions of dependencies
+README.md	                                                    Project documentation
+tsconfig.json	                                                TypeScript settings
+tsconfig.app.json	                                            TypeScript settings for your app code
+tsconfig.node.json	                                            TypeScript settings for Node-related code
+vite.config.ts	                                                Vite configuration and plugin setup
+
+17/04/25 :
+
+Component: In React, a component is a reusable, independent piece of code that handles a 
+specific part of the user interface.
+> It can be thought of as a JavaScript function that returns JSX (a syntax extension to 
+JavaScript) describing what should be rendered on the screen. 
+
+>components allow developers to break down complex UI into smaller,manageable and reusable units and to  make it independent.
+
+>ComponentName name should be Pascal Case.
+
+    Syntax:
+        TSX ( Typescript + XML)
+
+        function ComponentName() {
+            Javascript source code....
+            or Functionalities we will write here
+
+            return (
+                HTML source code... 
+
+                and dynamic data mapping from javascript written inside {}.
+            )
+        }
+
+
+        () - For writing HTML source code in return statement.
+        {} - For writing Javascript source code in return statement.
+
+        <ComponentName/> (component is basically a custom tag) its basically  a Function call.
+
+export default ComponentName : basically export is used to export something from current file to another file.(app.tsx)
+ 
+import App from './App.tsx'  (import to main.tsx file)
+
+import './App.css'  for importing css file to main.tsx
+
+
+Task: Build Navbar, Footer, Banner & Popular Destinations Components using React of Travelo Website.
+https://preview.colorlib.com/theme/travelo/
+
+
+18/04/2025:
+
+Data Binding: Used to communicate from Typescript to HTML.   
+    
+    String Interpolation/Expression
+    
+    Syntax:
+        <p>{expression}</p>
+        
+        Eg:
+            
+            <p>{variableName}</p>
+            <p>{variableName + variableName}</p>
+            <p>{variableName ? 'true Statement' : 'false statement'}</p>
+
+Event Binding: Used to communicate from HTML to Typescript.(mapping a event to a html element is event binding. )
+
+    Syntax:
+
+    Here we write Event name in camelCase.
+
+        Function without parameters:
+            <button onClick={functionName}></button>
+            
+        Function with parameters:
+            <button onClick={() => functionName(value)}></button>
+
+21/04/2025:
+
+Conditional Rendering:(it indicates rendering the Content as per the condition.)
+
+1. Logical AND
+2. Ternary Operator
+
+1. Logical AND:
+
+    Syntax:
+
+        {condition && <p>Content which we want to display</p>}
+        
+        Paragraph will be displayed only when condition is true.
+        
+        var discount = 0;
+        {discount > 0 && <p>{discount} off</p>}
+
+2. Ternary Operator
+
+    Syntax:
+        {condition ? <p>True Content</p> : <p>False Content</p>}
+    
+    Loader:
+        const isLoading = false;
+        {isLoading ? <p>Loading...</p> : <p>Digital Edify</p>}
+
+Map Method:The Map function is generally used to render the array items dynamically in react.This function iterates over  the array  and each iteration returns JSX for respective item.
+
+    arrayName.map((value, index) => (                                 //here for every iteratin we get value ,index.
+        <div key={index}>                                     (here we need to use key attribute to identify uniquely)
+        
+        
+        </div>
+    ))
+
+    To maintain uniqueness in each value we use Key={index}.
+
+React 16.X - Functional Components - React Hooks (Hooks are nothing but Functions in javascript.) 
+
+>>due to size complexity and performance react not using class components and it is taking more time to excute it and more memory space.
+
+>>functional components taking less space and less time to excute it.
+
+1. useState (predefined React Hook)
+    
+    Syntax:
+
+        import { useState } from 'react';
+
+        const [state, setState] = useState(initialValue);
+
+        initialValue - Initial value of variable.
+        state - Returns current value (state is a variableName)
+        setState - To update the value.
+
+Task: Build Dineout Restaurants page of Swiggy using Map Method.
+https://www.swiggy.com/dineout
+
+
+22/04/2025:
+
+UseEffect: Using useEffect we can do side effects in the component.
+
+Eg. Doing api call on load of the component.
+
+2. Updating value of a variable (using useEffect we can listen for the changes)
+> Using this, we can execute the source code present in 
+    on load of the component, 
+    on update of state variable value &      (on update indicates onclick,onchange,or onkeyup events)
+    on destroy or removal of the component.(removal of component indicates navigating from current page to another page.)
+
+    Syntax:
+
+        import { useEffect } from 'react';
+
+        useEffect(callbackFunction, DependenciesArray); useEffect is a function expecting two values.
+
+        callbackFunction: Source code present in this function, will be executed when useEffect is called.
+        DependenciesArray - it might be an empty array or Array of state variable.
+
+        Note: When value of state variable has been changed, react compiler will call  callbackFunction called automatically.
+   
+   
+    Onload:
+        const functionName = () => {
+        };
+        useEffect(functionName, []); (if we add empty array it will excute only on load of webpage.)
+
+    Onload & On Update:(to excute the code on update of variable)
+        
+        const functionName = () => {
+        };
+        useEffect(functionName, [stateVariable1, stateVariable2, ..., stateVariableN]);
+
+Task:work on dineout page details in swiggy app.
+
+23/04/2025:
+
+
+    onChange
+        anj
+            ['Manideep', 'Satish', 'Lokesh'];
+            ['Manideep', 'Satish'];
+            ['Manideep'];
+            []
+    
+Routing: Routing in React refers to the process of managing navigation between different 
+components or views within a React application, often without requiring a full page reload.
+
+> It enables the creation of single-page applications (SPAs) that offer a smooth, dynamic user experience.
+> Libraries like React Router provide tools for defining routes, navigating between them, and managing the application's history.
+
+Installation:
+    npm install react-router-dom
+
+Defining Routes:
+
+    main.tsx
+    import { BrowserRouter } from 'react-router-dom';
+
+    BrowserRouter - It stores the history of navigation of the application.
+        
+        Syntax:
+        <StrictMode>
+            <BrowserRouter>
+                <App />
+            </BrowserRouter>
+        </StrictMode>
+    
+    
+    App.tsx 
+    import { Routes, Route } from 'react-router-dom';
+    <div>
+      <Navbar/>
+      <Routes>
+        <Route path="/" element={<ComponenName/>}></Route>
+        <Route path="/route-name" element={<Groceries/>}></Route>
+      </Routes>
+      <Footer/>
+    </div>
+
+    Routes: Wraps all the routes available in the application.
+
+    Route: To configure route for a component.
+
+Static Navigation: using link tag:
+    
+     import { Link } from 'react-router-dom';
+    <Link to="/route-name">Content</Link>
+
+    24/04/2025:
+based on categories in zepto app we filtered groceries same like that
+     i want to filter buses which are available from bhubaneswar to hyderabad 
+    using filter operation using usestate and useeffct frst generate array of object to do api call from backend.
+
+    25/04/2025:
+
+    passing data(information) from one route to another route.
+
+    1.Route parameters
+    2.Query Parameters
+
+    https://localhost:5173/route-name/route-param-value1/route-param-value2?queryParam1=value1&queryParam2=value2
+
+
+route-param-value1/route-param-value2 ---this part is called route parameters having only values.
+queryParam1=value1&queryParam2=value2 --- this part is called Query parameters having key and value pairs and each key-value pair separated by &.
+
+>>query parameter need to be written after the question mark.
+
+>>A url can have both parameters and without parameters actually parameters are optional to pass in the url.
+
+Note: when we have less information to pass we use Route parameters and we use query parameters for more number of values using key value pairs we can easily identify.
+
+
+1.Route Parameters: while constructing the url to pass the information
+
+<Link to={`/route-name/id`}></Link>
+
+in the App.tsx file:
+
+under thr route:
+
+<Route path="/route-name/:id"></Route>
+
+To retrieve the information 
+
+
+import {useParams} from 'react-router-dom';  
+
+>>useParams is a predefined function , which returns current route ,route parameters as an object.
+
+syntax:
+
+    const params = useParams();
+    params.id;
+
+2.Query Parameters:
+
+    import {useSearchParams} from 'react-router-dom'
+
+    const [searchParams,setSearchParams] = useSearchParams();
+
+    searchParams.get{parameterName} = retrieve value of a parameter.
+
+Nested Routing: Defining child Routes under a route is called nested routing.
+
+    syntax:
+
+    App.tsx:
+
+                <Route path="/leave-management" element={<LeaveManagement />}>
+
+                 <Route path="/leave-settings" element={<LeaveSettings />}></Route>
+                 <Route path="/leave-recall" element={<LeaveRecall />}></Route>
+                 <Route path="/leave-history" element={<LeaveHistory />}></Route>
+                 <Route path="/leave-officers" element={<LeaveOfficer />}></Route>
+                <Route path="/*" element={<DefaultPage />}></Route>
+
+                </Route>
+
+                http://localhost:5173/leave-management/leave-settings
+                http://localhost:5173/leave-management/leave-recall
+                http://localhost:5173/leave-management/leave-history
+                http://localhost:5173/leave-management/leave-officers
+
+
+leave-management is the main file we need to route to child component we need to import outlet.
+
+>>It tells React Router where to render the child routes defined inside a parent route.
+
+
+
+import {Outlet} from react-router-dom
+
+<Outlet></Outlet>
+
+
+task-using nested routing design profile-details page from KRIS HRMS application.
+
+same like abve leave management i want personal details of employee havimg different components like personal details,contact details,
+next of kin details,education qualification,guarian details,family details,job details,
+financial details using nesting routing i want all the component in parent component i should navigate to child component using nested routing and outlet 
+
+
+26/04/25:
+
+Props (Properties): Shares the information from parent component to child component.
+
+> Props are read only properties. (Cannot be modified in the child components)
+> Props are passed as arguments in the function from Parent to Child components.
+    
+    Syntax:
+
+        function Parent() { - Parent Component
+            return (
+                <Child attribute1=value1 attribute2=value2 attribute3=value3/> - Child Component
+            )
+        }
+
+        function Child(props) {
+        }
+        
+        props (Argument - Optional) - by default its an Empty Object  >>(passing props to the child component is a optional thing)
+            {
+                property1: value1,
+                property2: value2,
+                propertyN: valueN
+            }
+
+
+    > Props can be passed attributes of tag.
+
+    > Attributes passed to the child component will be converted into object of property & value pairs by React Complier.
+
+    > Attribute value can be string, number, boolean, array, object & function.
+
+    > To pass data from Parent to Child Component:
+        string, number, boolean, array, object
+
+    > To pass data from Child to Parent Component:
+        function
+
+
+
+28/04/2025:
+
+Styling Functional components:
+
+1.Inline Styles
+2.Local Style (extrenal stylesheet)
+3.Css-in-Js libraries(e.g..tailwind css)
+
+1.Inline Styles: styling a html tag using an  attribute called style is called Inline styles.
+
+    syntax:
+
+    Approach 1:
+
+    const  isUserActive = true;
+
+        <tagName style={
+                {
+                    color : isLoading ? 'green' :'red', 
+                    padding:'10px', 
+                    border:'1px solid gray',
+                    backgroundcolour:'gray'
+                }
+            }>content</tagName> 
+        
+        
+        //here frst {} is switching from html to javascript and 2nd {} nothing but writting an object having key value pairs of styling .
+
+Approach 2:
+
+    const styles={   
+                    color :'red', 
+                    padding:'10px', 
+                    border:'1px solid gray',
+                    backgroundcolour:'gray'
+                };
+
+    <tagName style={styles}> Content</tagName>
+
+2.Local Styles (External stylesheet)
+
+index.css
+
+    selector{
+        background-colour:'red'
+    }
+
+    to link external stylesheet file we use 
+
+        import 'relativePathOfCSS';
+
+
+Fetch Data From APIs:
+
+    methods to fetch data from api:
+
+    GET: 
+
+        syntax:
+
+            const response= await fetch(url,{method:'GET'});
+
+            const parsedResponse = await response.json();
+
+    POST: 
+
+        syntax:
+        
+            const response= await fetch(url,{method:'POST', body:JSON.stringify(payload)});     //JSON.stringify will convert object or array into string format.
+
+            const parsedResponse = await response.json();
+
+
+AXIOS:Third Party Library ,AXIOS is a popular JavaScript library used for making HTTP requests in react Applications.
+
+>It simplifies the process of fetching data from APIs and sending data to servers.
+
+Axios is a promise-based HTTP client used in React applications to make requests to external APIs.
+ It simplifies the process of sending various types of requests, such as GET, POST, PUT, and DELETE, and handling responses.
+
+
+ syntax:
+
+        Installation:
+
+            npm install axios 
+
+            in Component.tsx
+
+            import axios from 'axios';
+
+            syntax:
+
+            GET:
+
+            const response = await axios.get(url); //here conversion of array or object will happen directly and we will get the parsed response back.
+
+
+            POST:
+
+            const response = await axios.post(url,payload);
+
+            PUT:
+
+            const response = await axios.put(url,payload); //whatever the information passing from the frontend to backend is called as payload like email,username,password.
+
+            // Basically payload is an object having username,password,email.
+
+            DELETE:
+
+            const response = await axios.delete(url);  behind this syntax it has AJAX syntax logic.
+
+
+29/04/25:
+
+
+Forms:
+
+    > Validations (Required, Minimum Length, Maximum Length, Regular Pattern).
+
+    > Retrieving data from forms and creating a object as payload.
+
+   React Hook Form: Validation is made easy for forms.
+
+Installation:
+
+    npm install react-hook-form (its an external library)
+
+Syntax:
+
+form.tsx
+
+import { useForm } from 'react-hook-form'; //useForm is the export keyword which is present is 'react-hook-form' package.
+
+function Component() {
+    const { register, handleSubmit, formState: { errors }, watch } = useForm();
+    const submitUser = function(formValues) {
+    }
+    return (
+        <form onSubmit="handleSubmit(submitUser)">
+            <div>
+                <label>Email</label>
+                <input type="email" name="email" {...register(formfieldName, { required: { value: true, message: 'Email is required'}} )}/>
+            </div>
+            <button>Submit</button>
+        </form>
+    )
+}
+    register - Registers form field in react hook form library.
+    handleSubmit - Used to submit the form when we click on submit button.
+    formState - Returns success / error state of the form.
+    errors - returns the error state of the form.
+    watch - Monitors form field, returns latest value present in form field.
+ 
+ 
+ const useForm() {                                 //Internally useForm is a function that returning one object.
+    return {
+        register: function() {},
+        handleSubmit: function() {},
+        formState: {
+            errors: value,
+        }
+        watch: function() {}
+    }
+}
+
+
+30/04/2025:
+
+>>for navigating from one route to another route programatically we use useNavigate from react-router-dom.
+
+
+
+    To conditional navigation from one route to another route.
+
+            useNavigate-react-router-dom
+
+
+            syntax:
+                import{useNavigate} from 'react-router-dom'
+
+                in Component.tsx:
+
+                function Component(){
+                    const navigate= useNavigate();
+                    navigate('/routeName')
+                }
+
+
+01/05/2025:
+
+    useRef: It's primarily used for accessing and manipulating DOM elements directly.
+    
+    Syntax:
+
+        import { useRef } from 'react';
+        const inputRef = useRef();
+        <input type="text" ref={inputRef} />
+
+useReducer: useReducer is very similar to useState, but it lets you move the state update logic from event handlers
+ into a single function outside of your component.
+
+ >>it is used to write the functionalities outside the component.
+    
+    Syntax:
+
+        import { useReducer } from 'react';
+
+        In Componenent.tsx:
+        
+                function Component() {
+            const [state, dispatch] = useReducer(reducerFunc, initialValue);
+        }
+
+
+        state - Returns current value of the state variable.
+
+        dispatch - Updates the state variable value.
+            dispatch({ action: actionName, payload: value });
+
+        reducerFunc - It's function which handles updation of the state value using actionname.
+        initialValue - Initial value.
+
+
+02/05/2025:
+
+Props Drilling:Manually sharing data from one component to another component throughout the hirerachy.
+
+
+drawback of props:
+
+    >>It is suitable for less Number  of component level to share the data.
+
+    >> To share the data between more number of Levels we use UseContext from react.
+
+
+03/05/2025:
+
+Prop drilling is the process of passing props down multiple levels of the component tree.
+
+
+> The useContext hook in React is used to access data from a context.
+>> It allows components to subscribe to React context without introducing prop drilling
+(no need of sharing data to intermediate components instead of that we can share data directly from any no.of  levels bacause of usecontext).
+
+
+ContextService.ts
+
+import { createContext } from 'react';  //using createContext function usually we create the context object and we are going to store the information in the context object.anf from that context object we will acccess the information using UseContext.
+
+const contextInstance = createContext(initialValue); //(createContext is a Provider)
+export default contextInstance;
+
+Provider:
+
+ParentComponent.tsx
+
+import contextInstance from 'ContextService';
+function ParentComponent() {
+    return (
+        <div>
+            <contextInstance.Provider value={{key1: value1, key2: value2, ..., keyN: valueN }}> //1st curly bracets for switching html to javascript and 2nd bracets for object.
+                <ChildComponent/>
+            </contextInstance.Provider>
+        
+        </div>
+    )
+}
+
+Consumer:
+
+ChildComponent.tsx
+
+import { useContext } from 'react';
+import contextInstance from 'ContextService';
+function ChildComponent() {
+    const data = useContext(contextInstance); //useContext is a consumer.
+}
+
+
+05/05/2025: 
+
+performance optimization of react application can be done bye Code Splitting and Lazy Loading.
+
+Code Splitting & Lazy Loading of React Components.
+    application
+        50 Components.
+        50 * 20 KB = 1000 KB based on the file size it takes times to load thr application from applicationserver to browser.
+        1 Component - 20 KB
+
+Code Splitting: Divides the application into smaller chunks or bundles, loading only the 
+necessary parts initially. This reduces the size of the initial JavaScript bundle, leading to 
+faster page load times. 
+
+Lazy Loading: Defers the loading of components or resources until they are actually needed. 
+This is achieved using React.
+>>lazy() for dynamic imports and React.Suspense to display a 
+fallback while the component is loading. 
+>>Lazy loading reduces the initial load time and improves 
+the user experience by loading resources on demand. 
+
+    Syntax:
+
+    App.tsx
+        import { lazy, Suspense } from 'react';
+        import ComponentName from 'relativePath';
+        const ComponentName = lazy(() => import('relativePath'));
+        <div>
+            <Navbar/>
+            <Suspense fallback={<Loading/>}>
+                <Routes>
+                    <Route path="/route-name" element={<ComponentName/>}></Route>
+                </Routes>
+            </Suspense>
+            <Footer/>
+        </div>
+
+
+
+
+Redux Toolkit: Is A Library Which Provides state Management for react Apps.
+
+>>UseContext is used to share the data from parent to child to any multiple level in the same hirerachy .
+
+>>Redux ToolKIt is used to share the data among same hirerachy and siblings hirerachy also.
+
+>>Redux Toolkit is a optional Concept of react Application, only the applications which are having huge data which need be share across multiple hirerachy  then only we use Redux ToolKit.
+
+
+react-redux: Dispatching an action, listening for state changes can be performed by this library in the component.
+
+    Installation:
+        npm install react-redux
+
+    Syntax:
+
+    import { useSelector, useDispatch } from 'react-redux';
+    function ComponentName() {
+        const dispatch = useDispatch(); //useDispatch is used to dispatch the actions.
+        const featureName = useSelector((state) => state.featureName); //useSelector is used to get the selected information from the store ,store is going have multiple features and values.
+        return (
+            <div>
+                <button onClick={() => dispatch('actionName')}></button>
+            </div>
+        )
+    }
+
+    User Interactions to the application is called as actions.
+
+    'ADD_TO_CART'
+    'UPDATE_PRODUCT_QUANTITY'
+    'REMOVE_PRODUCT'
+
+Redux ToolKIt  Flow Chart Procedure:
+
+>> React component and Redux Rool KIt two different libraries.
+
+>> to make communication from react to Redux ToolKit will dispatch a Action.
+
+>> In Redux Toolkit will have a Dispatcher ,this  Dispatcher will verify whether it a synchronous(it indicated javascript Logic) or asynchronous (doing the api calls).
+
+>>synchronous indicates direct interact with frontend where as asynchronous indicate interacting with backend and getting the response.
+
+>>if it is synchronous operation it calls reducer(has JavaScript logic like what need to be displayed in UI will write in UseReducer Function).
+
+>>once the Reducer EXcute the Logic that latest state need to be stored in (Store(its nothing but an simple object)).
+>> once the latest changes done again it connects from Redux ToolKit to React Component. its a cyclick process.
+
+>> if it a asynchronous operation it has MiddleWare.
+
+>>MiddleWare will helps us in doing the api calls from backend server .
+
+>>MiddleWare send the request To backend ,backend will process the request send response back t the MiddleWare.
+
+react-redux is library maily used to listen state changes and dispatch operations from react Component.
+
+
+06/05/2025:
+
+React with Redux ToolKit Application:
+
+    Installation:
+        npm install react-redux @reduxjs/toolkit 
+        npm install react-router-dom
+
+Store: The "Store" is the central container for your applications state.
+>>Its A single object that holds all the data and provides a way to acess and update it.
+
+  To store the Store:
+
+
+  store.ts
+
+    import {configureStore} from '@reduxjs/toolkit';
+
+    const store = configureStore({
+        reducer:{                    //reducer is predeefined keyword
+            key1:value1,             //key:value are the custome having different features
+            key2:value2,
+
+
+            keyN:valueN
+        }
+    })
+
+    export default store;
+
+
+    under the src/main.tsx
+
+    import store from './store';
+    import{Provider} from 'react-redux';
+
+    <StrictMode>
+
+    <Provide store={store}>
+            <App/> //here what ever the information we are passing in the store we are passing to the root component called App component.since we are passing the data to root component hence it has capability to listen the data at any child component.
+    </Provider>
+    
+    </StrictMode>
+
+
+    Slice: Its nothing but a Feature (application is going to have no of features called as No. of Slices.)
+
+    >>A slice is a Self -contained unit that encapsulates all the reducer logic and actions
+     related to a specific feature or section of your applications state.
+
+    >>This allows you to organize your Redux code more modularly and makes it easier to manage and scale your application.
+
+
+        syntax:
+
+            create one folder called slices.
+
+                slices/Counter.slice.ts
+
+                import {createSlice} from '@reduxjs/toolkit';
+
+                const sliceName =createSlice({                     //createSlice is a function call expecting one object this object has few parameters.
+
+                    name:'Slice Name',
+                    initialState:{value:},                                 //for current feature what need to be the initial value.
+                    reducer: {                                             //reducer Functions...
+                        functionName1:(state,action) => {                 //state is nothing but current feature value from store to slice, action is nothing but whatever the information we want to pass from component to slice.
+                            // Logic to update the counter State ...
+                        },
+                        functionName2:(state,action) => {                 //state is nothing but current feature value from store to slice, action is nothing but whatever the information we want to pass from component to slice.
+                            // Logic to update the counter State ...
+                        },
+                        functionName3:(state,action) => {                 //state is nothing but current feature value from store to slice, action is nothing but whatever the information we want to pass from component to slice.
+                            // Logic to update the counter State ...
+                        },
+                    }
+                
+                });
+
+                //Exporting Function definations to dispatch actions from component to slice.
+                export const {functionName1,functionName2,functionName2} = slice.name.actions;
+
+                // Latest Value after excuting reducer functions to update the store.
+                export default sliceName.reducers;
+
+                To import data to store:
+                import featureName from 'relativePath';
+
+                const store = configureStore({
+                    reducer:{
+                        key1:featureName,
+                        key1:value2,
+
+                        keyN:valueN.
+                    },
+                    })
+
+
+
+
+07/05//2025:
+
+Task on usersinfo displaying in the ui using redux-toolkit and adding users and updating in the existing userinfo table and displaying in the ui.
+
+
+08/05/2025:
+
+>> Asynchronous operation required one MiddleWare called Redux Thunk.REdux Thunk will help us in passing the information and doing the API calls.
+>>synchronous indicates it will not hold for API response its keep on excuting next lines once it call the function it should  go to next line but that should not be the case when we do API call,when we  to do the API call until we get the response  from API we need to hold it hold it .
+>>To handle Asynchronous Behaviour to synchronous we use a MiddleWare called Redux Thunk. 
+
+Asynchronous Redux Toolkit
+
+
+sliceName.ts
+
+export const getUser = async () => {
+    try {
+        const response = await axios.get(url);
+    } catch(error) {
+    }
+};  //This above function we need to export as an action.
+
+>> For every API call we have three cases
+    Request - Request (until we get the response we need to have one loader in Request phase.)
+    Fullfilled - Success (API success when the request is passed and get response back)
+    Rejected - Failure (when internet connection is down or server is not working all the exceptional scenerio it will go to rejected case.)
+
+const sliceName = createSlice({
+    name: 'Slice Name',
+    initialState: {
+    },
+    reducers: {
+    },
+    extraReducers: (builder) => {
+        builder.addCase(getUser.pending, (state, action) => {
+        })
+        builder.addCase(getUser.fullfilled, (state, action) => {
+            
+        })
+        builder.addCase(getUser.rejected, (state, action) => {
+            
+        })
+    }
+});
+export sliceName.reducer;
+
+09/05/2025:
+
+Next Js: It's a react Framework used for building Fullstack application.
+
+> Next.js is an open-source web development framework created by the private company Vercel 
+providing React-based web applications with server-side rendering and static rendering.
+
+>> Build Tool as an alternate for Vite Js.
+
+
+To create project using Next Js.
+
+npx create-next-app@latest
+    nextjs-app
+        node_modules: Consists of all the packages installed in the project.
+        public: All the assets like images, audio, video files exist here...
+        src 
+            app
+                favicon.ico -> Favicon of the app
+                globals.css -> Css written in this file will apply for the html files with matching id and class names.
+                layout.tsx -> Main typescript file for the app (its same like main.tsx in vite js project)
+                page.tsx -> Default page of the app (its same like app.tsx in vite js project)
+
+
+        .gitignore -> All the files which needs to ignored in storing cloud needs to be added here.
+        eslint.config.mjs -> ES Linter Configuration
+        next-env.d.ts - Next Js Configuration
+        next.config.ts - Next Js Configuration
+        package-lock.json - All the package names and versions of the packages used in the app.
+        package.json - All the package name and versions of the app.
+        postcss.config.mjs -> TailwindCSS
+        README.md -> Text file which tells about the app.
+        tsconfig.json -> typescript Configuration file.
+
+> To execute and start the local server:
+    npm run dev
+
+react-router-dom -> Configuration based routing. (App.tsx) <Routes> used by Vite Js
+
+
+Next Js -> File based routing  
+
+
