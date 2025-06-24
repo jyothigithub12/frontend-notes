@@ -1,0 +1,19 @@
+user management:
+
+    1. User Registration:
+        role:Admin(he has all the prevailages) ,user(he has his own prevailages where he can modufy his own data, or deactivate his own account.)
+
+    2.User Login:
+            email &password --> if we enter correct email and password we will get some response from the backend that response will have role parameter like admin and user.
+            > store the role in the local storage.(to identify wheather user or admin hace logged in).then next navigate to users(who all are registered till now every users data need to be shown.)
+
+            >in user listing page :
+                have on search button,have dropdown for role filters and status dropdown and that data need to filtered.and add paginations controls.(get pagination syntax from the bootstrap.)
+
+                > add delete and edit actions in users listing for editing the details and deleting the users, when user want to modify the data that data need to be modified and updated in the users listing using action buttons.and also add change password in actions along with edit and delete,when user want change the password it should navigate to user password change page.
+
+                > next when we click on name of user it should navigate to  user details page and on the bottom we should have edit and delete buttons.again if want to edit user need to navigate to the edit page like it should work two ways.
+
+                > give a=delete action permission to admin  not for user but add delete button in the user listing .
+
+            > whwenevr we want to change the password 
