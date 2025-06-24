@@ -1,0 +1,139 @@
+<!-- //rules of rock paper scissors game
+// 1. rock beats scissors
+// 2. scissors beats paper
+// 3. paper beats rock
+// 4. if both players choose the same option, it's a tie
+// 5. if player 1 chooses rock and player 2 chooses scissors, player 1 wins
+// 6. if player 1 chooses scissors and player 2 chooses paper, player 1 wins
+// 7. if player 1 chooses paper and player 2 chooses rock, player 1 wins
+// 8. if player 1 chooses rock and player 2 chooses paper, player 2 wins
+// 9. if player 1 chooses scissors and player 2 chooses rock, player 2 wins
+
+// 10. if player 1 chooses paper and player 2 chooses scissors, player 2 wins
+// 11. if player 1 chooses rock and player 2 chooses rock, it's a tie
+
+// 12. if player 1 chooses scissors and player 2 chooses scissors, it's a tie
+// 13. if player 1 chooses paper and player 2 chooses paper, it's a tie   -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rock Paper Scissors</title>
+  </head>
+  <body>
+    <h1>Rock Paper Scissors</h1>
+
+    <button onclick="playGame('rock');">Rock</button>
+    <button onclick="playGame('paper');">Paper</button>
+    <button onclick="playGame('scissors');">scissors</button>
+    <button
+      onclick="
+    score.wins = 0 ;
+    score.losses = 0;
+    score.ties = 0;
+    localStorage.removeItem('score');"
+    >
+      Reset Score
+    </button>
+
+    <script>
+      //Algorithm for rock paper scissors game:
+      //1. when we click on the button, it will call the playGame function.
+      //2. the playGame function will take the player move as an argument.
+      //3. the playGame function will call the pickComputerMove function to get the computer move.
+      //4. the playGame function will compare the player move and computer move to determine the winner.
+      //5.update the UI to show the result of the game.
+      //6.display the result in an alert box.
+
+      // const score = {
+      //   wins: 0,
+      //   losses: 0,
+      //   ties: 0
+      // }; // this is an object which will store the score of the game.
+
+      let score = JSON.parse(localStorage.getItem("score")) || {
+        wins: 0,
+        losses: 0,
+        ties: 0,
+      }; // this will get the score from the local storage and parse it to an object. if there is no score in the local storage, it will set the score to 0.
+
+      console.log(score); // this will print the score in the console.
+
+      
+
+      function playGame(playerMove) {
+        // this is a function which will take the player move  as an argument.
+        // this function will be called when the player clicks on the button.
+
+        const computerMove = pickComputerMove(); // here we are calling the function which is prrsent inside the playgame Function  to get the computer move.
+        console.log(computerMove); // this will print the computer move in the console.
+        let result = "";
+        if (playerMove === "scissors") {
+          if (computerMove === "rock") {
+            result = "You lose!";
+          } else if (computerMove === "paper") {
+            result = "You win!";
+          } else {
+            result = "Tie!";
+          }
+        } else if (playerMove === "rock") {
+          if (computerMove === "rock") {
+            result = "Tie!";
+          } else if (computerMove === "paper") {
+            result = "You lose!";
+          } else {
+            result = "You win!";
+          }
+        } else if (playerMove === "paper") {
+          if (computerMove === "rock") {
+            result = "You win!";
+          } else if (computerMove === "paper") {
+            result = "Tie!";
+          } else {
+            result = "You lose!";
+          }
+        }
+
+        if (result === "You win!") {
+          score.wins++;
+        } else if (result === "You lose!") {
+          score.losses++;
+        } else if (result === "Tie!") {
+          score.ties++;
+        }
+
+        localStorage.setItem("score", JSON.stringify(score)); // this will set the score in the local storage.
+        alert(
+          `You picked ${playerMove}, computer picked ${computerMove}. ${result}
+          wins: ${score.wins}, losses: ${score.losses}, ties: ${score.ties}`
+        );
+      }
+
+      function pickComputerMove() {
+        const randomNumber = Math.random(); // this will generate a random number between 0 and 1.
+        // this will be used to pick the computer move.
+        let computerMove = ""; // this will be used to store the computer move.
+
+        if (randomNumber >= 0 && randomNumber < 1 / 3) {
+          computerMove = "rock";
+        } else if (randomNumber >= 1 / 3 && randomNumber < 2 / 3) {
+          computerMove = "paper";
+        } else {
+          computerMove = "scissors";
+        }
+        return computerMove; // this will return the computer move and store it in the computerMove variable.
+      }
+
+      // return statement in JavaScript:
+      // 1. The return statement is used to exit a function and return a value to the caller.
+      // 2. The return statement can be used to return any value, including numbers, strings, objects, arrays, and functions.
+      // 3. The return statement can be used to return multiple values by returning an array or an object.
+
+     
+
+
+    </script>
+  </body>
+</html>

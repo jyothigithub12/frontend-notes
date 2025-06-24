@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Functions</title>
+</head>
+<body>
+
+    <script>
+        // Functions are reusable blocks of code that perform a specific task
+        // They can take inputs (parameters) and return outputs (return values)
+        // Functions are defined using the function keyword, followed by a name, parentheses, and curly braces
+
+        //Rules for naming functions:
+        // 1. Function names must start with a letter, underscore (_), or dollar sign ($)
+        // 2. Function names can contain letters, numbers, underscores, and dollar signs
+        // 3. Function names are case-sensitive (e.g., myFunction and myfunction are different)
+        // 4. Function names should be descriptive and indicate what the function does
+        // 5. Avoid using reserved keywords (e.g., if, else, for, while) as function names  
+        // 6. Function names should not contain spaces or special characters (e.g., @, #, %, &, etc.)
+        // 7. Function names should not start with a number (e.g., 1stFunction is invalid)
+        // 8. Function names should not be too long or too short (e.g., myFunction is better than a or myVeryLongFunctionNameThatDoesNotMakeSense)
+        // 9. Function names should be unique within the same scope (e.g., two functions with the same name in the same scope will cause an error)
+        // 10. Function names should be written in camelCase (e.g., myFunctionName) or snake_case (e.g., my_function_name) for readability
+
+        function function1(){
+            console.log("hello world"); // this is a function body
+            console.log(" 2hhh " + " 2 "); // this is a function
+        }
+        function1(); // calling the function means executing the function
+        function1(); // calling the function again
+
+        // Function with parameters
+        // Parameters are variables that are passed into a function when it is called
+        // They allow you to pass data into a function and make it more flexible and reusable   
+        // Parameters are defined in the parentheses of the function definition
+        
+        function calculateTAX(cost ,taxPercent =0.2){ // taxPercent is a parameter with a default value of 0.2
+           
+            console.log(cost * taxPercent); // this is a function body
+        }
+
+        calculateTAX( 2000 ,0.1); // calling the function means executing the function
+        
+        calculateTAX( 3000) ,0/1; //passing an argument to the function means passing a value to the function when it is called
+
+        //Rules for naming variables:
+        // 1. Variable names must start with a letter, underscore (_), or dollar sign ($)
+        // 2. Variable names can contain letters, numbers, underscores, and dollar signs
+        // 3. Variable names are case-sensitive (e.g., myVariable and myvariable are different)
+    </script>
+
+    
+</body>
+</html>

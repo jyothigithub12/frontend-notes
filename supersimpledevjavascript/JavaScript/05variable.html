@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Variable</title>
+</head>
+<body>
+
+    <script>
+        let Variable1 = 3; // Variable declaration and initialization
+        console.log(Variable1); // Output: 3
+
+        const calculation = 2 + 3; // Arithmetic operation
+        console.log(calculation); // Output: 5
+        console.log(calculation + 2); // Output: 7
+        console.log(calculation - 2); // Output: 3  
+        console.log(calculation * 2); // Output: 10
+        console.log(calculation / 2); // Output: 2.5
+        console.log(calculation % 2); // Output: 1 (remainder of division)
+        console.log(calculation ** 2); // Output: 25 (exponentiation)
+        // console.log(calculation++); // Output: 5 (post-increment)
+        // console.log(calculation); // Output: 6 (after increment)
+        // console.log(++calculation); // Output: 7 (pre-increment)
+        // console.log(calculation--); // Output: 7 (post-decrement)
+        // console.log(calculation); // Output: 6 (after decrement)
+
+        const result = calculation + 2; // Variable assignment
+        console.log(result); // Output: 7
+
+        const message = "Hello, World!"; // String variable
+        console.log(message); // Output: Hello, World!
+
+        console.log(message + " How are you?"); // String concatenation
+        console.log(calculation + message); // Output: 5Hello, World! (concatenation of number and string)
+        console.log(calculation + " " + message); // Output: 5 Hello, World! (concatenation with space)
+
+        // String interpolation using template literals
+        console.log(`The value of calculation is: ${calculation}`); // Output: The value of calculation is: 5
+
+        console.log(`The result of calculation + 2 is: ${result}`); // Output: The result of calculation + 2 is: 7
+        console.log(`The message is: ${message}`); // Output: The message is: Hello, World!
+
+        console.log(message); console.log(calculation); // Output: Hello, World! 5
+        console.log(message); console.log(';'); // Output: Hello, World! ;
+        console.log(calculation); // Output: 5
+
+        let finalResult = calculation + " " + message + " " + 2;
+        console.log(finalResult); // Output: 5 Hello, World! 2 (concatenation of number, string, and number)
+        console.log(calculation + message + 2); // Output: 6Hello, World!2 (concatenation of number and string without spaces)
+
+        Variable1 = 5; // Reassigning value to Variable1
+        console.log(Variable1); // Output: 5
+
+
+        Variable1 += 2; // Reassigning value to Variable1 using its own value
+        console.log(Variable1); // Output: 7 (5 + 2)
+        
+        const variable2 = 10; // Constant variable (cannot be reassigned)
+        console.log(variable2); // Output: 10
+        // variable2 = 20; // This will throw an error: Assignment to constant variable.
+       //best practice is to use const for variables that are not going to be reassigned.
+        //const variable2 = 20; // This will throw an error: Identifier 'variable2' has already been declared.
+
+        // Use let for variables that may be reassigned
+        let variable3 = 15; // Variable declaration and initialization
+        console.log(variable3); // Output: 15
+
+        variable3 = 25; // Reassigning value to variable3
+        console.log(variable3); // Output: 25
+
+        // Use var for variables that may be reassigned (not recommended in modern JavaScript)
+        var variable4 = 30; // Variable declaration and initialization
+        console.log(variable4); // Output: 30
+
+        variable4 = 40; // Reassigning value to variable4
+        console.log(variable4); // Output: 40
+
+        console.log(typeof Variable1); // Output: number (data type of Variable1)
+        console.log(typeof calculation); // Output: number (data type of calculation)   
+        console.log(typeof message); // Output: string (data type of message)
+        console.log(typeof variable2); // Output: number (data type of variable2)
+        
+
+    </script>
+    
+</body>
+</html>

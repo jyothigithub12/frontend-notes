@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document Object Model</title>
+</head>
+<body>
+
+    <!-- //DOM stands for document object model .its an built in object -->
+
+    <button>Hello</button>
+    <button class="js-button">second button</button>
+
+    <script>
+        // document.body.innerHTML = 'hello';
+
+        // document.title = 'GOOD JOB!';
+
+        //document object represents / models the webpage.
+        //document is an built in object .
+
+        console.log(document.title);
+        document.title = 'changed!';
+
+        console.log(document.body) //DOM combines the javascript and HTML together.
+        console.log(typeof document.body);
+
+        console.log(document.body.innerHTML);
+
+        // document.body.innerHTML = "changed!";
+
+        // document.body.innerHTML = '<button>GOOD JOB!</button>'; 
+
+        //method is a function inside a object.
+
+        //1.document.querySelector(): it will get any element from the page and put it inside javascript.
+        
+         document.querySelector('button')
+
+         console.log(document.querySelector('button').innerHTML);
+
+        document.querySelector('button').innerHTML = 'Changed';
+        document.querySelector('.js-button');
+        console.log(document.querySelector('button')) 
+        console.log(document.querySelector('.js-button'))
+
+        const buttonElement = document.querySelector('button');
+        console.log(buttonElement);
+
+
+        
+
+
+    </script>
+    
+</body>
+</html>

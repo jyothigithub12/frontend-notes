@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cart-Quantity</title>
+</head>
+<body>
+
+    <p>Cart Quantity</p>
+
+    <button onclick="console.log(` Cart quantity : ${CartQuantity}`)">Show Quantity</button>
+    
+    <button onclick="CartQuantity += 1 ;
+    console.log(` Cart quantity : ${CartQuantity}`)">Add to Cart</button>
+    <button onclick=" CartQuantity += 2 ;
+    console.log(` Cart quantity: ${CartQuantity}`) "> +2</button>
+    <button onclick=" CartQuantity +=  3 ;
+    console.log(` Cart quantity: ${CartQuantity}`) ">+3</button>
+    <button onclick =" CartQuantity =0;
+    console.log( ' cart was reset.');
+
+    console.log(` Cart quantity :${CartQuantity}`)">Reset Cart</button>
+
+    <script>
+        
+        let CartQuantity =0; // Variable declaration and initialization 
+        
+        
+        
+        //use camelCase for variable names ,camelcase means the first word is lowercase and the first letter of each subsequent word is uppercase.
+        //for example: cartQuantity, cartQuantity1, cartQuantity2, etc.
+
+        //pascalCase is used for class names, which means the first letter of each word is uppercase.
+        //for example: CartQuantity, CartQuantity1, CartQuantity2, etc.
+
+        //kebab-case is used for file names, which means all letters are lowercase and words are separated by hyphens.
+        //for example: cart-quantity, cart-quantity1, cart-quantity2, etc.
+
+        //snake_case is used for database table names, which means all letters are lowercase and words are separated by underscores.
+        //for example: cart_quantity, cart_quantity1, cart_quantity2, etc.
+
+        //lowercase is used for HTML tags, which means all letters are lowercase.
+        //for example: <html>, <body>, <head>, etc.
+
+        //uppercase is used for HTML attributes, which means all letters are uppercase.
+        //for example: <meta charset="UTF-8">, <meta name="viewport" content="width=device-width, initial-scale=1.0">, etc.
+
+       //kebab-case is used for CSS class names, which means all letters are lowercase and words are separated by hyphens.
+        //for example: .cart-quantity, .cart-quantity1, .cart-quantity2, etc.
+
+        //snake_case is used for CSS IDs, which means all letters are lowercase and words are separated by underscores.
+        //for example: #cart_quantity, #cart_quantity1, #cart_quantity2, etc.
+
+        //lowercase is used for JavaScript variables, which means all letters are lowercase.
+        //for example: let cartQuantity = 0; let cartQuantity1 = 0; let cartQuantity2 = 0; etc.
+
+        //kebab-case does not work for JavaScript variables, because it is not a valid variable name.
+        //for example: let cart-quantity = 0; let cart-quantity1 = 0; let cart-quantity2 = 0; etc.
+
+        // variable names should not start with a number, because it is not a valid variable name.
+        //for example: let 1cartQuantity = 0; let 2cartQuantity = 0; let 3cartQuantity = 0; etc.
+
+    </script>
+</body>
+</html>

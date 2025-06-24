@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Objects</title>
+  </head>
+  <body>
+    <!-- // Objects are a data type that can store multiple values in a single variable.
+// They are often used to represent complex data structures, such as a person, car, or product.
+// Objects are defined using curly braces {} and can contain key-value pairs, where the key is a string and the value can be any data type.
+// Objects can also contain methods, which are functions that are associated with the object.  
+// Methods are defined using the same syntax as functions, but they are defined inside the object.
+// Objects can be accessed using dot notation or bracket notation. Dot notation is used to access properties and methods of an object using the dot operator (.), while bracket notation is used to access properties and methods of an object using square brackets ([]).  -->
+    <script>
+      const product = {
+        name: "socks",
+        price: 1090,
+      };
+
+      console.log(product); // this will print the object in the console.
+      console.log(product.name); // this will print the name of the product in the console.(this is called dot notation.)
+      console.log(product.price); // this will print the price of the product in the console.
+
+      product.name = "cotton socks"; // this will change the name of the product to cotton socks. reassigning the value of the name property.
+
+      console.log(product); // this will print the name of the product in the console.
+
+      console.log(product.fullname); // this will print undefined in the console because fullname is not defined in the object.
+
+      product.newProperty = true; // this will add a new property to the object.
+
+      console.log(product); // this will print the object in the console.
+      console.log(product.newProperty); // this will print the new property in the console.
+      delete product.newProperty; // this will delete the new property from the object.
+      console.log(product); // this will print the object in the console.
+
+      console.log(typeof product); // this will print undefined in the console because newProperty is deleted from the object.
+
+      //another way of accessing the properties of an object is using bracket notation.
+      const product2 = {
+        name: "shirt",
+      };
+
+      console.log(product2["name"]); // this will print the name of the product in the console. (this is called bracket notation.)
+      console.log(product2["price"]); // this will print undefined in the console because price is not defined in the object.
+
+      //let us use the properties that dont work with dot notation.
+      const product3 = {
+        "product-name": "shirt",
+        "product-price": 1090,
+        "delivery-time": "2 days",
+        rating: {
+          stars: 4.5,
+          reviews: 1000,
+        },
+        "product-available": true,
+        "product-color": ["red", "blue", "green"],
+        fun: function functionName() {
+          console.log("this is a function inside an object.");
+        }, // this is a method inside an object.
+      };
+      console.log(product3["product-name"]); // this will print the name of the product in the console. (this is called bracket notation.)
+      console.log(product3.product - name); // this will give an error because product-name is not a valid identifier.
+      // this is because the hyphen (-) is not allowed in variable names.
+      console.log(product3); // this will print the price of the product in the console. (this is called bracket notation.)
+      console.log(product3["product-price"]); // this will print the price of the product in the console. (this is called bracket notation.)
+
+      console.log(product3.rating.stars); // this will print the rating of the product in the console. (this is called dot notation.)
+      console.log(product3.rating["stars"]); // this will print the rating of the product in the console.
+
+      console.log(product3.rating.reviews);
+
+      console.log(product3.fun); // this will print the function inside the object in the console.
+      product3.fun(); // this will call the function inside the object and print the message in the console.
+
+      console.log; // console is a method of the window object. and log is a method of the console object.
+      console.log(typeof console); // this will print the type of the console object in the console.
+      console.log(typeof console.log); // this will print the type of the log function in the console.
+      console.log(typeof Math.random()); // this will print a random number between 0 and 1 in the console.
+
+      //Built in objects in javascript.
+
+      // JSON is a built-in object in JavaScript that provides methods for working with JSON (JavaScript Object Notation) data.
+      //JSON STANDS FOR JAVASCRIPT OBJECT NOTATION.
+      //JSON is a lightweight data interchange format that is easy for humans to read and write and easy for machines to parse and generate.
+      
+      
+      //javascript object: //all properties not in double quotes.
+      const product4 = {
+        name: "socks",
+        price: 1090,
+        available: true,
+        color: ["red", "blue", "green"],
+        rating: {
+          stars: 4.5,
+          reviews: 1000,
+        },
+        fun: function functionName() {
+          console.log("this is a function inside an object.");
+        },
+      };
+
+      //JSON object: //all properties are in double quotes.
+      const product5 = {
+        name: "socks",
+        price: 1090,
+        available: true,
+
+        color: ["red", "blue", "green"],
+        rating: {
+          stars: 4.5,
+          reviews: 1000,
+        },
+      };
+      
+      //JSON does not support functions.
+      //JSON syntax is used universally it is understood by all programming languages.
+      // we use JSON to send data from one server to another server.
+        //JSON is a string format. it is not an object.
+        //JSON.stringify() is a method that converts a JavaScript object into a JSON string.
+
+        console.log(JSON.stringify(product4)); // this will print the object in JSON format in the console.
+
+        //converting JSON string to object.
+        //JSON.parse() is a method that converts a JSON string into a JavaScript object.
+
+      const jsonString = JSON.stringify(product4); // this will convert the object into a JSON string.
+
+        console.log(jsonString); // this will print the object in JSON format in the console.
+
+        console.log(JSON.parse(jsonString)); // this will convert the JSON string into a JavaScript object and print it in the console.
+        console.log(JSON.parse(jsonString).name); // this will print the name of the product in the console.
+
+
+        //Next BUilt in object is localStorage.
+
+        //localStorage is a built-in object in JavaScript that provides a way to store data in the browser.
+        //localStorage is a key-value store that allows you to store data in the browser's memory.
+
+        // localstorage is used to store data in the browser permanently.
+
+        //however variable store the values in the memory temporarily.if we close the page or refresh the page all the  variables will be deleted.
+
+
+         //null vs undefined in JavaScript:
+        //1. null is an object that represents the intentional absence of any object value.
+        //2. undefined is a primitive value that represents the absence of a value or an uninitialized variable.
+
+
+        console.log('hello world'.length); // this will print the length of the string in the console.
+        console.log('hello world'.toUpperCase()); // this will print the string in uppercase in the console.
+        console.log('hello world'.toLowerCase()); // this will print the string in lowercase in the console.
+
+        //AutoBoxing in JavaScript:
+        //1. AutoBoxing is the process of converting a primitive value into an object wrapper for that value.
+        //2. auto boxing is work with all the primitive data types in JavaScript.
+        //3. autoboxing is not work with null and undefined.
+
+        //objects are reference types in JavaScript.
+
+        const object1 = {
+            message:'hello'
+        }
+
+        const object2 = object1; // this will create a reference to the object.
+        object2.message = 'hi'; // this will change the message of the object to hi.
+        console.log(object1); // this will print the message of the object in the console.
+
+        console.log(object2); // this will print the message of the object in the console.
+        console.log(object1 === object2); // this will print true in the console because both the objects are pointing to the same reference.
+
+        // we directly cannot compare objects in JavaScript.
+
+        const object3 = {
+            message:'hello'
+        }
+        const object4 = {
+            message:'hello',
+            price: 1090
+
+        }
+
+        console.log(object3 === object4); // this will print false in the console because both the objects are pointing to different references.
+        
+        // const message = object4.message; // this will create a new variable and assign the value of the message property to it.
+        // console.log(message); // this will print the message of the object in the console.
+    
+        const {message,price} = object4; // this is called destructuring. this will create a new variable and assign the value of the message property to it.
+        console.log(message,price); // this will print the message of the object in the console.
+
+        const object5 = {
+            // message:message
+            message,
+            // method : function function1() {
+            //     console.log('this is a method inside an object.');
+            // }
+            method() {
+                console.log('this is a method inside an object.');
+            } // this is a method inside an object.
+        }
+        console.log(object5); // this will print the message of the object in the console.
+
+        console.log(object5.method); // this will print the method of the object in the console.
+        object5.method(); // this will call the method of the object and print the message in the console.
+
+
+
+        
+
+
+    </script>
+  </body>
+
+
+
+
+</html>
+

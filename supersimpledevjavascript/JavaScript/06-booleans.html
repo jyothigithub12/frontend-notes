@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Booleans</title>
+  </head>
+  <body>
+    <script>
+      // Booleans are a data type that can only be true or false
+      // They are often used in conditional statements to control the flow of a program
+      //purpose of booleans is to represent truth  or false values.
+
+      console.log(3 < 5); // true
+      console.log(3 > 5); // false
+      console.log(3 == 5); // false
+      console.log(3 != 5); // true
+      console.log(3 === 5); // false
+      console.log(typeof "true"); // string
+      console.log(typeof true); // boolean
+
+      //they are various comparison operators in JavaScript
+      // <, >, <=, >=, ==, !=, ===, !==, &&, ||, !
+      // < less than
+
+      console.log(5 == 5.0); // true
+      console.log(5 === "5.0"); // false
+      console.log("5" === "hi"); // false
+
+      //order of operations in JavaScript
+      // 1. Parentheses
+      // 2. Exponents
+      // 3. Multiplication and Division
+      // 4. Addition and Subtraction
+      // 5. Comparison operators
+
+      console.log(3 + 5 * 2); // 13
+      console.log((3 + 5) * 2); // 16
+      console.log(3 + 5 > 2 * 4); //false
+      console.log(3 + 5 < 2 * 4); //false
+      console.log(3 + 5 == 2 * 4); //true
+      console.log(3 + 5 != 2 * 4); //false
+      console.log(3 + 5 === 2 * 4); //true
+      console.log(3 + 5 !== 2 * 4); //false
+      console.log(3 + 5 > 2 * 4 && 3 + 5 < 2 * 4); //false
+
+      if (true) {
+        console.log("hello");
+      } else {
+        console.log("This is false");
+      }
+
+      const age = 15;
+
+      if (age >= 16) {
+        console.log("you can drive");
+        console.log("congrats!");
+      } else if (age >= 14) {
+        console.log("almost there!");
+        console.log("congrats!");
+      } else {
+        console.log("you cannot drive");
+      }
+
+      // syntax rules for if statements
+      // 1. if statement must be followed by a condition in parentheses.
+      // 2. if statement must be followed by a block of code in curly braces.
+      // 3. if statement must be followed by an else statement in curly braces.
+      //4. if inner branch has single line of code, curly braces are optional.
+      // 5. if inner branch has multiple lines of code, curly braces are required.
+      //6. if we have more than one condition, we can use else if statement.
+
+      //combining variables in if statements:
+      // 1. we can combine variables in if statements using logical operators.
+      // 2. logical operators are && (and), || (or), ! (not).
+
+      console.log(true && true); // true
+      console.log(true && false); // false
+      console.log(false && true); // false
+      console.log(false && false); // false
+
+      console.log(0.2 > 0 && 0.2 < 0.3); // true
+      console.log(0.2 > 0 && 0.2 > 0.3); // false
+
+      //order of operations for logical operators:
+      // 1. Parentheses
+      // 2. NOT (!)
+      // 3. AND (&&)
+
+      // 4. OR (||)
+      // 5. Comparison operators
+      // 6. Arithmetic operators
+
+      // 7. Assignment operators
+      // 8. Increment and Decrement operators
+      // 9. Ternary operator
+      // 10. Conditional operator
+
+      console.log(true || true); // true
+      console.log(true || false); // true
+      console.log(false || true); // true
+      console.log(false || false); // false
+
+      console.log(!true); // false
+      console.log(!false); // true
+
+      //truthy and falsy values in JavaScript:
+      // 1. Falsy values: false, 0, "", null, undefined, NaN
+
+      // 2. Truthy values: true, 1, "0", "false", [], {}, function() {}, new Date(), Infinity, -Infinity, -0, +0
+      // 3. Truthy values are values that evaluate to true in a boolean context.
+      // 4. Falsy values are values that evaluate to false in a boolean context.
+      // 5. Truthy values are values that are not falsy.
+      // 6. Falsy values are values that are not truthy.
+      // 7. Truthy values are values that are not equal to false.
+      // 8. Falsy values are values that are equal to false.
+
+      if (5) {
+        console.log("5 is truthy");
+      } else {
+        console.log("5 is falsy");
+      }
+
+      const cartQuantity = 5;
+
+      if (cartQuantity > 0) {
+        console.log("cart has items");
+      } else {
+        console.log("cart is empty");
+      }
+
+      console.log(!5); // false
+      console.log(!0); // true
+      console.log("text" / 5); // NaN
+      console.log(5 / 0); // Infinity
+      console.log(5 / -0); // -Infinity
+      console.log(5 / 0 === -5 / 0); // true
+
+      console.log(5 / 0 == -5 / 0); // true
+      let variables;
+      console.log(variables); // undefined
+      console.log(typeof variables); // undefined
+      console.log(typeof null); // object
+      console.log(typeof undefined); // undefined
+
+      console.log(typeof NaN); // number
+      console.log(typeof Infinity); // number
+      console.log(typeof -Infinity); // number
+      console.log(typeof -0); // number
+      console.log(typeof +0); // number
+      console.log(typeof 0); // number
+
+      //ternary operator in JavaScript:
+      // 1. Ternary operator is a shorthand for if-else statement.
+      // 2. Ternary operator is a conditional operator that takes three operands.
+      // 3. Ternary operator is used to evaluate a condition and return a value based on the result.
+
+      const result = true ? "truthy" : "falsy"; // 'truthy'
+      // short hand for if statement
+      if (true) {
+        ("truthy");
+      } else {
+        ("falsy");
+      }
+
+      console.log(result); // 'truthy'
+
+      const result1 = false ? "truthy" : "falsy"; // 'falsy'
+      //short hand for if statement
+      if (false) {
+        ("truthy");
+      } else {
+        ("falsy");
+      }
+      console.log(result1); // 'falsy'
+
+      //guard operator in JavaScript:
+      // 1. Guard operator is a shorthand for if statement.
+      // 2. Guard operator is a conditional operator that takes two operands.
+      // 3. Guard operator is used to evaluate a condition and return a value based on the result.
+      // 4. Guard operator is used to check if a value is truthy or falsy.
+      // 5. Guard operator is used to check if a value is null or undefined.
+
+      false && console.log("this will not be printed"); // false
+
+      // short hand for if statement
+      if (false) {
+        console.log("this will not be printed");
+      } else {
+        console.log("this will be printed");
+      }
+
+      true && console.log("this will be printed"); // true
+
+      const message2 = 5 && "hello world"; // 'hello world'
+      console.log(message2); // 'hello world'
+
+      //default operator in JavaScript:
+      // 1. Default operator is a shorthand for if statement.
+      // 2. checks is atleadt one of the values is truthy.
+
+      false || console.log("this will be printed"); // true
+
+      true || console.log("this will not be printed"); // false
+
+      const message = "hello world11";
+      const message1 = message || "hello world"; // 'hello world11'
+      // short hand for if statement
+        if (message) {
+            console.log(message);
+        } else {
+            console.log("hello world");
+        }
+
+        const currency = "undefined" || "EUR"; 
+        console.log(currency); // 'undefined'
+        // short hand for if statement  
+        if (currency) {
+            console.log(currency);
+        } else {
+            console.log("EUR");
+        }
+    </script>
+  </body>
+</html>
