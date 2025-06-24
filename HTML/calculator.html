@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+  <title>Calculator</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: #f0f0f0;
+    }
+    .calculator {
+      background: #333;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+      width: 320px;
+    }
+    .screen {
+      width: 100%;
+      height: 60px;
+      font-size: 2rem;
+      text-align: right;
+      padding: 0 10px;
+      margin-bottom: 15px;
+      border: none;
+      border-radius: 5px;
+      background: #222;
+      color: #fff;
+    }
+    .keys {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 10px;
+    }
+    .btn {
+      height: 60px;
+      font-size: 1.4rem;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background 0.2s;
+    }
+    .btn-grey { background: #e0e0e0; }
+    .btn-op { background: #ff9500; color: #fff; }
+    .btn-clear { background: #ff3b30; color: #fff; }
+    .btn-eq { background: #34c759; color: #fff; grid-column: span 2; }
+    .btn:hover { filter: brightness(0.9); }
+  </style>
+</head>
+<body>
+  <div class="calculator">
+    <input type="text" class="screen" id="screen" readonly value="0">
+    <div class="keys">
+      <button class="btn btn-clear">C</button>
+      <button class="btn btn-op" data-op="/">÷</button>
+      <button class="btn btn-op" data-op="*">×</button>
+      <button class="btn btn-op" data-op="-">−</button>
+      <button class="btn btn-grey" data-num="7">7</button>
+      <button class="btn btn-grey" data-num="8">8</button>
+      <button class="btn btn-grey" data-num="9">9</button>
+      <button class="btn btn-op" data-op="+">+</button>
+      <button class="btn btn-grey" data-num="4">4</button>
+      <button class="btn btn-grey" data-num="5">5</button>
+      <button class="btn btn-grey" data-num="6">6</button>
+      <button class="btn btn-grey" data-num="1">1</button>
+      <button class="btn btn-grey" data-num="2">2</button>
+      <button class="btn btn-grey" data-num="3">3</button>
+      <button class="btn btn-grey" data-num="0">0</button>
+      <button class="btn btn-grey" data-num=".">.</button>
+      <button class="btn btn-eq" id="equals">=</button>
+    </div>
+  </div>
+
+  <script>
+    const screen = document.getElementById('screen');
+    let current = ''; 
+
+    const updateScreen = () => {
+      screen.value = current === '' ? '0' : current; 
+    };
+
+    document.querySelectorAll('.btn-grey, .btn-op').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const v = btn.dataset.num || btn.dataset.op;
+        current += v;
+        updateScreen();
+      });
+    });
+
+    document.querySelector('.btn-clear').addEventListener('click', () => {
+      current = '';
+      updateScreen();
+    });
+
+    document.getElementById('equals').addEventListener('click', () => {
+      try {
+        current = eval(current).toString();
+      } catch {
+        current = 'Error';
+      }
+      updateScreen();
+    });
+
+    document.addEventListener('keydown', e => {
+      if (/[0-9+\-*/.]/.test(e.key)) {
+        current += e.key;
+      } else if (e.key === 'Enter') {
+        try { current = eval(current).toString(); }
+        catch { current = 'Error'; }
+      } else if (e.key === 'Backspace') {
+        current = current.slice(0, -1);
+      } else if (e.key.toLowerCase() === 'c') {
+        current = '';
+      }
+      updateScreen();
+    });
+
+    updateScreen();
+  </script>
+</body>
+</html>

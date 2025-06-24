@@ -1,0 +1,75 @@
+HTML
+> Hyper text markup language.
+> used to display content in the web page.
+> It consists of predefined markup tags which helps in displaying the content. 
+        (we cannot create our own tags we can use only predefined tags which helps in displaying the content).
+
+        Tag:
+
+            <tagname>content here...</tagname>
+
+            <tagname= starting Tagname
+
+            </tagname>=ending Tag
+
+            headers:displays headings in web page.
+            h1-h6
+              
+              syntax:
+
+              <h1>content here..</h1>
+              <h2>content here..</h2>
+              <h3>content here..</h3>
+              <h4>content here..</h4>
+              <h5>content here..</h5>
+              <h6>content here..</h6>
+
+file:
+
+    filename.html = each html file is called a web page.
+
+    <html>
+        <head>
+            including css ,javascript files
+            specifying title of webpage.
+        </head>
+        <body>
+            <h1>  </h1>
+        </body>
+    </html>
+
+ every browser pre configures html compiler internally, so we caan directly excute html files in any web browser.
+
+ paragraph tag:
+        used for displaying paragraphs in web page.
+
+        syntax:
+            <p>content here ..</p>
+
+ anchor tag: 
+        used to navigate from one webpage to another webpage.
+    
+        syntax:
+            <a href="html filename">content here...</a>
+            href="html filename"   it is called as attribute.
+
+attribute adds additional functionality to the tags.
+   href=hyper reference
+
+        <tagname attribute1=value1 attribute2=value2 attribute3=value3 attribute4=value4> </tagname>
+
+image:
+        syntax:
+            <imp src="filename" alt="content here like image not found" height ="100px" width="20px" />
+
+favicon:
+
+        syntax:
+            <link rel="ïcon" href="filename" />  # rel=relation
+
+
+
+#24th jan 2025
+
+
+

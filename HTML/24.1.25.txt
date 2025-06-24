@@ -1,0 +1,126 @@
+# to refresh the webpage everytime instead of doing this we can open html file with live server.
+#live server running on port number called 5500.
+CSS:
+>cascading sytle sheet:applies styles to the content displaying using html.
+>we use filename.css extension to save the css file.
+>css latest version of css3.
+>html latest version html5.
+>www:world wide web consist of three different technologies called html,css and javascript.
+>Cascading Style Sheets (CSS) is a style sheet language used for specifying the presentation and styling of a document written in a markup language such as HTML or XML (including XML dialects such as SVG, MathML or XHTML).
+>CSS is a cornerstone technology of the World Wide Web, alongside HTML and JavaScript.
+  
+  External style sheet:
+  syntax:
+   
+   filename.css
+
+        selector(tagName/id/class){
+            property:value;
+            property:value;
+            property:value;
+            property:value;
+            property:value;
+        
+        }
+
+    property:font-size,color,background-color,font-family , text align.
+
+    <head>
+        <link rel="stylesheet" href="filename.css"
+    </head>
+
+
+>designers use tools called figma,adobe and XD.
+
+
+>throught the website designing mostly we will use one or two diffrent font families.
+
+
+>next property in css:
+>text align: it align the content as we required.
+>right ,left, center are three different alignments.
+
+Tagname:points to all the references of a tag.
+
+class: points to group of elements.
+
+    syntax:
+
+        <tagName class="class1 class2 class3...classN"></tagName>
+
+how we write class in css
+    syntax:
+
+
+        .className{
+            property:value;
+            property:value;
+            property:value;
+            property:value;
+
+        }
+
+#class names are user defined and should be lower case followed by -(hypen) .ex:vs-code
+
+
+ID: points to a specific element.
+
+syntax:
+    <tagName id="idName"> </tagName>
+
+        #idName {
+            property:value;
+            property:value;
+            property:value;
+            property:value;
+
+        }
+
+
+>units of measurments in css:px(pixels) and rem stands for root em used for measuring font size.
+>rem=1rem=16px
+>like in font-size we can use font-size=20px or 2.5rem
+
+
+#HTML COLORCODE WEBSITE:
+
+>THEY ARE 3 DIFFERENT COMPANY FORMATS WHICH ARE USED FOR COLORCODE.
+
+1.HEX (HEXADECIMAL FORMAT)
+ #712f21 (measured is HEXADECIMAL.) this code is a combination of three different colors(red,green,blue)
+ #712f21  first 2 values indicated red 2nd two values indicates green and last two values indicate blue.
+>HEX code is given by designers.
+
+Hex codes:
+
+
+    Range:
+      #000000 - #FFFFFF
+            1st 2 values-red
+            2nd 2 values-green
+            3rd 2 values-blue
+
+
+2.RGB :(red,green,blue)
+
+    syntax:
+
+        rgb(0,0,0,) - rgb(255,255,255)
+ 
+
+
+3.HSL
+
+        h-hue-color (0-360) (0-120 red) (121-240 green) (241-360 blue) actually measured in degrees.
+        s-saturation-increases the intensity of color (0-100%)
+        l-lightness-decrease the intensity of color.(0-100%)
+        
+        syntax:
+                
+                hsl( hue,saturation,lightness)
+                       
+                        ex:11, 70%, 29% 
+
+
+
+
