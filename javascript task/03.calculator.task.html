@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+</head>
+<body>
+   <div>
+    <input type="number" placeholder="Enter first number" id="num1" > <br><br>
+    <input type="number"  placeholder="Enter second number" id="num2"> <br>
+   </div>
+    
+    <br>
+
+    <button type="button" onclick="add()">Addition</button>
+    <p id="add"></p>
+
+    <button type="button" onclick="sub()">Subtraction</button>
+    <p id="sub"></p>
+
+    <button type="button" onclick="multi()">Multiplication</button>
+    <p id="multi"></p>
+
+    <button type="button" onclick="div()">Division</button>
+    <p id="div"></p>
+
+    <script>
+        function getValues() {
+            var num1 = Number(document.getElementById('num1').value);
+            var num2 = Number(document.getElementById('num2').value);
+            return { num1, num2 };
+        }
+
+        function add() {
+            var values = getValues();
+            var sum = values.num1 + values.num2;
+            console.log('Sum of two numbers:', sum);
+            document.getElementById('add').innerHTML = 'Addition: ' + sum;
+        }
+
+        function sub() {
+            var values = getValues();
+            var difference = values.num1 - values.num2;
+            console.log('Subtraction of two numbers:', difference);
+            document.getElementById('sub').innerHTML = 'Subtraction: ' + difference;
+        }
+
+        function multi() {
+            var values = getValues();
+            var product = values.num1 * values.num2;
+            console.log('Multiplication of two numbers:', product);
+            document.getElementById('multi').innerHTML = 'Multiplication: ' + product;
+        }
+
+        function div() {
+            var values = getValues();
+            var quotient = values.num1 / values.num2;
+            console.log('Division of two numbers:', quotient);
+            document.getElementById('div').innerHTML = 'Division: ' + quotient;
+        }
+    </script>
+
+</body>
+</html>

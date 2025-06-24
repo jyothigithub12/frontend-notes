@@ -1,0 +1,210 @@
+
+<!-- Task: https://www.goibibo.com/flights/air-HYD-BOM-20250307--1-0-0-E-D? -->
+
+<!-- using template literalls generate flights data dynamically. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flight Card</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f8f9fa;
+            margin: 20px;
+        }
+        .flight-card {
+            display: flex;
+            align-items: center;
+            background: white;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            max-width: 900px;
+            margin: 20px auto;
+        }
+        .airline-logo img {
+            width: 50px;
+            border-radius: 50%;
+        }
+        .airline-info {
+            margin-left: 15px;
+        }
+        .airline-name {
+            font-weight: bold;
+        }
+        .flight-details {
+            display: flex;
+            flex-grow: 1;
+            justify-content: space-between;
+            margin-left: 30px;
+        }
+        .time {
+            text-align: center;
+            font-weight: bold;
+            font-size: 18px;
+        }
+        .duration {
+            text-align: center;
+            color: green;
+            font-size: 14px;
+            margin-top: 5px;
+        }
+        .price {
+            text-align: right;
+        }
+        .original-price {
+            text-decoration: line-through;
+            color: gray;
+            font-size: 14px;
+        }
+        .discounted-price {
+            font-size: 20px;
+            font-weight: bold;
+        }
+        .discount {
+            color: red;
+            font-size: 14px;
+        }
+        .view-fares {
+            background: #ff6600;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            margin-left: 15px;
+            cursor: pointer;
+        }
+        .offer {
+            background: #e6ffee;
+            padding: 10px;
+            text-align: center;
+            border-radius: 5px;
+            font-size: 14px;
+            margin-top: 10px;
+            max-width: 900px;
+            margin: auto;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="flight-container"></div>
+
+    <script>
+        var flightsData = [
+            {
+                airlineLogo: "https://wallpapers.com/images/hd/air-india-boeing-b747-337-aircraft-nw9d0nz66xa2y7df.jpg",
+                airlineName: "Air India",
+                flightNumber: "AI 2626",
+                departureTime: "08:20",
+                departureCity: "Hyderabad",
+                duration: "01h 55m",
+                stopType: "Non stop",
+                arrivalTime: "10:15",
+                arrivalCity: "Mumbai",
+                originalPrice: "₹4,556",
+                discountedPrice: "₹4,156",
+                discountAmount: "₹400 Instant Discount",
+                offerText: "✅ Get Rs.400 OFF on this booking with GISUPER"
+            },
+            {
+                airlineLogo: "https://wpassets.adda247.com/wp-content/uploads/multisite/sites/5/2022/04/29090759/323813-newproject86.jpg",
+                airlineName: "IndiGo",
+                flightNumber: "6E 205",
+                departureTime: "09:30",
+                departureCity: "Delhi",
+                duration: "02h 10m",
+                stopType: "Non stop",
+                arrivalTime: "11:40",
+                arrivalCity: "Bangalore",
+                originalPrice: "₹5,200",
+                discountedPrice: "₹4,700",
+                discountAmount: "₹500 Instant Discount",
+                offerText: "✅ Get Rs.500 OFF on this booking with INDIGO500"
+            },
+            {
+                airlineLogo: "https://static1.simpleflyingimages.com/wordpress/wp-content/uploads/2022/05/Vistara-Boeing-787-9-Dreamliner-N1008S.jpg",
+                airlineName: "Vistara",
+                flightNumber: "UK 890",
+                departureTime: "14:00",
+                departureCity: "Mumbai",
+                duration: "01h 45m",
+                stopType: "Non stop",
+                arrivalTime: "15:45",
+                arrivalCity: "Chennai",
+                originalPrice: "₹6,000",
+                discountedPrice: "₹5,500",
+                discountAmount: "₹500 Instant Discount",
+                offerText: "✅ Get Rs.500 OFF on this booking with VISTARA500"
+            },
+            {
+                airlineLogo: "https://s3.india.com/wp-content/uploads/2021/06/spicejet-sale-2021.jpg",
+                airlineName: "SpiceJet",
+                flightNumber: "SG 303",
+                departureTime: "18:45",
+                departureCity: "Kolkata",
+                duration: "02h 30m",
+                stopType: "Non stop",
+                arrivalTime: "21:15",
+                arrivalCity: "Delhi",
+                originalPrice: "₹4,800",
+                discountedPrice: "₹4,300",
+                discountAmount: "₹500 Instant Discount",
+                offerText: "✅ Get Rs.500 OFF on this booking with SPICE500"
+            }
+        ];
+
+        // Generate Flight Cards using for loop
+        var flightContainer = document.getElementById("flight-container");
+
+        for (var i = 0; i < flightsData.length; i++) {
+            var flight = flightsData[i];
+
+            var flightCardHTML = `
+                <div class="flight-card">
+                    <div class="airline-logo">
+                        <img src="${flight.airlineLogo}" alt="${flight.airlineName}">
+                    </div>
+                    <div class="airline-info">
+                        <div class="airline-name">${flight.airlineName}</div>
+                        <div class="flight-number">${flight.flightNumber}</div>
+                    </div>
+                    
+                    <div class="flight-details">
+                        <div class="time">
+                            ${flight.departureTime}
+                            <div class="city">${flight.departureCity}</div>
+                        </div>
+                        <div class="duration">
+                            ${flight.duration} <br>
+                            ${flight.stopType}
+                        </div>
+                        <div class="time">
+                            ${flight.arrivalTime}
+                            <div class="city">${flight.arrivalCity}</div>
+                        </div>
+                        <div class="price">
+                            <div class="original-price">${flight.originalPrice}</div>
+                            <div class="discounted-price">${flight.discountedPrice}</div>
+                            <div class="discount">${flight.discountAmount}</div>
+                        </div>
+                    </div>
+
+                    <button class="view-fares">VIEW FARES</button>
+                </div>
+
+                <div class="offer">
+                    ${flight.offerText}
+                </div>
+            `;
+
+            // Append each flight card
+            flightContainer.innerHTML += flightCardHTML;
+        }
+    </script>
+
+</body>
+</html>

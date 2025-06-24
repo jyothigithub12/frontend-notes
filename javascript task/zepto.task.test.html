@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grocery Filter</title>
+</head>
+<body>
+
+    <h2>Select a Category:</h2>
+    <select id="categorySelect" onchange="onChangeCategory(this.value)">
+        <option value="">--Select--</option>
+        <option value="Fruits">Fruits</option>
+        <option value="Vegetables">Vegetables</option>
+        <option value="Dairy">Dairy</option>
+        <option value="Meat">Meat</option>
+        <option value="Seafood">Seafood</option>
+        <option value="Grains">Grains</option>
+        <option value="Bakery">Bakery</option>
+        <option value="Condiments">Condiments</option>
+        <option value="Nuts">Nuts</option>
+    </select>
+
+    <h2>Filtered Groceries:</h2>
+    <ul id="filteredList"></ul>
+
+    <script>
+
+        const groceries = [
+            { name: "Apple", category: "Fruits", price: 2.5, imageUrl: "https://example.com/images/apple.jpg" },
+            { name: "Banana", category: "Fruits", price: 1.2, imageUrl: "https://example.com/images/banana.jpg" },
+            { name: "Carrot", category: "Vegetables", price: 1.0, imageUrl: "https://example.com/images/carrot.jpg" },
+            { name: "Broccoli", category: "Vegetables", price: 2.0, imageUrl: "https://example.com/images/broccoli.jpg" },
+            { name: "Milk", category: "Dairy", price: 3.5, imageUrl: "https://example.com/images/milk.jpg" },
+            { name: "Cheese", category: "Dairy", price: 5.0, imageUrl: "https://example.com/images/cheese.jpg" },
+            { name: "Chicken Breast", category: "Meat", price: 7.5, imageUrl: "https://example.com/images/chicken-breast.jpg" },
+            { name: "Salmon", category: "Seafood", price: 10.0, imageUrl: "https://example.com/images/salmon.jpg" },
+            { name: "Rice", category: "Grains", price: 3.0, imageUrl: "https://example.com/images/rice.jpg" },
+            { name: "Bread", category: "Bakery", price: 2.5, imageUrl: "https://example.com/images/bread.jpg" },
+            { name: "Eggs", category: "Dairy", price: 4.0, imageUrl: "https://example.com/images/eggs.jpg" },
+            { name: "Olive Oil", category: "Condiments", price: 8.0, imageUrl: "https://example.com/images/olive-oil.jpg" },
+            { name: "Almonds", category: "Nuts", price: 6.0, imageUrl: "https://example.com/images/almonds.jpg" }
+        ];
+
+        var filteredGroceries = [];
+
+        function onChangeCategory(selectedCategory) {
+            // Clear the previous filtered items
+            filteredGroceries = [];
+
+            // Loop through groceries and add matching items
+            for (let i = 0; i < groceries.length; i++) {
+                if (groceries[i].category === selectedCategory) {
+                    filteredGroceries.push(groceries[i]);
+                }
+            }
+
+            console.log("Filtered Groceries:", filteredGroceries);
+            displayFilteredGroceries();
+        }
+
+        function displayFilteredGroceries() {
+    // Get the <ul> element where we want to show the filtered groceries
+    const listContainer = document.getElementById("filteredList");
+
+    // Clear any previous grocery list before adding new items
+    listContainer.innerHTML = "";
+
+    // Loop through each filtered grocery item
+    for (let i = 0; i < filteredGroceries.length; i++) {
+        const item = filteredGroceries[i]; // Get the current grocery item
+
+        // Create a new <li> element for this item
+        const listItem = document.createElement("li");
+
+        // Set the text inside the <li> element (name and price)
+        listItem.textContent = `${item.name} - $${item.price}`;
+
+        // Add this new <li> to the list container
+        listContainer.appendChild(listItem);
+    }
+}
+
+    </script>
+</body>
+</html>

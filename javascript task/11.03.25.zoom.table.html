@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Table Form</title>
+    <style>
+       body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        table {
+            border-collapse: collapse;
+            margin-top: 50px;
+            background-color: whitesmoke;
+        }
+        h2 {
+           text-align: center;
+            font-size: 30px;
+            text-decoration: underline;
+            color: brown;
+        }
+       th,td {
+            border: 1px solid black;
+           padding: 10px;
+            text-align: left;
+        }
+        th{
+            background-color:aqua;
+            color: black;
+        }
+
+        #filters{
+            display: flex;
+            justify-content: center;
+            column-gap: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h2>Zoom Meeting Session List</h2>
+    <div id="filters">
+        <div>
+            <label > From</label>
+            <input type="date" id="from"/>
+        </div>
+        <div>
+            <label >To</label>
+            <input type="date" id="to"/>
+        </div>
+        <button onclick="searchMeetings()">Search</button>
+    </div>
+    <div>
+        <table>
+            <thead>
+                <tr>
+                    <th>id</th>
+                    <th>topic</th>
+                    <th>Meeting Id</th>
+                    <th>User Name</th>
+                    <th>User Email</th>
+                    <th>Creation Time</th>
+                    <th>Start Time</th>
+                    <th>End Time</th>
+                    <th>Duration Min</th>
+                    <th>Participant Min</th>
+                </tr>
+            </thead>
+            <tbody id="tbody">
+            </tbody>
+        </table>
+    </div>
+    <script>
+        var meetingsHistory = [
+            {
+                "id":"1",
+                "topic": "fs-basic-2505 7:00AM",
+                "meetingId": "864 9362 2875",
+                "userName": "Manideep",
+                "userEmail": "hr@digitaledify.ai",
+                "creationTime": "2025-03-08T12:00:00.000Z",
+                "startTime": "2025-03-09T07:05:02.000Z",
+                "endTime": "2025-03-0908:14:35.000Z",
+                "durationMinutes": 70,
+                "participantMinutes": 693
+            },
+            {
+                "id":"2",
+                "topic": "React -2501- 8 AM",
+                "meetingId": "816 6725 8060",
+                "userName": "Manideep",
+                "userEmail": "hr@digitaledify.ai",
+                "creationTime": "2025-03-01T08:12:14.000Z",
+                "startTime": "2025-03-1008:14:34.000Z",
+                "endTime": "2025-03-10T09:26:17.000Z",
+                "durationMinutes": 72,
+                "participantMinutes": 1744
+            },
+            {
+                "id":"3",
+                "topic": "NodeJS Advanced",
+                "meetingId": "123 4567 8901",
+                "userName": "John Doe",
+                "userEmail": "john@example.com",
+                "creationTime": "2025-03-05T10:15:30.000Z",
+                "startTime": "2025-03-10T10:30:00.000Z",
+                "endTime": "2025-03-10T11:45:00.000Z",
+                "durationMinutes": 75,
+                "participantMinutes": 1200
+            },
+            {
+                "id":"4",
+                "topic": "VueJS Fundamentals",
+                "meetingId": "234 5678 9012",
+                "userName": "Jane Smith",
+                "userEmail": "jane@example.com",
+                "creationTime": "2025-03-07T12:00:00.000Z",
+                "startTime": "2025-03-09T12:30:00.000Z",
+                "endTime": "2025-03-09T13:40:00.000Z",
+                "durationMinutes": 70,
+                "participantMinutes": 1050
+            },
+            {
+                "id":"5",
+                "topic": "Python for AI",
+                "meetingId": "345 6789 0123",
+                "userName": "Alice Brown",
+                "userEmail": "alice@example.com",
+                "creationTime": "2025-03-09T15:20:45.000Z",
+                "startTime": "2025-03-08 T16:00:00.000Z",
+                "endTime": "2025-03-08 T17:10:00.000Z",
+                "durationMinutes": 70,
+                "participantMinutes": 980
+            },
+        ];
+        
+        var filteredMeetings = JSON.parse(JSON.stringify(meetingsHistory)) ;
+        function displayMeetings(){
+            let meetingsHistoryDiv=document.getElementById('tbody'); //getting the reference of tbody tag.
+        var meetingsHistoryStr='';  //creating one empty string
+        for(var i=0; i<filteredMeetings.length; i++){
+            var creationTimeObj=new Date(filteredMeetings[i].creationTime);
+            var uiTimestamp=`${creationTimeObj.getHours() > 12 ? '0'+ (creationTimeObj.getHours() - 12) : creationTimeObj.getHours()}:${creationTimeObj.getMinutes()} ${creationTimeObj.getHours() > 12 ? 'PM' : 'AM'} on ${creationTimeObj.getDate()}/${creationTimeObj.getMonth() + 1}/${creationTimeObj.getFullYear()}`;
+             //here creation time we are modifying 
+             filteredMeetings[i].creationTime = uiTimestamp; //we are updating modified time.
+        meetingsHistoryStr+=`
+        <tr>
+            <td>${filteredMeetings[i].id}</td>
+            <td>${filteredMeetings[i].topic}</td>
+            <td>${filteredMeetings[i].meetingId}</td>
+            <td>${filteredMeetings[i].userName}</td>
+            <td>${filteredMeetings[i].userEmail}</td>
+            <td>${filteredMeetings[i].creationTime}</td>
+            <td>${filteredMeetings[i].startTime}</td>
+            <td>${filteredMeetings[i].endTime}</td>
+            <td>${filteredMeetings[i].durationMinutes}</td>
+            <td>${filteredMeetings[i].participantMinutes}</td>
+            </tr>
+        `
+        };
+        meetingsHistoryDiv.innerHTML=meetingsHistoryStr;
+        }
+
+        displayMeetings();
+
+        function searchMeetings(){
+
+            var from = document.getElementById('from').value; //getting the reference from. 
+            var to = document.getElementById('to').value; //getting the reference to.
+
+            // var fromObj = new Date(from); //creating/constructing new from object.
+            // var fromObj = new Date(to); //creating/constructing new to object.
+
+            filteredMeetings =[];
+
+            for ( var i=0; i<meetingsHistory.length; i++){
+
+                var startTimeObj = new Date(meetingsHistory[i].startTime);
+
+                var startDate = startTimeObj.getDate();
+                var startMonth = startTimeObj.getMonth();
+                var startYear = startTimeObj.getFullYear();
+
+                var fromDate = fromObj.getDate();
+                var fromMonth = fromObj.getMonth();
+                var fromYear = fromObj.getFullYear();
+
+                var toDate = toObj.getDate();
+                var toMonth = toObj.getMonth();
+                var toYear = toObj.getFullYear();
+
+
+                if (startDate >= fromDate && startDate <= toDate  && startMonth >= fromMonth && startMonth <= toMonth && startYear >= fromYear && startYear <= toYear ){
+
+                    filteredMeetings.push(meetingsHistory[i]);
+
+                }
+
+                
+            }
+
+            console.log('filteredMeefings');
+
+            displayMeetings();
+
+            
+        }
+    </script>
+</body>

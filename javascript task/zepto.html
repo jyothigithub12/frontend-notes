@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fresh Fruits and Vegetables</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+        }
+        .sidebar {
+            width: 250px;
+            padding: 20px;
+            background: #f4f4f4;
+        }
+        .sidebar button {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            margin: 5px 0;
+            border: none;
+            background: #ddd;
+            cursor: pointer;
+        }
+        .sidebar button:hover {
+            background: #bbb;
+        }
+        .container {
+            flex: 1;
+            padding: 20px;
+        }
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+        }
+        .item {
+            padding: 10px;
+            border: 1px solid #ddd;
+            text-align: center;
+            background: #fff;
+        }
+        .item img {
+            width: 100px;
+            height: 100px;
+            object-fit: cover;
+        }
+        .price {
+            color: red;
+            font-weight: bold;
+        }
+        .old-price {
+            text-decoration: line-through;
+            color: grey;
+        }
+    </style>
+</head>
+<body>
+    <div class="sidebar">
+        <button onclick="filterItems('all')">All</button>
+        <button onclick="filterItems('vegetables')">Fresh Vegetables</button>
+        <button onclick="filterItems('fruits')">Fresh Fruits</button>
+        <button onclick="filterItems('mangoes')">Flowers & Leaves</button>
+        <button onclick="filterItems('mangoes')">Mangoes & Melons</button>
+        <button onclick="filterItems('mangoes')">Leafy,Herbs& Seasoning</button>
+        <button onclick="filterItems('mangoes')">Exotics & Premium</button>
+        <button onclick="filterItems('mangoes')">Organics & Hydeoponics</button>
+        <button onclick="filterItems('mangoes')">Cuts & Sprouts</button>
+        <button onclick="filterItems('mangoes')">Plants & Gardening</button>
+        <button onclick="filterItems('mangoes')">Dried & Dehydrated</button>
+        <button onclick="filterItems('mangoes')">Fresh Juices</button>
+        <button onclick="filterItems('mangoes')">Fresh Salads &Juices</button>
+    </div>
+    
+    <div class="container">
+        <h2>Fresh Fruits and Vegetables</h2>
+        <div class="grid" id="productGrid">
+            <div class="item vegetables">
+                <img src="capsicum.jpg" alt="Capsicum Green">
+                <p>Capsicum Green</p>
+                <p class="price">₹21 <span class="old-price">₹84</span></p>
+            </div>
+            <div class="item vegetables">
+                <img src="carrot.jpg" alt="Carrot Local">
+                <p>Carrot Local</p>
+                <p class="price">₹29 <span class="old-price">₹67</span></p>
+            </div>
+            <div class="item vegetables">
+                <img src="ladyfinger.jpg" alt="Lady Finger">
+                <p>Lady Finger</p>
+                <p class="price">₹29 <span class="old-price">₹41</span></p>
+            </div>
+            <div class="item mangoes">
+                <img src="mango_banganapalli.jpg" alt="Mango Banganapalli">
+                <p>Mango Banganapalli</p>
+                <p class="price">₹213 <span class="old-price">₹380</span></p>
+            </div>
+            <div class="item mangoes">
+                <img src="mango_sindhura.jpg" alt="Mango Sindhura">
+                <p>Mango Sindhura</p>
+                <p class="price">₹220 <span class="old-price">₹342</span></p>
+            </div>
+            <div class="item fruits">
+                <img src="apple.jpg" alt="Apple Red Delicious">
+                <p>Apple Red Delicious</p>
+                <p class="price">₹182 <span class="old-price">₹335</span></p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function filterItems(category) {
+            let items = document.querySelectorAll('.item');
+            items.forEach(item => {
+                if (category === 'all' || item.classList.contains(category)) {
+                    item.style.display = 'block';
+                } else {
+                    item.style.display = 'none';
+                }
+            });
+        }
+    </script>
+</body>
+</html>

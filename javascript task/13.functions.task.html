@@ -1,0 +1,202 @@
+<!-- Task: chatgpt prompt: list done different functionalities of employee object js.
+
+    Create a object with employee:
+
+        name
+        salary - 1000
+        designation
+        isActive  - true or false
+        technologies Known - ['HTML', 'CSS', 'Javascript]
+
+
+             write different functionalities  for 
+            1. incrementSalary (10%) then it should be increment to 1100.
+            2. getActiveStatus - Active / Inactive
+            3. getTechnologiesKnow:  output should be print like list index. it should be dynamic using anonymous function.
+                    1. HTML
+                    2. CSS
+                    3. Javascript -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee Data</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .employee {
+            border: 1px solid #ccc;
+            padding: 10px;
+            margin: 10px;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div id="employees"></div>
+
+    <script>
+        const employees = [
+            {
+                name: "JYOTHI",
+                salary: 1000,
+                designation: "Software Developer",
+                isActive: true,
+                technologiesKnown: ["HTML", "CSS", "JavaScript"],
+                incrementSalary: function() {
+                    this.salary += this.salary * 0.1;
+                },
+                getActiveStatus: function() {
+                    return this.isActive ? "Active" : "Inactive";
+                },
+                getTechnologiesKnown: function() {
+                    return this.technologiesKnown.map((tech, index) => `${index + 1}. ${tech}`).join('<br>');
+                }
+            },
+            {
+                name: "SONU",
+                salary: 1200,
+                designation: "Frontend Developer",
+                isActive: false,
+                technologiesKnown: ["React", "CSS", "JavaScript"],
+                incrementSalary: function() {
+                    this.salary += this.salary * 0.1;
+                },
+                getActiveStatus: function() {
+                    return this.isActive ? "Active" : "Inactive";
+                },
+                getTechnologiesKnown: function() {
+                    return this.technologiesKnown.map((tech, index) => `${index + 1}. ${tech}`).join('<br>');
+                }
+            },
+            {
+                name: "MANOJ",
+                salary: 1500,
+                designation: "Backend Developer",
+                isActive: true,
+                technologiesKnown: ["Node.js", "Express", "MongoDB"],
+                incrementSalary: function() {
+                    this.salary += this.salary * 0.1;
+                },
+                getActiveStatus: function() {
+                    return this.isActive ? "Active" : "Inactive";
+                },
+                getTechnologiesKnown: function() {
+                    return this.technologiesKnown.map((tech, index) => `${index + 1}. ${tech}`).join('<br>');
+                }
+            }
+        ];
+
+        function displayEmployees() {
+            const container = document.getElementById("employees");
+            employees.forEach(emp => {
+                const div = document.createElement("div");
+                div.classList.add("employee");
+                div.innerHTML = `<strong>Name:</strong> ${emp.name} <br>
+                                 <strong>Salary:</strong> $${emp.salary} <br>
+                                 <strong>Designation:</strong> ${emp.designation} <br>
+                                 <strong>Status:</strong> ${emp.getActiveStatus()} <br>
+                                 <strong>Technologies:</strong> <br> ${emp.getTechnologiesKnown()}`;
+                container.appendChild(div);
+            });
+        }
+
+        displayEmployees();
+    </script>
+</body>
+</html>
+
+
+
+
+<!-- The <div id="employees"> acts as a container where employee details will be dynamically inserted using JavaScript. -->
+
+    <!-- const employees = [
+This initializes an array named employees, containing multiple employee objects. -->
+
+
+<!-- name: Stores the employee's name.
+
+salary: Stores the base salary.
+
+designation: Stores the job title.
+
+isActive: Boolean indicating if the employee is currently working.
+
+technologiesKnown: An array of technologies the employee knows. -->
+
+
+<!-- incrementSalary: function() {
+    this.salary += this.salary * 0.1;
+},
+Increases the employee's salary by 10%.
+
+Example: If salary = 1000, it updates it to 1100. -->
+
+
+<!-- getActiveStatus: function() {
+    return this.isActive ? "Active" : "Inactive";
+},
+Returns "Active" if isActive is true, otherwise returns "Inactive". -->
+
+
+<!-- getTechnologiesKnown: function() {
+    return this.technologiesKnown.map((tech, index) => `${index + 1}. ${tech}`).join('<br>');
+}
+Maps the technologiesKnown array to a formatted list. -->
+
+
+
+
+<!-- function displayEmployees() {
+    const container = document.getElementById("employees");
+Finds the <div> where employee details should be displayed. -->
+
+
+    <!-- employees.forEach(emp => {
+        const div = document.createElement("div");
+        div.classList.add("employee");
+Loops through each employee in the employees array.
+
+Creates a new <div> for each employee and assigns it the .employee class. -->
+
+
+    <!-- div.innerHTML = `<strong>Name:</strong> ${emp.name} <br>
+                         <strong>Salary:</strong> $${emp.salary} <br>
+                         <strong>Designation:</strong> ${emp.designation} <br>
+                         <strong>Status:</strong> ${emp.getActiveStatus()} <br>
+                         <strong>Technologies:</strong> <br> ${emp.getTechnologiesKnown()}`;
+Populates the <div> with employee details dynamically.
+
+Calls the getActiveStatus() and getTechnologiesKnown() methods. -->
+
+<!-- 
+container.appendChild(div);
+    });
+}
+Appends each employee's <div> to the #employees container. -->
+
+
+<!-- 
+    displayEmployees();
+Executes displayEmployees(), displaying all employees on page load. -->
+
+
+
+
+<!-- Summary
+HTML: Provides a structure with a container <div> to display employees.
+
+CSS: Adds simple styling for better readability.
+
+JavaScript:
+
+Defines an employees array with objects.
+
+Implements methods for salary increment, active status, and listing technologies.
+
+Dynamically generates and displays employee data. -->

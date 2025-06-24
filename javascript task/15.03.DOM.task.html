@@ -1,0 +1,93 @@
+
+<!-- Task: Create array of employees list and display those employees in tabular form using create element and append child. -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee Table</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            padding: 20px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            background: #fff;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        thead {
+            background-color: #007bff;
+            color: white;
+            text-align: left;
+        }
+
+        th,
+        td {
+            padding: 12px;
+            border-bottom: 1px solid #ddd;
+        }
+
+        tbody tr:hover {
+            background-color: #f1f1f1;
+        }
+
+        th {
+            text-transform: uppercase;
+        }
+    </style>
+</head>
+
+<body>
+    <table>
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Name</th>
+                <th>Position</th>
+                <th>Salary</th>
+            </tr>
+        </thead>
+        <tbody id="employees-Tbody">
+        </tbody>
+    </table>
+
+    <script>
+        const employees = [
+            { Id: 1, Name: "Jyothi", Position: "Manager", Salary: "50000" },
+            { Id: 2, Name: "Sandhya", Position: "Developer", Salary: "40000" },
+            { Id: 3, Name: "Virendhar", Position: "Designer", Salary: "50000" },
+            { Id: 4, Name: "Uma", Position: "HR", Salary: "30000" }
+        ];
+
+        function employeesDetails() {
+            const employeesTbody = document.getElementById('employees-Tbody');
+
+            for (let i = 0; i < employees.length; i++) {
+                const tr = document.createElement('tr');
+                const employee = employees[i];
+
+                for (let key in employee) {
+                    const td = document.createElement('td');
+                    td.innerHTML = employee[key];
+                    tr.appendChild(td);
+                }
+
+                employeesTbody.appendChild(tr);
+            } // <-- This was the misplaced closing bracket
+        }
+
+        employeesDetails();
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,48 @@
+
+<!--     task: add eye icon for signup page. -->
+
+
+
+<div class="form-container sign-up-container">
+    <form action="#">
+        <h1>Create Account</h1>
+        <div class="social-container">
+            <a href="#" class="social"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" class="social"><i class="fab fa-google-plus-g"></i></a>
+            <a href="#" class="social"><i class="fab fa-linkedin-in"></i></a>
+        </div>
+        <span>or use your email for registration</span>
+        <input type="text" placeholder="Name" />
+        <input type="email" placeholder="Email" />
+        <div style="position: relative; width:100%;">
+            <input type="password" placeholder="Password" id="signup-password" />
+            <i class="fa-solid fa-eye" id="signup-password-icon" style="position:absolute; right:10px; top:22px; cursor: pointer;" onclick="toggleSignupPasswordIcon()"></i>
+        </div>
+        <button onclick="signupUser()">Sign Up</button>
+    </form>
+</div>
+
+<script>
+    var isSignupPasswordVisible = false;
+
+    function toggleSignupPasswordIcon(){
+        isSignupPasswordVisible ? showSignupPassword() : hideSignupPassword();
+        isSignupPasswordVisible = !isSignupPasswordVisible;
+    }
+
+    function showSignupPassword(){
+        var passwordIcon = document.getElementById('signup-password-icon');
+        var passwordInput = document.getElementById('signup-password');
+        passwordInput.type = 'text';
+        passwordIcon.classList.add('fa-eye');
+        passwordIcon.classList.remove('fa-eye-slash');
+    }
+
+    function hideSignupPassword(){
+        var passwordIcon = document.getElementById('signup-password-icon');
+        var passwordInput = document.getElementById('signup-password');
+        passwordInput.type = 'password';
+        passwordIcon.classList.remove('fa-eye');
+        passwordIcon.classList.add('fa-eye-slash');
+    }
+</script>

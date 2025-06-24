@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div onclick="onChangeCategory()">
+
+    </div>
+
+    <script>
+
+const groceries = [
+    {
+        name: "Apple",
+        category: "Fruits",
+        price: 2.5,
+        imageUrl: "https://example.com/images/apple.jpg"
+    },
+    {
+        name: "Banana",
+        category: "Fruits",
+        price: 1.2,
+        imageUrl: "https://example.com/images/banana.jpg"
+    },
+    {
+        name: "Carrot",
+        category: "Vegetables",
+        price: 1.0,
+        imageUrl: "https://example.com/images/carrot.jpg"
+    },
+    {
+        name: "Broccoli",
+        category: "Vegetables",
+        price: 2.0,
+        imageUrl: "https://example.com/images/broccoli.jpg"
+    },
+    {
+        name: "Milk",
+        category: "Dairy",
+        price: 3.5,
+        imageUrl: "https://example.com/images/milk.jpg"
+    },
+    {
+        name: "Cheese",
+        category: "Dairy",
+        price: 5.0,
+        imageUrl: "https://example.com/images/cheese.jpg"
+    },
+    {
+        name: "Chicken Breast",
+        category: "Meat",
+        price: 7.5,
+        imageUrl: "https://example.com/images/chicken-breast.jpg"
+    },
+    {
+        name: "Salmon",
+        category: "Seafood",
+        price: 10.0,
+        imageUrl: "https://example.com/images/salmon.jpg"
+    },
+    {
+        name: "Rice",
+        category: "Grains",
+        price: 3.0,
+        imageUrl: "https://example.com/images/rice.jpg"
+    },
+    {
+        name: "Bread",
+        category: "Bakery",
+        price: 2.5,
+        imageUrl: "https://example.com/images/bread.jpg"
+    },
+    {
+        name: "Eggs",
+        category: "Dairy",
+        price: 4.0,
+        imageUrl: "https://example.com/images/eggs.jpg"
+    },
+    {
+        name: "Olive Oil",
+        category: "Condiments",
+        price: 8.0,
+        imageUrl: "https://example.com/images/olive-oil.jpg"
+    },
+    {
+        name: "Almonds",
+        category: "Nuts",
+        price: 6.0,
+        imageUrl: "https://example.com/images/almonds.jpg"
+    }
+];
+
+var filteredGroceries = [];
+
+function onChangeCategory(selectedCategory){
+
+    for( let i=0;i<groceries.length;i++){
+        if(groceries[i].category ===selectedCategory){
+            filteredGroceries.push(groceries[i]);
+        }
+    }
+}
+
+
+console.log(groceries);
+console.log(filteredGroceries);
+
+
+    </script>
+</body>
+</html>
+
+

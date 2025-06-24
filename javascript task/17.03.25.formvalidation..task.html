@@ -1,0 +1,181 @@
+
+task: try to generate more regular expression using chatgpt and try to understand it more with explanation.
+
+
+1. Matching an Email Address
+Regex:
+
+
+^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$
+
+Explanation:
+^ → Start of the string.
+
+[a-zA-Z0-9._%+-]+ → Matches the local part (before @).
+
+@ → The @ symbol (literal match).
+
+[a-zA-Z0-9.-]+ → Matches the domain name.
+
+\. → Matches a dot (. needs escaping).
+
+[a-zA-Z]{2,} → Matches the domain extension (like com, org, net).
+
+$ → End of the string.
+
+✅ Example Matches:
+john.doe@example.com
+hello123@test.net
+
+❌ Non-Matches:
+john.doe@example..com (Double dots are not allowed)
+hello@.com (Domain name missing)
+
+
+2. Indian Mobile Number (10 Digits)
+Regex:
+regex
+Copy
+Edit
+^[6789]\d{9}$
+Explanation:
+^ → Start of the string.
+
+[6789] → First digit must be 6, 7, 8, or 9.
+
+\d{9} → Matches exactly 9 more digits.
+
+$ → End of the string.
+
+3. Matching a Phone Number (US format)
+Regex:
+
+^\(\d{3}\) \d{3}-\d{4}$
+
+Explanation:
+^ → Start of the string.
+
+\( → Matches an opening parenthesis (.
+
+\d{3} → Matches exactly 3 digits (area code).
+
+\) → Matches a closing parenthesis ) and a space.
+
+\d{3}-\d{4} → Matches a 3-digit prefix, a hyphen, and a 4-digit suffix.
+
+$ → End of the string.
+
+✅ Example Matches:
+(123) 456-7890
+
+❌ Non-Matches:
+123-456-7890 (Missing parentheses)
+(12) 345-6789 (Area code must be 3 digits)
+
+4. Matching a Strong Password
+Regex:
+
+^(?=.*[A-Z])(?=.*[a-z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$
+
+Explanation:
+
+^ → Start of the string.
+
+(?=.*[A-Z]) → At least one uppercase letter.
+
+(?=.*[a-z]) → At least one lowercase letter.
+
+(?=.*\d) → At least one digit.
+
+(?=.*[@$!%*?&]) → At least one special character from @$!%*?&.
+
+[A-Za-z\d@$!%*?&]{8,} → Matches a string of at least 8 characters with allowed characters.
+
+$ → End of the string.
+
+✅ Example Matches:
+Secure@123
+HelloWorld1!
+
+❌ Non-Matches:
+password123 (No special character, no uppercase)
+Pass@ (Too short)
+
+5. Extracting Dates (YYYY-MM-DD)
+Regex:
+
+\b\d{4}-\d{2}-\d{2}\b
+Explanation:
+\b → Word boundary (ensures we match a full date).
+
+\d{4} → Matches exactly 4 digits (year).
+
+- → Matches a literal dash.
+
+\d{2} → Matches exactly 2 digits (month).
+
+- → Matches another dash.
+
+\d{2} → Matches exactly 2 digits (day).
+
+\b → Word boundary.
+
+✅ Example Matches:
+2024-06-15
+1999-12-31
+
+❌ Non-Matches:
+2024-6-15 (Month/day must have 2 digits)
+99-12-31 (Year must have 4 digits)
+
+6. Extracting Hashtags from Text
+Regex:
+
+#\w+
+
+Explanation:
+
+# → Matches the hash symbol.
+
+\w+ → Matches one or more word characters (letters, numbers, underscore).
+
+✅ Example Matches:
+#HelloWorld
+#regex_is_fun
+
+❌ Non-Matches:
+HelloWorld (No # present)
+# (No word characters after #)
+
+7. Finding URLs in Text
+
+
+Regex:
+
+
+https?:\/\/(www\.)?[a-zA-Z0-9-]+(\.[a-zA-Z]{2,})+(/[^\s]*)?
+
+Explanation:
+
+https? → Matches http or https.
+
+:\/\/ → Matches :// literally.
+
+(www\.)? → Optionally matches www..
+
+[a-zA-Z0-9-]+ → Matches domain name.
+
+(\.[a-zA-Z]{2,})+ → Matches .com, .net, .org, etc.
+
+(/[^\s]*)? → Optionally matches a path after the domain.
+
+
+
+
+✅ Example Matches:
+https://example.com
+http://www.test.org/about
+
+❌ Non-Matches:
+www.example.com (Missing http://)
+https:/example.com (Incorrect slash count)
