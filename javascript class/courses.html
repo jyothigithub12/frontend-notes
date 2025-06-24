@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* General Styles */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 20px;
+        }
+
+        /* Container */
+        .container {
+            max-width: 1200px;
+            margin: auto;
+        }
+
+        h2 {
+            text-align: left;
+            margin-bottom: 20px;
+        }
+
+        /* Course Grid */
+        .course-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+
+        /* Course Card */
+        .course-card {
+            background-color: #fff;
+            border-radius: 10px;
+            padding: 15px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: left;
+        }
+
+        .course-card img {
+            width: 100%;
+            border-radius: 8px;
+        }
+
+        h3 {
+            font-size: 16px;
+            margin-top: 10px;
+        }
+
+        .instructor {
+            color: gray;
+            font-size: 14px;
+            margin: 5px 0;
+        }
+
+        .rating {
+            font-size: 14px;
+            color: #ff9800;
+        }
+
+        .rating span {
+            color: gray;
+            font-size: 12px;
+        }
+
+        /* Price Styling */
+        .price {
+            margin-top: 10px;
+            font-size: 18px;
+        }
+
+        .discounted {
+            color: green;
+            font-weight: bold;
+        }
+
+        .original {
+            color: gray;
+            text-decoration: line-through;
+            margin-left: 8px;
+        }
+
+        /* Tags */
+        .tags {
+            margin-top: 10px;
+        }
+
+        .premium {
+            background-color: #7e57c2;
+            color: white;
+            padding: 3px 8px;
+            font-size: 12px;
+            border-radius: 5px;
+        }
+
+        .bestseller {
+            background-color: #2e7d32;
+            color: white;
+            padding: 3px 8px;
+            font-size: 12px;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <h2>Featured Courses</h2>
+        <div class="course-grid" id="courses">
+        </div>
+    </div>
+    <script>
+
+        const httpRequest = new XMLHttpRequest();
+
+        httpRequest.onreadystatechange = function () {
+            if (httpRequest.readyState === 4) {
+                const parsedResponse = JSON.parse(httpRequest.responseText);
+                const courses = JSON.parse(httpRequest.responseText);
+
+                let str = '';
+
+                for (let i = 0; i < courses.length; i++) {
+                    str += `
+        <div class="course-card">
+            <img src="${courses[i].imageUrl}" alt="Course Image">
+            <h3>\${courses[i].title}</h3>
+            <p class="instructor">\${courses[i].instructor}</p>
+            <p class="rating">⭐ \${courses[i].rating} <span>(\${courses[i].reviews} reviews)</span></p>
+            <p class="price">
+                <span class="discounted">₹\${courses[i].discountedPrice}</span> 
+                <span class="original">₹\${courses[i].originalPrice}</span>
+            </p>
+            <div class="tags">
+                <span class="premium">\${courses[i].premium ? 'Premium' : ''}</span>
+                <span class="bestseller">\${courses[i].bestseller ? 'Bestseller' : ''}</span>
+            </div>
+        </div>
+    `;
+                }
+
+                document.getElementById('courses').innerHTML = str;
+
+            }
+        }
+
+        httpRequest.open('GET', 'http://localhost:4000/courses');
+
+        httpRequest.send();
+
+
+
+    </script>
+</body>
+
+</html>

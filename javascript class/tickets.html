@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Support Ticket Table</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .container {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            width: 80%;
+            max-width: 900px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 10px;
+            text-align: left;
+        }
+        th {
+            background-color: #28a745;
+            color: white;
+        }
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+        .delete-icon{
+            color:red;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Support Tickets</h2>
+
+        <div id="add-ticket">
+
+            <a href="./24.03.add.ticket.html">Add Ticket</a>
+            
+        </div>
+        <table>
+            <thead>
+                <tr>
+                    <th>Id</th>
+                    <th>Customer Name</th>
+                    <th>Subject</th>
+                    <th>Description</th>
+                    <th>Priority</th>
+                    <th>Status</th>
+                    <th>Category</th>
+                    <th>Created At</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody id="support-tickets">
+            </tbody>
+        </table>
+    </div>
+
+
+    <script>
+
+        async function fetchTickets(){
+
+            try{
+
+                const response = await fetch('http://localhost:4000/tickets', {method:'GET'}); //doing api call here no need of passing content type and body ince we are not passing any request  from frontend to backend.
+                const tickets = await response.json(); //here we are converting the data from string format to array of objects.
+
+                const supportTicketTbody = document.getElementById('support-tickets'); // getting the reference and displaying the data in the ui.
+                console.log(tickets)
+
+                let str = '';
+
+                for ( let i = 0; i < tickets.length; i++){
+                    console.log(tickets[i])
+                    str += ` <tr>
+                    <td>${tickets[i].id}</td>
+                    <td>${tickets[i].customerName}</td>
+                    <td>${tickets[i].subject}</td>
+                    <td>${tickets[i].description}</td>
+                    <td>${tickets[i].priority}</td>
+                    <td>${tickets[i].status}</td>
+                    <td>${tickets[i].category}</td>
+                    <td>${tickets[i].createdAt}</td>
+                    <td><i class="fa-solid fa-trash delete-icon" onclick="deleteTicket('${tickets[i].id}')"></i></td>
+
+                </tr>
+                `;
+                supportTicketTbody.innerHTML = str;
+                }
+
+                // supportTicketTbody.innerHTML = str;
+
+            }catch(error){
+                console.log(error) //to display the errror in the console.
+
+            }
+
+        }
+
+        fetchTickets();
+
+        async function deleteTicket(id){
+            try{
+                const response = await fetch('http://localhost:4000/tickets/' + id, {method:'DELETE'}); 
+                window.alert('Deleted ticket successfully');//here once the ticket is deleted function need to called once again to refresh the page.
+                fetchTickets();
+
+            }catch(error){
+                console.log(error);
+            }
+
+        }
+
+    </script>
+</body>
+</html>

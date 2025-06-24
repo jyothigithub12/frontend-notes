@@ -1,0 +1,238 @@
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="creation"></h1>
+    <h2 id="header"></h2>
+    <script>
+
+       document.getElementById('creation').innerHTML='Creation at Netscape';
+       document.getElementById('header').innerHTML='Promote Your products by Colorlib';
+
+       console.log('Promote Your products by Colorlib');
+
+    //    window.alert('output parameter');
+
+    var email='jyothi@gmail.com';   // String
+
+    var employeeName='Jyothi N'; //String
+
+    var salary =9090; //Number
+
+    var isLoggedIn =true; //Boolean
+
+    console.log(isLoggedIn);
+
+    console.log(email);
+
+    console.log(employeeName);
+
+    console.log(salary);
+
+    document.getElementById('header').innerHTML=email;    //document is a predefined object.
+
+    salary=45000;
+
+    console.log(typeof salary);
+    console.log(typeof email);
+    console.log(typeof employeeName);
+    console.log(typeof isLoggedIn);
+
+    var age;  // we havenot defined value to that varaiable.
+
+    console.log(age); // by default it is undefined.
+    
+
+    var meetings=['react-2507','fs-basics-2504','python-2508','java-2508',];
+
+    console.log(meetings);
+
+    console.log(meetings[3]);
+
+    meetings[2]='node-2403' //reassigning the value.
+
+    console.log(meetings);
+
+
+    var washingMachine=['Whirlpool 8 Kg 5 Star Stainwash Royal Plus Fully Automatic Top Load Washing Machine (SW ROYAL PLUS H 8 KG GREY 10YMW with In-Built Heater)', 18000, 20000,];
+      
+    var washingMachine = {
+        name:'Lg 7kg 5 start smart washingmachine',
+        mrp:27490,
+        discount:35,
+        imageurl:'https://m.media-amazon.com/images/I/61QjBtPiQrL._SX679_.jpg',
+        instock:true,
+        averageRating:4.2,
+        ratings: [
+                {
+                    rating: 5,
+                    percentage: 57
+                },
+                {
+                    rating: 4,
+                    percentage: 26
+                },
+                {
+                    rating: 3,
+                    percentage: 7
+                },
+                {
+                    rating: 2,
+                    percentage: 2
+                },
+                {
+                    rating: 1,
+                    percentage: 8
+                }
+            ]   //array of objects.
+    };   //we will not write the actual price of product we will write logic to calculate using javascript based on discount percentage.
+
+    console.log(washingMachine.name);
+
+    
+    console.log(washingMachine.mrp);
+    
+    console.log(washingMachine.discount);
+
+
+    var washingMachines = [
+            {
+                name: 'LG 7 Kg 5 Star Smart Inverter Technology Fully Automatic Top Load Washing Machine',
+                mrp: 27490,
+                discount: 35,
+                imageUrl: 'https://m.media-amazon.com/images/I/71BZCfuDANL._AC_UY218_.jpg',
+                inStock: true,
+                averageRating: 4.2,
+                ratings: [
+                    {
+                        rating: 5,
+                        percentage: 5007
+                    },
+                    {
+                        rating: 4,
+                        percentage: 26
+                    },
+                    {
+                        rating: 3,
+                        percentage: 7
+                    },
+                    {
+                        rating: 2,
+                        percentage: 2
+                    },
+                    {
+                        rating: 1,
+                        percentage: 8
+                    }
+                ]
+            },
+            {
+                name: 'kenStar Smart Inverter Technology Fully Automatic Top Load Washing Machine',
+                mrp: 27490,
+                discount: 35,
+                imageUrl: 'https://m.media-amazon.com/images/I/71BZCfuDANL._AC_UY218_.jpg',
+                inStock: true,
+                averageRating: 4.2,
+                ratings: [
+                    {
+                        rating: 5,
+                        percentage: 578
+                    },
+                    {
+                        rating: 4,
+                        percentage: 26
+                    },
+                    {
+                        rating: 3,
+                        percentage: 7
+                    },
+                    {
+                        rating: 2,
+                        percentage: 2
+                    },
+                    {
+                        rating: 1,
+                        percentage: 8
+                    }
+                ]
+            },
+            {
+                name: 'whirlpool5 Star Smart Inverter Technology Fully Automatic Top Load Washing Machine',
+                mrp: 27490,
+                discount: 35,
+                imageUrl: 'https://m.media-amazon.com/images/I/71BZCfuDANL._AC_UY218_.jpg',
+                inStock: true,
+                averageRating: 4.2,
+                ratings: [
+                    {
+                        rating: 5,
+                        percentage: 517
+                    },
+                    {
+                        rating: 4,
+                        percentage: 26
+                    },
+                    {
+                        rating: 3,
+                        percentage: 7
+                    },
+                    {
+                        rating: 2,
+                        percentage: 2
+                    },
+                    {
+                        rating: 1,
+                        percentage: 8
+                    }
+                ]
+            }
+        ];
+
+        console.log(washingMachines[0].ratings[0].percentage);  //for accessing array use index value and . (dot operator) to access the value from object.
+
+     // phonepay transctions is also a array of objects.
+        var transactions = [
+            {
+                merchantName: 'X',
+                amount: 76,
+                debitedFrom: 'UPI',
+                createdAt: '24-02-2025',
+                
+            },
+            {
+                merchantName: 'Y',
+                amount: 400,
+                debitedFrom: 'UPI',
+                createdAt: '24-02-2025',
+                
+            },
+            {
+                merchantName: 'Z',
+                amount: 100,
+                debitedFrom: 'UPI',
+                createdAt: '26-02-2025',
+                
+            },
+            {
+                merchantName: 'A',
+                amount: 250,
+                debitedFrom: 'UPI',
+                createdAt: '25-02-2025',
+                
+            },
+        ]  
+
+
+        console.log(transactions[1].merchantName);   
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+
+        const currentDate = new Date();
+
+        const getCurrentDate = function () {
+
+            return `${currentDate.getDate()}/${currentDate.getMonth() + 1}/${currentDate.getFullYear()}`;
+        }
+
+        console.log(getCurrentDate());
+
+        const userInfo = {
+            firstname: 'Jayanth',
+            lastname: 'K',
+            gender: 'Male',
+            getUsername: function () {
+                if (userInfo.gender === 'Male') {
+                    return `Mr. ${userInfo.firstname} ${userInfo.lastname}`;
+                } else {
+                    return `Mrs. ${userInfo.firstname} ${userInfo.lastname}`;
+
+                }
+            }
+        };  // we can store string ,functions,arrays,numbers,booleans all data types in object.
+
+        console.log(userInfo.getUsername());
+
+        var getUser = function () {
+            if (userInfo.gender === 'Male') {
+                return `Mr. ${userInfo.firstname} ${userInfo.lastname}`;
+            } else {
+                return `Mrs. ${userInfo.firstname} ${userInfo.lastname}`;
+
+            }
+        }
+
+        console.log(getUser); // it written the function defination in the console.
+
+        console.log(window); // what all variables and function which are created in the script tag will be stored in window object directly.
+
+        console.log(getUser()); // it written the function value in the console.
+
+        (function() {
+            console.log('Inside IIFE...');
+        })();
+
+        
+
+    </script>
+</body>
+
+</html>

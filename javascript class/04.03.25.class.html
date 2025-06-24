@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+
+    <script>
+
+        var counter = 0;
+
+        counter++;
+        counter++;
+
+        counter--;
+        counter--;
+
+
+        console.log('Counter:', counter);
+
+        var marks = [10, 20, 30, 40, 50];
+        var totalMarks = 0;
+         var index = 0;
+        
+        //  totalMarks += marks[index]; /// totalMarks = totalMarks + marks[0];
+
+        totalMarks += marks[index]; /// totalMarks = totalMarks + marks[0];
+        index++;
+        totalMarks += marks[index]; /// totalMarks = totalMarks + marks[1]; 
+        index++;
+        totalMarks += marks[index]; /// totalMarks = totalMarks + marks[2];
+        index++;
+        totalMarks += marks[index]; /// totalMarks = totalMarks + marks[3];
+        index++;
+        totalMarks += marks[index]; /// totalMarks = totalMarks + marks[4]; 
+        index++;
+        
+        console.log('Total Marks:', totalMarks);   
+
+        var companyName1 = 'Digital Edify';
+        var companyName2 = "Digital Edify";
+
+        console.log(companyName1==companyName2);
+
+        var portNo = 5500;
+        var portNo2 = '5500';
+
+        console.log(portNo==portNo2);
+
+        console.log(portNo===portNo2);
+
+        console.log(portNo!=portNo2);
+
+        var batchName = 'fs-basics-2501';
+
+        var batchName2 = 'fs-basic-2501';
+
+        console.log(batchName==batchName2);
+        console.log(batchName===batchName2);
+        console.log(batchName!=batchName2);
+        console.log(batchName!==batchName2);
+
+        var isPortNoMatching = (portNo==portNo2) ? 'Port No is matching' : 'Port No is not matching';
+
+        console.log(isPortNoMatching);
+
+        
+
+    </script>
+</body>
+
+</html>

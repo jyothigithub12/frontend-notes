@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const loginPromise = new Promise(function(resolve,reject){
+            const isCredentialsValid = true;
+
+            if(isCredentialsValid){
+                resolve('credentials are matching');
+            }else {
+                reject('credentials are not matching'); 
+            }
+        });
+
+        loginPromise.then(function(value){
+            console.log(value);
+        }).catch(function(error){
+            console.log(error);
+
+        });
+
+        try {
+            document.getElementById('message').innerHTML = 'HTML'; 
+            //here if we write this line if id is not exist in the html body so it will break the source code.
+        
+        // to stop this breaking of source code we usually write in try Block.
+        }catch(error){
+            //error causing statements will be stored in error block.
+
+        }
+
+        async function fetchCart() {
+            try {
+                const response = await fetch('http://localhost:4000/cart', { method: 'GET' });
+                const parsedResponse = await response.json();
+                console.log(parsedResponse)
+            } catch(error) {
+
+            }
+        }
+
+        fetchCart();
+        
+    </script>
+</body>
+</html>

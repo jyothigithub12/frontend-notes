@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .form-container {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+            width: 100%;
+            max-width: 400px;
+        }
+        h2 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        label {
+            font-weight: bold;
+            display: block;
+            margin-top: 10px;
+        }
+        input {
+            width: 95%;
+            padding: 10px;
+            margin-top: 5px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+        button {
+            width: 100%;
+            padding: 10px;
+            margin-top: 20px;
+            border: none;
+            background: #28a745;
+            color: white;
+            font-size: 18px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        button:hover {
+            background: #218838;
+        }
+
+        .error-msg {
+            color: red;
+            font-size: 12px;
+            margin: 0px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="form-container">
+        <h2>Register</h2>
+        <form novalidate>
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" placeholder="Enter your name"  onkeyup="clearFormValues()">
+            <p class="error-msg" id="name-msg"></p> 
+            <!-- by default text in the paragraph tag will be empty. -->
+            <label for="mobile">Mobile No</label>
+            <input type="tel" id="mobile" name="mobile" placeholder="Enter your mobile number" onkeyup="clearFormValues()">
+            <p class="error-msg" id="mobile-msg"></p>
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" placeholder="Enter your email" onkeyup="clearFormValues()" >
+            <p class="error-msg" id="email-msg"></p>
+            <label for="password">Password</label>
+            <input type="password" id="password" name="password" placeholder="Enter your password" onkeyup="clearFormValues()" >
+            <p class="error-msg" id="password-msg"></p>
+
+            <!-- here class name:error-msg is used for styling and id is used for javascript functionalities in the paragrapgh tag. -->
+            <button type="button" onclick="registerUser()">Submit</button>
+        </form>
+    </div>
+
+    <script>
+
+        function registerUser() {
+
+            const isFormValid = validateName() && validateMobileNo() && validateEmail() && validatePassword();
+
+            if (isFormValid) {
+                // AJAX... here we going to do api call and storing the information in the data base.
+            } else {
+
+            }
+        }
+
+        function validateName() {
+            const formValue = document.getElementById('name').value;
+            if (formValue.length === 0) {
+                document.getElementById('name-msg').innerHTML = 'Name is required';
+                return false;
+            } else {
+                return true; //return keyword is used to pass the value from function defination to function call.
+            }
+        }
+
+        function validateMobileNo() {
+            const formValue = +document.getElementById('mobile').value;  // + will convert number into string format.
+            const mobileRegex = /^[6789]\d{9}$/;
+
+            if (formValue.length === 0) {
+                document.getElementById('mobile-msg').innerHTML = 'Mobile is required';
+                return false;
+            } else if (mobileRegex.test(formValue)) {
+                return true;
+            } else {
+                document.getElementById('mobile-msg').innerHTML = 'Incorrect mobile format';
+                return false;
+            }
+
+        }
+
+        function validateEmail() {
+            const formValue = document.getElementById('email').value;
+            const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+
+            if (formValue.length === 0) {
+                document.getElementById('email-msg').innerHTML = 'Email is required';
+                return false;
+            } else if (emailRegex.test(formValue)) {
+                return true;
+            } else {
+                document.getElementById('email-msg').innerHTML = 'Incorrect email format';
+                return false;
+            }
+        }
+
+        function validatePassword() {
+            const formValue = document.getElementById('password').value;
+            const passwordRegex = /^(?=.*[A-Z])(?=.*[a-z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/;
+
+            const min8CharsRegex = /^.{8,}$/;
+            const uppercaseRegex = /^(?=.*[A-Z]).{8,}$/;
+            const lowercaseRegex = /^(?=.*[a-z]).{8,}$/;
+            const digitRegex = /^(?=.*\d).{8,}$/;
+            const specialCharsRegex = /^(?=.*[@$!%*?&]).{8,}$/;
+
+            if (formValue.length === 0) {
+                document.getElementById('password-msg').innerHTML = 'Password is required';
+                return false;
+            } else if (!min8CharsRegex.test(formValue)) {
+                document.getElementById('password-msg').innerHTML = 'Minimum 8 characters';
+                return false;
+            } else if (!uppercaseRegex.test(formValue)) {
+                document.getElementById('password-msg').innerHTML = 'Atleast one upper case character';
+                return false;
+            } else if (!lowercaseRegex.test(formValue)) {
+                document.getElementById('password-msg').innerHTML = 'Atleast one lower case character';
+                return false;
+            } else if (!digitRegex.test(formValue)) {
+                document.getElementById('password-msg').innerHTML = 'Atleast one digit.';
+                return false;
+            } else if (!specialCharsRegex.test(formValue)) {
+                document.getElementById('password-msg').innerHTML = 'Atleast one special character.';
+                return false;
+            } else {
+                return true;
+            }
+        }
+
+        function clearFormValues() {
+            document.getElementById('name-msg').innerHTML = '';
+            document.getElementById('mobile-msg').innerHTML = '';
+            document.getElementById('email-msg').innerHTML = '';
+            document.getElementById('password-msg').innerHTML = '';
+        }
+    </script>
+
+</body>
+</html>

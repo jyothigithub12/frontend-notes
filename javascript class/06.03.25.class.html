@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        div {
+            margin: 20px 0;
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        label {
+            font-size: 16px;
+            font-weight: bold;
+            margin-right: 10px;
+            color: #6725d1;
+        }
+
+        select {
+            padding: 10px 15px;
+            font-size: 14px;
+            border: 2px solid #FF4B2B;
+            border-radius: 8px;
+            background-color: #fff;
+            color: #333;
+            outline: none;
+            transition: all 0.3s ease-in-out;
+            cursor: pointer;
+        }
+
+        select:hover {
+            border-color: #FF416C;
+        }
+
+        select:focus {
+            border-color: #26c03d;
+            box-shadow: 0 0 5px rgba(255, 75, 43, 0.5);
+        }
+
+        option {
+            background-color: #fff;
+            color: #2d2929;
+            font-size: 14px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div>
+
+        <label>Brand:</label>
+
+        <select id="selected-brand" onchange="onChangeBrand()">
+
+            <option>Selected Brand</option>
+            <option>Apple</option>
+            <option>Samsung</option>
+            <option>Google</option>
+            <option>OnePlus</option>
+
+
+        </select>
+
+    </div>
+
+    <div>
+        <h3>Selected Brand: <span id="brand"></span></h3>
+    </div>
+
+
+
+    <script>
+
+        // if('pradeep'==='pradeep'){
+        //     console.log('Names are matching');
+        // }
+
+        // var isLoggedIn = false;
+
+        // if (isLoggedIn){
+        //     console.log('User logged In');
+        // } else{
+        //     console.log('User Have not logged in');
+        // }
+
+        // var selectedBrand = 'vivo';
+
+        // if (selectedBrand ==='Apple'){
+        //     console.log("selected brand is apple");
+
+        // }else if (selectedBrand ==='Samsung'){
+        //     console.log("selected brand is samsung");
+
+        // }else if (selectedBrand ==='Redmi'){
+        //     console.log("selected brand is redmi");
+
+        // }else {
+        //     console.log("none of the brand is selected");
+
+        // }
+
+
+        function onChangeBrand() {
+            var selectedBrand = document.getElementById('selected-brand').value;
+            var brand = document.getElementById('brand');
+
+            // if (selectedBrand === 'Apple') {
+            //     brand.innerHTML = selectedBrand;
+            //     brand.style.color = 'gray';
+
+
+            // } else if (selectedBrand === 'Samsung') {
+            //     brand.innerHTML = selectedBrand;
+            //     brand.style.color = 'blue';
+
+            // } else if (selectedBrand === 'Google') {
+            //     brand.innerHTML = selectedBrand;
+            //     brand.style.color = 'green';
+
+            // } else if (selectedBrand === 'OnePlus') {
+            //     brand.innerHTML = selectedBrand;
+            //     brand.style.color = 'red';
+
+            // } else {
+            //     brand.innerHTML = 'none of the brand got selected';
+            //     brand.style.color = 'black';
+
+            // }
+
+            brand.innerHTML = selectedBrand;
+
+            switch (selectedBrand) {
+                case 'Apple': {
+                    brand.style.color = 'gray';
+                    break;
+                } case 'Samsung': {
+                    brand.style.color = 'blue';
+                    break;
+                } case 'Google': {
+                    brand.style.color = 'green';
+                    break;
+                } case 'OnePlus': {
+                    brand.style.color = 'red';
+                    break;
+                } default: {
+                    brand.innerHTML = 'None of the brand is selected.';
+                    brand.style.color = 'black';
+                }
+            }
+        }
+
+
+
+
+
+    </script>
+
+</body>
+
+</html>

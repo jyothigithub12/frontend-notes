@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <div>
+
+        <lable> Enter mobile number or email</lable> <br>
+        <input type="text" placeholder="Enter mobile number or email" id="emailOrPhoneNo" onkeyup="onChangeEmailOrPhoneNo()" />
+    </div>
+    <button onclick="ValidateEmailOrPhoneNo()">Continue</button>
+
+    <div>
+     <lable>
+        Role
+     </lable> <br>
+     <select onchange="onChangeRole( )" id="role">
+        <option >Select Role</option> 
+        <option  value="admin">Admin</option>
+        <option value="customer"> Customer</option>
+        <option  value="partner"> Partner</option>
+     </select>
+
+    </div>
+
+    <!-- <button onclick="ValidateEmailOrPhoneNo()">Continue</button> -->
+
+    <p id="selected-role"> </p>
+    
+
+    <script>
+
+        function calculateSum(num1,num2) {
+
+            sum = num1 + num2 ;
+
+            console.log('sum of two numbers:', sum);
+
+            return sum;
+
+        }
+
+          var result =calculateSum(10,20);  //no need of declaring datatype because javascript will assign variable dynamically during compilation.
+
+
+        console.log(result);
+
+        calculateSum(25,25);
+        
+        console.log(result);
+
+
+        calculateSum(225,25);
+        
+        console.log(result);
+
+       function ValidateEmailOrPhoneNo(){
+
+        console.log('Validating the email or phone no..');
+
+        var EmailOrPhoneNo = document.getElementById('emailOrPhoneNo').value; 
+         //for form filed we will using .value and for non form fields we will using .innerHTML
+         
+         console.log(EmailOrPhoneNo);
+       }
+
+       function onChangeRole(){
+         var role = document.getElementById('role').value;
+
+
+         console.log(role);
+
+         document.getElementById('selected-role').innerHTML = 'Selected Role: ' +  role.toUpperCase();
+       }
+
+       function onChangeEmailOrPhoneNo(){
+        var emailOrPhoneNo = document.getElementById('emailOrPhoneNo').value;
+
+        console.log(emailOrPhoneNo);
+
+        document.getElementById('emailOrPhoneNo').value = emailOrPhoneNo.toUpperCase();
+       }
+
+
+    </script>
+</body>
+</html>

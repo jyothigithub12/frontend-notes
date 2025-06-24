@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            padding: 20px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            background: #fff;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        thead {
+            background-color: #007bff;
+            color: white;
+            text-align: left;
+        }
+
+        th,
+        td {
+            padding: 12px;
+            border-bottom: 1px solid #ddd;
+        }
+
+        tbody tr:hover {
+            background-color: #f1f1f1;
+        }
+
+        th {
+            text-transform: uppercase;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1 class="header">1.</h1>
+    <h1 class="header">2.</h1>
+    <h1 class="header">3.</h1>
+
+    <h3>2.1</h3>
+    <h3 id="second-header">2.2</h3>
+    <h3>2.3</h3>
+    <h3>2.4</h3>
+
+    <button id="login-btn">Continue</button>
+
+    <div id="container">
+
+    </div>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Name</th>
+                <th>Duration</th>
+                <th>Instructor</th>
+                <th>Price</th>
+                <th>Level</th>
+                <th>Topics</th>
+            </tr>
+        </thead>
+        <tbody id="coursesTbody1">
+
+        </tbody>
+    </table>
+
+
+    <script>
+
+
+
+        // HTML Collection - Array of HTML Elements
+        const headerTags = document.getElementsByClassName('header');
+
+        for (let i = 0; i < headerTags.length; i++) {
+            headerTags[i].innerHTML = `Header ${i + 1}`;
+            headerTags[i].style.color = 'blue';
+        }
+
+        const services = ['Best Chef', 'Quality Food', 'Perfect Cook', 'Good Location'];
+
+        // HTML Collection - Array of HTML Elements
+
+        const header3Tags = document.getElementsByTagName('h3');
+
+        console.log(header3Tags);
+
+        for (let i = 0; i < header3Tags.length; i++) {
+            header3Tags[i].innerHTML = services[i];
+            if (i === 0) {
+                header3Tags[i].style.color = 'red';
+            } else if (i === 1) {
+                header3Tags[i].style.color = 'blue';
+            } else if (i === 2) {
+                header3Tags[i].style.color = 'green';
+            } else if (i === 3) {
+                header3Tags[i].style.color = 'yellow';
+            }
+        }
+
+
+        // Node List - Array of HTML Elements
+        const elements = document.querySelectorAll('#second-header');
+
+        console.log(elements);
+
+        const loginBtn = document.getElementById('login-btn');
+
+        loginBtn.addEventListener('click', function () {
+
+            console.log('In login user function...'); // if we want map a button using javascript go for event listeners.
+
+        });
+
+
+        function loginUser() {
+            console.log('In login user function...'); //  if we want map a button using html go for events.
+        }
+
+
+
+
+        const courses = [
+            {
+                id: 1,
+                name: "Java Full Stack Development",
+                duration: "6 months",
+                instructor: "John Doe",
+                price: 500,
+                level: "Beginner",
+                topics: ["Java", "Spring Boot", "Hibernate", "React", "MySQL"],
+            },
+            {
+                id: 2,
+                name: "Python Full Stack Development",
+                duration: "5 months",
+                instructor: "Jane Smith",
+                price: 450,
+                level: "Intermediate",
+                topics: ["Python", "Django", "PostgreSQL", "Vue.js"],
+            },
+            {
+                id: 3,
+                name: "MERN Stack Development",
+                duration: "4 months",
+                instructor: "Alice Johnson",
+                price: 400,
+                level: "Advanced",
+                topics: ["MongoDB", "Express.js", "React", "Node.js"],
+            },
+            {
+                id: 4,
+                name: "Data Science with Python",
+                duration: "6 months",
+                instructor: "Bob Williams",
+                price: 600,
+                level: "Beginner",
+                topics: ["Python", "Pandas", "NumPy", "Machine Learning"],
+            },
+            {
+                id: 5,
+                name: "DevOps and Cloud Computing",
+                duration: "5 months",
+                instructor: "Charlie Brown",
+                price: 550,
+                level: "Intermediate",
+                topics: ["AWS", "Docker", "Kubernetes", "CI/CD"],
+            }
+        ];
+
+        //creating header using createlement from javascript.
+
+        const h1 = document.createElement('h1');
+
+        h1.innerHTML = 'header generated using javascript.';
+
+        console.log(h1);
+
+        // wrapping h1 tag in the container division in html body. using append child here div with container id is a parent element and now we want to append h1 tag in the conatainer division.
+
+        const container = document.getElementById('container'); //getting the reference of division.
+
+        container.appendChild(h1);  //using this we can add h1 tag in the div container ,this is the way of creating html elements dynamically using javascript.
+
+        // here container(leftside will be parent element) and rightside one(h1 is the child element.)
+
+
+        function displayCourses() {
+
+            const coursesTbody = document.getElementById('coursesTbody1');
+
+            for (let i = 0; i < courses.length; i++) {
+
+                const tr = document.createElement('tr');
+
+                const course = courses[i];
+
+                for (let key in course) {
+
+                    var td = document.createElement('td');
+
+                    td.innerHTML = course[key];
+
+                    tr.appendChild(td);
+
+                }
+
+                coursesTbody.appendChild(tr);
+
+            }
+
+        }
+
+        displayCourses();
+
+
+
+    </script>
+
+
+</body>
+
+</html>

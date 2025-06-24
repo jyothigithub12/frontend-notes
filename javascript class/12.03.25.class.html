@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var emails= [];
+
+        emails.push('jyothi123@gmail.com');
+        emails.push('bunty123@gmail.com');
+        emails.push('aru123@gmail.com');
+
+        // emails.pop();
+        // emails.pop();
+
+        emails.splice(1,1 , 'sonu@gmail.com' , 'sonali@gmail.com');
+        
+        console.log(emails);
+
+        var emails2 = [ 'sanju123@gmail.com'];
+
+        var emails3 = emails.concat(emails2);
+
+        console.log(emails3);
+
+        var sortedEmails = emails3.sort();
+        console.log(sortedEmails);
+
+        var reversedEmails = emails3.reverse();
+        console.log(reversedEmails);
+
+        console.log(sortedEmails.includes('jj123@gmail.com'));
+
+        console.log(sortedEmails.includes('jyothi123@gmail.com'));
+
+        console.log(sortedEmails.slice(1,2));
+
+        console.log(sortedEmails.indexOf('venkat.k@digitaledify.ai'));
+        console.log(sortedEmails.indexOf('jyothi123@gmail.com'));
+
+        var userInfo = {
+            id: 1,
+            name: "John Doe",
+            username: "johndoe123",
+            email: "johndoe@example.com",
+            mobile: "+1234567890",
+            age: 30,
+            gender: "Male",
+            address: {
+                street: "123 Main St",
+                city: "New York",
+                state: "NY",
+                zip: "10001",
+                country: "USA"
+            },
+            preferences: {
+                theme: "dark",
+                language: "English",
+                notifications: true
+            },
+            createdAt: "2025-03-12T10:00:00Z",
+            updatedAt: "2025-03-12T12:00:00Z",
+            isActive: true,
+            roles: ["user", "admin"]
+        };
+
+        var key = Object.keys(userInfo);
+
+        console.log(key);
+
+        var values = Object.values(userInfo);
+
+        console.log(values);
+
+        var entries = Object.entries(userInfo);
+
+        console.log(entries);
+
+        var freezedUserInfo = Object.freeze(userInfo);
+
+        freezedUserInfo.age =22;
+
+        console.log(freezedUserInfo);
+
+        var sealedUserInfo = Object.seal(userInfo);
+
+        sealedUserInfo.name = 'n.jyothi';
+
+        console.log(sealedUserInfo);
+
+        var age = 24;
+
+        function getUserInfo() {
+
+            console.log(age);
+
+
+        }
+
+        getUserInfo();
+
+        console.log(age);
+
+
+        for (let i = 0; i < 5; i++) { //let and const meant for block scope.
+            console.log(i);
+            const country = 'India';  //const also act as block scope variable but it can be assigned only once.
+
+            // console.log(country);
+        }
+
+        console.log(country);
+
+
+
+
+
+
+    </script>
+</body>
+</html>

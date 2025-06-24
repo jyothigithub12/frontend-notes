@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+
+        p{
+            color:red;
+            padding:5px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div>
+        <label>
+            Mobile Number
+        </label>
+
+        <input type="text" placeholder="Enter Mobile Number" id="mobile-number" />
+
+        <p id="error-msg"></p>
+    </div>
+
+    <button onclick="validateMobileNo()">Continue</button>
+
+
+    <script>
+
+        function validateMobileNo() {
+
+            document.getElementById('error-msg').innerHTML  = ''; //whenever the number is entered and trigged is should be empyty string.
+
+            const mobileNo = document.getElementById('mobile-number').value; //getting the reference and storing the mobile no.
+            console.log(mobileNo);
+            const mobileRegex = /^[6789]\d{9}$/;
+
+            if (mobileRegex.test(mobileNo)) {
+
+                // if mobile number is true we need to do api call here to get otp or anything.
+                return true;
+            } else {
+                document.getElementById('error-msg').innerHTML = 'Please enter a valid Mobile number';
+                return false;
+            }
+
+        }
+
+
+
+    </script>
+
+</body>
+
+</html>

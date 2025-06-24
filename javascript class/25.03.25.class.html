@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <a href="./25-2.3.25.html">2</a>
+
+
+
+    <script>
+
+        const userInfo = {
+            "id": "UUID or Auto-increment",
+            "name": "Rahul Sharma",
+            "email": "rahul.sharma@example.com",
+            "mobile": "+91 9876543210",
+            "dob": "1992-08-15",
+            "gender": "Male",
+            "aadharNumber": "XXXX-XXXX-1234",
+            "aadharVerified": true,
+            "panNumber": "ABCDE1234F",
+            "panVerified": true,
+            "address": {
+                "street": "123 MG Road",
+                "city": "Bangalore",
+                "state": "Karnataka",
+                "pincode": "560001",
+                "country": "India"
+            },
+            "occupation": "Software Engineer",
+            "income": "10-15 LPA",
+            "maritalStatus": "Married",
+            "createdAt": "2024-03-24T10:00:00Z",
+            "updatedAt": "2024-03-24T12:00:00Z"
+        };
+
+        localStorage.setItem('userinfo', JSON.stringify(userInfo));
+
+        localStorage.setItem('occupation', userInfo.occupation);
+
+        localStorage.setItem('createdAt', userInfo.createdAt);
+
+        localStorage.setItem('updatedAt', userInfo.updatedAt);
+
+
+        sessionStorage.setItem('updatedAt', userInfo.updatedAt);
+
+        class Student {
+
+            constructor(name, enrollmentNo, courseName, batchName,enrollmentDate ) {
+                this.name = name; //here no need of having same name for parameters and variableName.
+                // (here this keyword is used to distinguish between varaible and parameters and also
+                //  this keyword will point out to currentclass and .name will point out to current class variable.)
+                this.enrollmentNo = enrollmentNo;
+                this.courseName = courseName;
+                this.batchName = batchName;
+                this.enrollmentDate =enrollmentDate;
+            }
+
+            getFormattedEnrollmentDate(enrollmentDate) {
+                const enrollmentDateObj = new Date(this.enrollmentDate);
+
+                const date = enrollmentDateObj.getDate().toString().length === 1 ? '0' + enrollmentDateObj.getDate() : enrollmentDateObj.getDate();
+                const month = enrollmentDateObj.getMonth().toString().length === 1 ? '0' + (enrollmentDateObj.getMonth() + 1) : enrollmentDateObj.getMonth() + 1;
+                const year = enrollmentDateObj.getFullYear().toString().length === 1 ? '0' + enrollmentDateObj.getFullYear() : enrollmentDateObj.getFullYear();
+
+                const enrollmentDateStr = `${date}/${month}/${year}`;
+                return enrollmentDateStr; //return keyword meant fro returning the value from function defination to function call.
+            }
+
+
+        }
+
+        // here we are creating student object.
+
+        const student1 = new Student('Anjali', 'DE-9023', 'MERN Stack', 'FS-Basics-2501' ,'2025-03-25T04:48:03.793Z'); //here intialization of parameter will happen during object creation.
+
+        console.log(student1.getFormattedEnrollmentDate('2025-03-25T04:48:03.793Z'));
+
+        const student2 = new Student('Narendra Goud', 'DE-9024', 'MEAN Stack', 'FS-Basics-2502','2025-03-25T11:48:03.793Z');
+
+        console.log(student2);
+
+
+
+
+
+    </script>
+</body>
+
+</html>

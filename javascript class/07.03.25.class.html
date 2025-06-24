@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=script, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f8f8f8;
+            padding: 20px;
+        }
+
+        .bus-card {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background: white;
+            padding: 15px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            max-width: 1200px;
+            margin: 20px auto;
+        }
+
+        .bus-info {
+            flex: 0.5;
+        }
+
+        .bus-info h2 {
+            margin: 0;
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        .bus-type {
+            font-size: 14px;
+            color: gray;
+        }
+
+        .icons {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            font-size: 14px;
+            color: #444;
+        }
+
+        .tracking {
+            font-weight: bold;
+            color: #222;
+        }
+
+        .bus-timing,
+        .bus-route,
+        .bus-rating,
+        .bus-price {
+            text-align: center;
+        }
+
+        .bus-timing strong {
+            display: block;
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        .date {
+            color: red;
+            font-size: 14px;
+        }
+
+        .rating {
+            background: green;
+            color: white;
+            padding: 5px 10px;
+            border-radius: 5px;
+        }
+
+        .bus-links {
+            flex: 2;
+            text-align: center;
+        }
+
+        .bus-links a {
+            text-decoration: none;
+            color: #d9534f;
+            font-size: 14px;
+            margin: 0 5px;
+        }
+
+        .view-seats {
+            background: #d9534f;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            cursor: pointer;
+            border-radius: 5px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="bus-list">
+
+    </div>
+
+     <script>
+        var employees = [
+            {
+                id: 1,
+                name: 'Karthik',
+                designation: 'Software Engineer'
+            },
+            {
+                id: 2,
+                name: 'Pradeep',
+                designation: 'Senior Software Engineer'
+            },
+            {
+                id: 3,
+                name: 'Deepak',
+                designation: 'Team Lead'
+            }
+        ];
+
+        var i=0;
+
+        while (i < employees.length ) {
+
+            console.log(employees[i]);
+            i++;
+
+
+
+        }
+
+        var marks = [89,56,34,56,78,90];
+
+        var totalMarks = 0;
+        var index = 0;
+
+        // totalMarks += marks[index];
+        // index++;
+
+        // totalMarks += marks[index];
+        // index++;
+
+        // totalMarks += marks[index];
+        // index++;
+
+        // totalMarks += marks[index];
+        // index++;
+
+        // totalMarks += marks[index];
+        // index++;
+
+        // totalMarks += marks[index];
+        // index++;
+
+        // console.log('Total Marks: ', totalMarks);
+
+        while(index < marks.length){
+            totalMarks += marks[index];
+            index++;
+        }
+        console.log('Total Marks: ', totalMarks);
+
+        
+
+
+        var index = 0;
+        do {
+            totalMarks += marks[index];
+            index++;
+        } while (index > marks.length);
+
+        console.log('Total Marks: ', totalMarks);
+
+
+        var totalMarks = 0;
+        var index = 0;
+
+      for (var i =0; i<marks.length ; i++){
+        totalMarks +=marks[i];
+
+      }
+
+      console.log('Total Marks: ', totalMarks);
+           
+
+      for ( var i= employees.length -1 ; i >=0 ; i--){
+        console.log(i,employees[i]);
+      }
+
+      
+      var busDetails = {
+            travelAgency: "Vikram Travels",
+            busType: "Volvo 9600 Multi-Axle A/C Sleeper (2+1)",
+            departureTime: "21:00",
+            travelDuration: "09h 25m",
+            arrivalTime: "06:25",
+            travelDate: "08-Mar",
+            rating: 4.9,
+            totalRatings: 768,
+            startingPoint: "Gachibowli",
+            destination: "Anand Rao Circle",
+            price: 1619,
+            availableSeats: 15,
+            singleSeatsAvailable: 2,
+            amenities: [
+                "Live Tracking",
+                "Charging Point",
+                "Blanket",
+                "Water Bottle",
+                "Reading Light",
+                "Television"
+            ],
+            links: {
+                amenities: "Amenities",
+                busPhotos: "Bus Photos",
+                boardingDroppingPoints: "Boarding & Dropping Points",
+                reviews: "Reviews",
+                bookingPolicies: "Booking Policies"
+            }
+        };
+
+        for (var key in busDetails) {
+            console.log(key, busDetails[key]);
+        }
+
+        var busList = [
+            {
+                travelAgency: "Vikram Travels",
+                busType: "Volvo 9600 Multi-Axle A/C Sleeper (2+1)",
+                departureTime: "21:00",
+                travelDuration: "09h 25m",
+                arrivalTime: "06:25",
+                travelDate: "08-Mar",
+                rating: 4.9,
+                totalRatings: 768,
+                startingPoint: "Gachibowli",
+                destination: "Anand Rao Circle",
+                price: 1619,
+                availableSeats: 15,
+                singleSeatsAvailable: 2,
+                amenities: ["Live Tracking", "Charging Point", "Blanket", "Water Bottle", "Reading Light", "Television"],
+                links: {
+                    amenities: "Amenities",
+                    busPhotos: "Bus Photos",
+                    boardingDroppingPoints: "Boarding & Dropping Points",
+                    reviews: "Reviews",
+                    bookingPolicies: "Booking Policies"
+                }
+            },
+            {
+                travelAgency: "Orange Travels",
+                busType: "Mercedes Benz Multi-Axle A/C Sleeper (2+1)",
+                departureTime: "22:30",
+                travelDuration: "08h 45m",
+                arrivalTime: "07:15",
+                travelDate: "08-Mar",
+                rating: 4.7,
+                totalRatings: 580,
+                startingPoint: "Madhapur",
+                destination: "Majestic",
+                price: 1750,
+                availableSeats: 10,
+                singleSeatsAvailable: 3,
+                amenities: ["WiFi", "Charging Point", "Blanket", "Water Bottle", "GPS Tracking", "Personal TV"],
+                links: {
+                    amenities: "Amenities",
+                    busPhotos: "Bus Photos",
+                    boardingDroppingPoints: "Boarding & Dropping Points",
+                    reviews: "Reviews",
+                    bookingPolicies: "Booking Policies"
+                }
+            },
+            {
+                travelAgency: "SRS Travels",
+                busType: "Scania A/C Multi-Axle Sleeper (2+1)",
+                departureTime: "20:45",
+                travelDuration: "10h 10m",
+                arrivalTime: "07:55",
+                travelDate: "08-Mar",
+                rating: 4.5,
+                totalRatings: 620,
+                startingPoint: "Kukatpally",
+                destination: "K.R. Market",
+                price: 1499,
+                availableSeats: 12,
+                singleSeatsAvailable: 1,
+                amenities: ["Charging Point", "Water Bottle", "Reading Light", "Television", "Live Tracking"],
+                links: {
+                    amenities: "Amenities",
+                    busPhotos: "Bus Photos",
+                    boardingDroppingPoints: "Boarding & Dropping Points",
+                    reviews: "Reviews",
+                    bookingPolicies: "Booking Policies"
+                }
+            },
+            {
+                travelAgency: "VRL Travels",
+                busType: "Volvo B11R Multi-Axle Semi-Sleeper (2+2)",
+                departureTime: "23:15",
+                travelDuration: "09h 50m",
+                arrivalTime: "09:05",
+                travelDate: "08-Mar",
+                rating: 4.8,
+                totalRatings: 845,
+                startingPoint: "Ameerpet",
+                destination: "Majestic",
+                price: 1899,
+                availableSeats: 8,
+                singleSeatsAvailable: 2,
+                amenities: ["WiFi", "Live Tracking", "Blanket", "Charging Point", "Personal TV"],
+                links: {
+                    amenities: "Amenities",
+                    busPhotos: "Bus Photos",
+                    boardingDroppingPoints: "Boarding & Dropping Points",
+                    reviews: "Reviews",
+                    bookingPolicies: "Booking Policies"
+                }
+            },
+            {
+                travelAgency: "Kaveri Travels",
+                busType: "Ashok Leyland A/C Sleeper (2+1)",
+                departureTime: "22:00",
+                travelDuration: "10h 30m",
+                arrivalTime: "08:30",
+                travelDate: "08-Mar",
+                rating: 4.6,
+                totalRatings: 530,
+                startingPoint: "Miyapur",
+                destination: "Kalasipalya",
+                price: 1399,
+                availableSeats: 18,
+                singleSeatsAvailable: 4,
+                amenities: ["Charging Point", "Water Bottle", "Reading Light", "Television", "GPS Tracking"],
+                links: {
+                    amenities: "Amenities",
+                    busPhotos: "Bus Photos",
+                    boardingDroppingPoints: "Boarding & Dropping Points",
+                    reviews: "Reviews",
+                    bookingPolicies: "Booking Policies"
+                }
+            }
+        ];
+
+        for (var i = 0; i < busList.length; i++) {
+            console.log(busList[i]);
+        }
+
+        var div = '<h2>' + busDetails.travelAgency + 
+            
+            '</h2>';
+
+        console.log(div);
+
+        var busDetailsStr = '';
+
+        for (var i = 0; i < busList.length; i++) {
+            busDetailsStr += `
+                <div class="bus-card">
+                    <div class="bus-info">
+                        <h2>${busList[i].travelAgency}</h2>
+                        <p class="bus-type">${busList[i].busType}</p>
+                        <div class="icons">
+                            <span>🛏️</span>
+                            <span>💻</span>
+                            <span>📺</span>
+                            <span>💧</span>
+                            <span>⏰</span>
+                            <span>🔋</span>
+                            <span>7</span>
+                            <span class="tracking">📍 Live Tracking</span>
+                        </div>
+                    </div>
+                    <div class="bus-timing">
+                        <strong>${busList[i].departureTime}</strong>
+                        <p>${busList[i].travelDuration}</p>
+                        <strong>${busList[i].arrivalTime}</strong>
+                        <p class="date">${busList[i].travelDate}</p>
+                    </div>
+                    <div class="bus-route">
+                        <p>${busList[i].startingPoint}</p>
+                        <p>${busList[i].destination}</p>
+                    </div>
+                    <div class="bus-rating">
+                        <span class="rating">⭐${busList[i].rating}</span>
+                        <p>${busList[i].totalRatings} reviews</p>
+                    </div>
+                    <div class="bus-price">
+                        <p>Starts from <strong>${busList[i].price}</strong></p>
+                        <p>${busList[i].price}</p>
+                    </div>
+                    <button class="view-seats">VIEW SEATS</button>
+                </div>
+            `;
+        }
+
+        document.getElementById('bus-list').innerHTML = busDetailsStr;
+
+
+
+
+     </script>
+</body>
+</html>

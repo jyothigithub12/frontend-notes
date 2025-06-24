@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Form</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f4f4f4;
+        }
+
+        .login-container {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 400px;
+        }
+
+        h2 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        label {
+            font-weight: bold;
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        input {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+
+        input:focus {
+            border-color: #007bff;
+            outline: none;
+        }
+
+        .btn {
+            width: 100%;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            background: #007bff;
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .btn:hover {
+            background: #0056b3;
+        }
+
+        #error-msg {
+            color: red;
+            font-size: 12px;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="login-container">
+        <h2>Login</h2>
+        <div class="form-group">
+            <label for="username">Username</label>
+            <input type="text" id="username" placeholder="Enter username" required>
+        </div>
+        <div class="form-group">
+            <label for="password">Password</label>
+            <input type="password" id="password" placeholder="Enter password" required>
+        </div>
+        <button class="btn" onclick="loginUser()">Login</button>
+        <p id="error-msg"></p>
+    </div>
+
+    <script>
+
+        function loginUser() {
+
+            const usernameValue = document.getElementById('username').value;
+
+            const passwordValue = document.getElementById('password').value;
+
+            const requestBody = {
+                username: usernameValue,
+                password: passwordValue
+            };
+
+            const httpRequest = new XMLHttpRequest();
+
+            httpRequest.onreadystatechange = function () {
+                if (httpRequest.readyState === 4) {
+                    const parsedResponse = JSON.parse(httpRequest.responseText);
+
+                    if (httpRequest.status === 400) {
+                        const errorMsg = document.getElementById('error-msg');
+
+                        errorMsg.innerHTML = parsedResponse.message;
+
+                    } else {
+                        window.location.href = "./courses.html"; ///here in this stage navigating from login page to courses.html page.
+                        // in html we use anchor tag to navigate from one page to another page but in javascript we use window.location.href = ".filename";  fro navigating one page toanother page. 
+                    }
+                    console.log(JSON.parse(httpRequest.responseText));
+                }
+            }
+
+            httpRequest.open('POST', 'https://dummyjson.com/auth/login');
+
+            httpRequest.setRequestHeader('Content-Type', 'application/json');
+
+            httpRequest.send(JSON.stringify(requestBody));
+
+        }
+
+
+    </script>
+
+</body>
+
+</html>

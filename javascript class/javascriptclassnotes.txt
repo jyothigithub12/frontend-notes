@@ -1,0 +1,1444 @@
+24/02/2025
+
+proper folder structure:
+medicare-app
+    views - html files
+    styles  - css files
+    assets - images, videos, audio etc...
+    scripts - Js files...
+    index.html
+    assets
+        images
+            logo.png
+    index.html
+        <img src="C:/DE/images/logo.png" />
+    Relative Path
+
+
+
+25/02/2025:
+
+programming language:
+A programmming language is a set of instructions that tell a computer hoew to perform a task.
+>Its written languange that uses specific syntax and semantics to communicate with the computers.
+
+E.g.  Javascript,python,java,Go,Net,PHP etc...
+
+>scripting languange:A scripting language is a type of programming language that is interpreted at runtime instead of compilation.
+
+E.g .  Javascript,python etc..
+
+>so usually programming languages  will follows compilation(source code is excuetion happens at a time called compilation) and scripting languages will follow interpretation(line by line excuetion of code).
+
+
+Javascript:often abbreviated as JS, is a programming language and core technology of the World Wide Web, alongside HTML and CSS. Ninety-nine percent of websites use JavaScript on the client side for webpage behavior.
+> Javascript is a monopoly for frontend.(to write the code in client side behaviour.)
+> Web browsers have a dedicated JavaScript engine (javascript compilers which executes the code written by us) that executes the client code.(they will write their own Javascript by following ECMA Script standards).
+> usually ECMA Script is a organization will be setting the standards/features for javascript.
+> Name of JavaScript Engines which are availble under different browsers.
+
+  >V8 -- Google Chrome
+  >JavaScript Core --safari browser
+  >Spider Monkey- Mozilla Firefox
+  >Chakra -Internet Explorer/Microsoft Edge
+
+  >when ever new features is going to come in the market that feature will be implemented by every browsers  to make application work in every browser.
+
+> These engines are also utilized in some servers and a variety of apps. The most popular runtime system for non-browser usage is Node.js.
+>Node.js uses V8 engine (google Chrome browser).
+> Node.js will be used for both front end and backend servers (not dependent on the browsers,it runs separately.)
+
+
+
+Output Parameters:
+
+1.document.getElementById(idName).innerHTML=value;     Maps value present in JavaScript To HTML element.  (to indicate the dynamic text from javascript to HTML body will map dynamic text using document.getElementById parameter)
+  > to map information from javascript to HTML.
+2.console.log(value)  --Display the value in browser console (developer tools).(it is going to used only by developers not by end users.) to see the partial  output we will use console.log once the application is ready we will remove all console.log statements.
+3.window.alert(value) --Display the value in the form of alert message in the browsers.
+
+
+28/02/2025:
+
+Variable: Variables are containers for storing information.(information be of any type.)
+    
+    Syntax:
+
+    Variable definition:
+
+        var variableName = value;  (var is predefined key word , variableName is the purpose of that value).
+
+        E.g. var salary =9000;
+    
+    To access value of a variable:
+        
+        variableName  (salary)
+    
+    To reassign value to a variable:
+     
+     variableName = value;
+
+      E.g.  salary=100000;
+
+
+    Camel Case: Starting from second word first letter of every word should be in capital letter.
+
+    E.g> FirstName ,LastName ,createdAt, deletedAt, etc..
+
+    SnakeCase: followed by python.
+
+    E.g. fisrt_name,Last_name,created_at,upadted_at etc..
+
+
+> Dynamic Typing: Assigning data type to the variable during run time is called Dynamic typing.
+
+
+Data Types:
+
+1. Predefind Data Types (we are going to assign one value at a time.) 
+
+  >based on syntax datatype is going to be assigned to the varaible.
+    
+    String | Number | Boolean
+
+2. Userdefined Data Types (we are going to assign multiple value at a time.)
+    
+    Array | Object | Function
+
+    Array: Collection of multiple values. (arrays are meant for storing  similar kind (purpose is same) of  information .)
+        Syntax:
+        var variableName = [value1, value2, value3, ..., valueN];
+                        index  0       1       2           n-1
+                        length 1       2       2            n
+         usually index starts with 0 and length starts with 1.
+
+         
+        E.g.  var meetings=['react-2507','fs-basics-2504','python-2508','java-2508',];
+        
+        To access a value:
+
+             variableName[index]
+
+             meetings[2];
+
+        To re assign a value of a index:
+
+            variableName[index] = value;
+
+            meetings[2]='node-2403'
+
+            updated array: ['react-2507', 'fs-basics-2504', 'node-2403', 'java-2508']
+
+    Object: Collection of key value pairs. (objects are meant for storing  unsimilar kind (purpose is not same) of  information .)
+        
+        Syntax:  value can be a any datatye like string,number,Boolean ,array,object,function.
+            var variableName = {
+                key1: value1,
+                key2: value2,
+                key3: value3,
+                keyN: valueN
+            };
+
+        To access a value of a key:
+            
+            variableName.keyName
+        
+        To reassign a value for a key:
+            
+            variableName.keyName = value;  (. is a predefined keyword meant for  accesing value of a particular key inside the object)
+
+    28/02/2025:
+
+    Task1: create array of objects of busesinfo from abhibus.
+            
+    //access data from multiple levels of object and print in console log at different levels.
+
+
+03/03/2025
+
+
+Function: A function is a set of statements that performs a task or calculates a value.
+
+> Functions are reusable blocks of code that can be called from anywhere in the scope where they are defined. (writing functionality for amazon signin if entered mobile no or email is registered then move to amazon home page if not registered through an error like email or no not registered .)
+    Syntax:
+    Function Definition:
+
+        function functionName(param1, param2, ..., paramN) {
+            // Statements...
+            return value;
+        }  // statements which are written in the function defination will be executed only when the function is called.
+
+
+    Function Call: (function call be called for N no.of times.)
+        
+        functionName(value1, value2, ..., valueN);
+
+    Parameter(Optional) - Used to pass data from function call to function definition.
+
+    > Function definition will be executed, only when we call it.(function call will be called for N no.of times.)
+
+    > Using return keyword, we can pass resultant of a function, from function definition to function call.
+
+Event: JavaScript Events are actions or occurrences that happen in the browser. They can be triggered by various user interactions or by the browser itself.
+     >to interact with HTML elements we will use a concept called Events. (when we want to interact from html to javascript we use Events concepts.)
+
+    onload(predefined word) - Statements present in script will be executed on load of the page. (whatever the code which is getting executed on load of the page it is called as onload Event simple terms users interacts to the application ..)
+    
+    onclick(predefined word) - Clicking on any html element.
+    
+    onchange(predefined word) - Changing value from one to another. (we will be using this for select options like forms, like file upload we can change uploading from one file to another file.)
+    
+    onkeyup - After entering a key in any input value. 
+        
+        Syntax:
+            <button onclick="functionName()"></button>  //for buttons passing parameters is not required.
+
+           ** //for form filed (like input,text area,select etc..) we will using .value 
+            
+           ** //and for non form fields(all header tags,p,etc....) we will using .innerHTML
+
+
+Task: 03/03/2025
+
+create to input field for num1 and num 2 and have multiple buttons like addition,subtraction,multiplication,division  and followed by resultant .
+
+so when we click on addition we need to get addition of two values. 
+
+04/03/2025:
+
+
+Operators: Javascript operators are used to perform different types of mathematical and logical computations.
+
+1. Arithematic
+
+    + | - | * | / | % | ++ (Increment) | -- (Decrement)
+
+
+2. Assignment
+
+    = | += | -= | *= | /=
+
+3. Comparison
+
+    == | === | != | !== | > | < | >= | <= | ?
+
+4. Logical:
+
+    && | || | !
+
+Increment Operator: Increments the current value by 1.
+
+    Syntax:
+
+        variableName++ // variableName = variableName + 1; (variableName is operand and + is operator)
+        
+        variableName-- // variableName = variableName - 1;
+
+        > for retrieving each value from array we use Increment (to get value from first to last from the array) and Decrement operator (to get value from last to first from the array) .
+
+
+Unary Operator: 1 Operand + 1 Operator (Increment and Decrement comes under unary operators.)
+
+   + (Unary plus: Converts to a number)
+   - (Unary minus: Negates a number)
+   ++ (Increment) 
+   -- (Decrement)
+   typeof (Returns type of operand)
+    ! (Logical NOT)
+
+
+    eg: let x = 5;
+     console.log(-x);  // Unary negation (-5)
+     console.log(++x); // Unary increment (6)
+     console.log(typeof x); // typeof operator
+
+  
+Binary Operator: 2 Operands + 1 Operator
+
+
+     Operate on two operands.
+
+     eg:let a = 10, b = 5;
+        console.log(a + b);  // Addition (15)
+        console.log(a > b);  // Comparison (true)
+        console.log(a && b); // Logical AND (5)
+
+
+        Common Binary Operators:
+
+                Arithmetic: +, -, *, /, %, **
+                Comparison: >, <, >=, <=, ==, !=
+                Logical: &&, ||
+                Assignment: =, +=, -=, *=, /=
+                Bitwise: &, |, ^, <<, >>
+
+
+
+Ternary Operator: 3 Operands + 2 Operators
+
+   The only ternary operator in JavaScript is the conditional (ternary) operator ? :
+
+   condition ? expression1 : expression2;
+
+   eg: let age = 18;
+       let message = (age >= 18) ? "Adult" : "Minor";
+       console.log(message); // "Adult"
+
+
+ Assignment:
+
+  Equal to (=)  
+    Syntax:
+        var variableName = value;
+
+            Assigns right side value to left side variable.
+ +=:
+    Syntax:
+
+        without using  += operator:
+
+        variableName = variableName + value;
+        
+        // Using +=
+
+        variableName += value;
+
+Comparison: (usually comparision operator will be used for comparing or filtering data like contacts,phonepay history,meetings created from start date to end date).
+
+  Double Equal to (==): Compares both the values and if both the values are matching it returns true otherwise false.
+    
+    Syntax: 
+        
+        variableName == variableName
+
+  ===: Compares both the values and data types, and if both the values and data types are matching it returns true otherwise false.
+   
+    Syntax: 
+        
+        variableName === variableName
+
+  != (Not Equal): Compares both the values and if both the values are not matching it returns true otherwise false. (reverse of ==)
+    Syntax: 
+        
+        variableName != variableName
+
+  !==: Compares both the values and data types, and if both the values and data types are not matching it returns true otherwise false. (reverse of ===)
+    Syntax: 
+
+        
+        variableName !== variableName
+  
+  Ternary Operator (?):
+
+    Syntax:
+        
+        condition/expression ? true statement : false statement.  (in place of true and false statements we can also write function calls.)
+        
+        If expression is returning true, it executes true statement otherwise false statement.  
+
+
+
+05/03/2025:
+
+Logical Operators:
+
+1. Logical AND (&&): If both the conditions are true, resultant will be true otherwise false. (here email or phone and password should be match then it returns true.)
+    
+2. Logical OR (||): If any of the condition is true, resultant will be true otherwise false.(any login page like entering email or mobile no either of one should match with registered account. )
+
+3. Logical NOT (!): if the statement is true then it returns false,  if statement is false then it returns true.
+
+
+ Three different Purpose of +
+
+    1.Concatination E.g.  'jyothi' + 200 output('jyothi200') if any of those is string then + will act as a concatination.
+    2.if we add two numbers that is addition.
+    3.type conversion(converting string to number)
+
+
+
+
+ for string manipulation: 
+    parseInt:for numbers parseInt.and if we have only integers then also parseInt.
+    parseFloat:when we have decimal number we have to use parseFloat.
+         
+
+Class Manipulation of HTML Element:
+
+    Syntax:
+
+    To add class to html element:
+       
+        htmlElementRef.classList.add(className);  //classlist indicate multiple classes.
+    
+    To remove class of html element:
+       
+        htmlElementRef.classList.remove(className);
+
+        
+        
+        task: add eye icon for signup page.
+
+
+06/03/25:
+
+Control Structures:
+
+1. Conditional Statements
+2. Looping Statements / Control Statements
+
+1. Conditional Statements: Conditional statements control behavior in JavaScript and determine whether or not pieces of code can run.
+    > if: Statements present in it, will be executed only if condition is true.(if we are having one scenario only if condition.)
+    > if else :(if we are having two scenarios then if  else condition.)
+    > if else if ladder :(if we are having  more than two scenarios then if  else if condition.) (if we have dis similar condition we can go for if else if).
+    > switch (if we have similar condition we can go for switch).
+    
+    if:
+        Syntax:
+            if (condition) {
+                // Statements...
+            }
+
+    if else:
+        Syntax:
+            if (condition) {
+                // Statements...
+            } else {
+                // Statements...
+            }
+
+            If condition is true, statements in if block will be executed.
+            If condition is false, statements in else block will be executed.
+
+
+    if else if :
+            if (condition) {
+                // Statements...
+            } else if (condition) {
+                // Statements...
+            }  else if (condition) {
+                // Statements...
+            }  else {
+                // Statements...
+            }
+
+
+    Switch:
+
+        Syntax:
+
+            switch(value) {
+                case value1: {
+                    // Statements...
+                    break;
+                }
+                case value2: {
+                    // Statements...
+                    break;
+                }
+                case value3: {
+                    // Statements...
+                    break;
+                }
+                default: {
+                    // Statements...
+                }
+            }
+
+
+
+task:
+
+zepto task:
+
+            onclick="onChangeCategory('all')"
+
+
+07/03/25:
+
+Looping / Control Statements:
+
+> A loop is a programming tool that is used to repeat a set of instructions. 
+
+> Iterate is a generic term that means “to repeat” in the context of loops.
+
+> A loop will continue to iterate until a specified condition, commonly known as a stopping condition, is met.
+
+Types:
+
+1. while
+2. do while
+3. for 
+4. for in 
+
+    while: Repeats the set of instructions until condition become false.
+        
+        Syntax:
+            while(condition) {
+                // Instructions...
+            }
+    do while: Repeats the set of instructions until condition become false. But if condition is becoming for every iteration, it executes for one time.
+        
+        Syntax:
+            do {
+                // Instructions...
+            } while(condition);
+
+    for: Repeats the set of instructions until condition become false.
+        Syntax:
+            for (initilization; condition; increment/decrement)  {
+                // Instructions...
+            }
+    for in: Iterates key value pairs of object.(it is mainly designed for objects.)
+        
+        Syntax:
+            
+            for (var key in objectName) {
+                // Instructions...
+            }
+
+Template Literals:
+
+    Syntax:
+        var variableName = `
+            <div>
+                <h2>${variableName}</h2>
+            </div>
+        `;
+Task: https://www.goibibo.com/flights/air-HYD-BOM-20250307--1-0-0-E-D?
+
+
+10/03/2025:
+
+Date Methods:
+
+
+Date Object: Predefined Object, which consists of predefined methods/functions.
+
+       
+
+    Syntax:
+
+        var dateObj = new Date(); //Date()  it is a function call.(here we havent written the function defination but directly we rae calling because it is already defined in javascript.)
+
+        var dateObj = new Date(); //it is going to store the current timestamp value.
+
+        new - Keyword used to create object using function.(new is a predefined keyword.)
+
+        
+
+        dateObj.toISOString(); - Converts dateObj into ISO string format.
+
+
+
+        The difference between dateobj and isostring is in their format and usage:
+
+                        1. Date Object (dateobj)
+                >A Date object represents a specific point in time.
+
+                >It allows manipulation of date and time values (e.g., getting the year, adding days, formatting).
+
+                Example:
+
+                javascript:
+                
+                const dateobj = new Date(); // Creates a Date object with the current date and time
+                console.log(dateobj); // Output: Sat Mar 29 2025 14:30:00 GMT+0000 (Coordinated Universal Time)
+
+
+                                2. ISO String (isostring)
+                An ISO 8601 string is a textual representation of a date in the format "YYYY-MM-DDTHH:MM:SS.sssZ".
+
+                It is useful for storage, data transfer (APIs, JSON), and maintaining time zone consistency.
+
+                Example:
+
+                javascript
+                
+                const isostring = dateobj.toISOString(); // Convert Date object to ISO 8601 string
+                console.log(isostring); // Output: '2025-03-29T14:30:00.123Z'
+
+
+                Key Differences
+
+                Feature 	dateobj (Date Object)	                isostring (ISO String)
+
+                Type	    JavaScript Date object	                String (text format)
+                Usage	    Date/time calculations, formatting	    Storage, API communication, JSON
+                Format	    Structured object	                    "YYYY-MM-DDTHH:MM:SS.sssZ" (ISO 8601 format)
+                Conversion	toISOString() to get ISO string	          new Date(isostring) to convert back to Date
+
+
+
+                                        Conversion Between Them
+                        Date Object → ISO String:
+
+                        javascript:
+                       
+                        const dateobj = new Date();
+                        const isostring = dateobj.toISOString();
+                        console.log(isostring);
+
+
+                        ISO String → Date Object:
+
+                        javascript
+                        
+                        const parsedDate = new Date(isostring);
+                        console.log(parsedDate);
+
+
+Getter Methods:(retrieval )
+
+>   this all are predefined functions which are available in the javascript.
+
+getDate()
+getMonth()
+getFullYear()
+getHours()
+getMinutes()
+getSeconds()
+getDay()
+
+Setter Methods: (updation)
+> setter methods are used to update the data.
+
+setDate(value) //in setter method we will pass the value as parameters for given function.
+setMonth(value)
+setFullYear(value)
+setHours(value)
+setMinutes(value)
+setSeconds(value)
+setDay(value)
+
+> in javascript months starts with 0. indicates that 0-january,1-feb etc..
+
+> in javascript days starts with 0. indicates that 0-sunday,1-monday etc..
+
+String Methods: anything present in single quotes or double quotes can be treated as string.
+
+  >.strings are used for storing and manipulating text.
+  >.javascript strings simply stored a series of characters.
+
+  example: var carName = "volvo xc60."
+           var answer = "it's all right.";
+           var answer = "it's all 'right.'";
+           var answer = 'it's all right.';
+
+
+Length ( it  counts each characters includimg special characters,space ).
+
+indexOf(string)  (for every character it assigns index).
+
+lastIndexOf(string)  (to get the last index of given word in the string).
+
+slice(start, end) ( to get  substring of whole string here we give start and end index).
+
+substr(start, len)  (to get  substring of whole string here we give start index and length).
+
+toUpperCase()    (it converts every character into UpperCase).
+
+toLowerCase()   (it converts every character into lowerCase).
+
+
+concat(“ ”, str)         (it is a alternative for + operator) .
+               //"Hello".concat(" ", "World!");
+
+charAt(index);  (reverse of index)
+
+
+task:
+
+frst  take array of objects of meetingshistory which consist of few fields relaated to meetings ,
+
+  1.frst we need to format the data of creation time and start and end time.
+  2.get that formatted array of objects.using array of objects we need to iterate through with the help of for loop and using template literals we can construct and concat multiple strings like tr and td tags later once we get that string append it to table.
+
+
+11/03/25:
+
+zoom table filtering class.
+
+
+
+        
+12/03/25:
+
+Array and Object Methods
+
+Array Methods:
+
+push( ); - Insert value into array at last  index  position or next available index.
+
+pop( ); - Deletes the value from last index position.
+
+splice(index_pos, delete_num, “new_value”, “new_value”);  - Insert or delete values from any index position.
+
+concat( second_arr); - Join more than one array.
+
+Sort( ) - Sorts the data in ascending order.
+
+Reverse( ) - Reverses the order of values.
+
+Includes() - Check if value exist in the array, If exist it returns true otherwise false.
+
+Slice(start_index, end_index) - Returns values present in between starting and ending index.
+
+
+IndexOf(value): Returns index of the value. (if value is not matching it returns -1 ,if  it is matching it gives specified value.)
+
+Object Methods:
+
+Object.keys(obj) - Array of keys
+
+Object.values(obj) - Array of values
+
+Object.entries(obj) - Array of array of key , value.(array of arrays.)
+
+Object.freeze(obj) -- using this method we will freeze the data so that hackers cannot modify it.
+
+
+Object.seal(obj) both seal and freeze used for same purpose we cannot add or modify the data.(no one can modify the configuration of data).
+
+
+Scope: Visibility of value of a variable.
+
+1. Global Scope - Value can be accessed through out the file. - var
+
+2. Functional Scope - Value can be accessed within a function. - var
+
+3. Block Scope - value can be accessed within a block ({}) (within curly bracets or script tag) - let and const (ES6)
+
+
+
+variable hoisting:Moving variable declaration to the top of file, to make it accesible through the file is called hoisting .
+
+before declaring any variable if we want access the variable we wont get error it is accesible but value will be undefined.
+
+
+e.g.:
+
+            console.log(userInfo); // accesing variable before declaration we wont get any error but value will be undefined.
+
+            var userInfo = {
+                        id: 1,
+                        name: "John Doe",
+                        username: "johndoe123",
+                        email: "johndoe@example.com",
+                        mobile: "+1234567890",
+                        age: 30,
+                        gender: "Male",
+                        address: {
+                            street: "123 Main St",
+                            city: "New York",
+                            state: "NY",
+                            zip: "10001",
+                            country: "USA"
+                        },
+                        preferences: {
+                            theme: "dark",
+                            language: "English",
+                            notifications: true
+                        },
+                        createdAt: "2025-03-12T10:00:00Z",
+                        updatedAt: "2025-03-12T12:00:00Z",
+                        isActive: true,
+                        roles: ["user", "admin"]
+                    };
+
+
+
+
+
+
+
+13/03/25:
+
+Types of Functions:
+
+1. Function Constructor / Expression
+
+2. Anonymous Function
+
+3. IIFE (Immediatory Invokable Function)
+
+4. Callback Function
+
+5. Higher Order Function
+
+6. Closures.
+
+Anonymous Function: A function without a name is called anonymous function. (name of the function name will be variableName).
+    
+    Syntax:
+
+        const variableName = function(param1, param2, ..., paramN) {
+            // Statements...
+            return value;  // return keyword is used to return the value from function defination to function call.
+        }   # here whole function is going to be stored in variableName.
+
+        > parameters are used to get the values from function call to function defination.
+
+        variableName(value1, value2, ..., valueN); //calling the function.
+        variableName(value1, value2, ..., valueN);
+        variableName(value1, value2, ..., valueN);
+
+
+       > console.log(window); // what all variables and function which are created in the script tag will be stored in window object directly.
+       > window object is to store all javascript function and variables.
+       > document object is to store all html elements.
+
+
+
+Callback Function: A function definition which is passed as a parameter to another function is called callback function.
+    
+    Syntax:
+        const func1 = function() {
+        };
+        const func2 = function(func1) {
+            func1 - Callback Function
+            func1();
+        };
+        func2(func1); - Higher Order Function
+
+
+
+Higher Order Function: A function which is expecting another function as a parameter is called higher order function.
+
+IIFE (Immediatory Invocable Function Expression): A function which is called by itself is called IIFE.
+    
+    Syntax:
+        (function() {
+            // Statements...
+        })(); // ()function call
+
+        > if we want to excute the function only for once then we will use this function.
+
+Closure: A closure is created when a function is defined inside another function. The inner function has access to the outer 
+function's variables, even after the outer function has finished executing. This allows the inner function to “close over” 
+and capture the values of variables from its containing scope.
+
+Task: chatgpt prompt: list done different functionalities of employee object js.
+
+    Create a object with employee:
+
+        name
+        salary - 1000
+        designation
+        isActive  - true or false
+        technologies Known - ['HTML', 'CSS', 'Javascript]
+
+
+             write different functionalities  for 
+            1. incrementSalary (10%) then it should be increment to 1100.
+            2. getActiveStatus - Active / Inactive
+            3. getTechnologiesKnow:  output should be print like list index. it should be dynamic using anonymous function.
+                    1. HTML
+                    2. CSS
+                    3. Javascript
+
+
+
+
+15/03/2025:
+
+
+
+    DOM - Document Object Model:
+
+
+DOM Tree or DOM STRUCTURE., Nodes, Manipulation
+
+Every tag or every html element present in the  DOM is consider as node.
+
+DOM Manipulation:
+
+1. document.getElementById(id-name); //(whatever the string or text present in the javascript we are manipulating to html body.) this is dedicated.
+
+2. document.getElementsByClassName(class-name); // we can manipulate multiple elements using class-name.this is dedicated.
+
+3. document.getElementsByTagName(tag-name); //we can manipulate  elements using tag-name. this is dedicated.
+
+4. document.querySelectorAll(id/class/tag); here we can use either of id ,class or tag name to manipulate the elements from js to html. this is universal .
+
+using all the above we can get the reference of html elements to manipulate from JavaScript TO HTML.
+
+Event Listeners: if we want to map one event using javascript to html  we will go for EventListerner.
+
+    Syntax:
+        const tagName = document.getElementById('id-name');
+        tagName.addEventListerner(eventName, function() {
+        });
+
+
+Events: if we want map one event using html then we go for events concept.
+    Syntax:
+        <button onclick="functionName()"></button>
+
+
+
+Create Element: It is a predefined function of javascript, used to create html element dynamically.(alternate to template literals.)
+    
+    Syntax:
+        document.createElement(tagName);  (used to create html element dynamically using Javascript.)
+
+Append Child: Used to append one element as a child of another element.
+
+    Syntax:
+        parentTag.appendChild(childTag);
+
+Task: Create array of employees list and display those employees in tabular form using create element and append child.
+
+
+17/03/25:
+
+
+Form Validations:
+
+> Data entered in the forms, needs to validated first before passing that to backend.
+
+1. Mandatory 
+2. Minimum Length
+3. Maximum Length
+4. Pattern -  patterns are desgined using Regular Expression (RegEx).
+    Email:
+
+        ^
+            [a-zA-Z0-9._%+-]+
+            @
+            [a-zA-Z0-9.-]+\.
+            [a-zA-Z]{2,}
+        $
+        e.g:
+        word@domain.com
+
+    Mobile No:
+
+        10 digits
+        First letter 6-9
+
+    Password:
+
+        Minimum 8 characters
+        1 Special character
+        1 Capital letter
+        1 lower case letter
+        1 numeric
+
+RegEx and Forms
+
+  email:  word_word67@digital-edify.com
+
+
+   mobileno:  ^[6789]\d{9}$
+    password:
+    ^ start
+    (?=.*[A-Z]) atleast one uppercase.
+    (?=.*[a-z]) atleast one lowercase.
+    (?=.*\d)   atleast one digit.
+    (?=.*[@#$%^&+=!]) atleast one speacial character.
+    [A-Za-z\d@#$%^&+=!]{8,} remaining 8 letters can be anything upper,lower,speacial or digit.
+    $ end
+
+
+https://regexr.com/:
+
+cheatsheet:
+
+
+
+Character classes:
+.	any character except newline.
+\w\d\s	\w for comparing word, \d for comparing  digit,  \s to add or remove whitespace.
+\W\D\S	not word,not a digit, not a  whitespace.
+[abc]	any of a, b, or c not other than this characters.
+[^abc]	not a, b, or c other than a,b,c we can access all the characters.
+[a-g]	any character between a & g .(this is used to reduce the syntax.)
+[a-zA-z] for accesing all the lower case and uppercase characters.
+
+Anchors:
+^abc$	^ used for starting of the string / $ used for end of the string.
+\b\B	\b last word of whole sentences, \B not-word boundary indicates whole sentence without last word.
+
+
+ex:  RegExr was created by gskinner.com.    
+
+ .com. is the boundary word (\b)  ,
+ 
+  RegExr was created by gskinner (\B not-word boundary).
+
+
+Escaped characters:
+
+\.\*\\	escaped special characters (\\ it is meant for accepting user input as a predefined characters.)
+\t\n\r	tab, linefeed, carriage return
+
+
+Groups & Lookaround:
+
+(abc)	capture group
+\1	backreference to group #1
+(?:abc)	non-capturing group here it wont treat like group it treats like individual characters.
+(?=abc)	positive lookahead (if we have two word to access rightside word we use positive lookahead).
+(?!abc)	negative lookahead (if we have two word to access leftside word we use negative lookahead).
+
+Quantifiers & Alternation:
+
+a*a+a?	* indicates 0 or more occurrences ,+ indicates  1 or more occurrences,  ? indicates optional either it exsit or doesnot exsit (0 or 1).
+a{5}a{2,}	exactly five charcters., two or more characters
+a{1,3}	 exactly between one & three.
+a+?a{2,}?	match as few as possible
+ab|cd	  match ab or cd
+
+
+task: try to generate more regular expression using chatgpt and try to understand it more with explanation.
+
+
+18.03.2025:
+
+task:
+
+Form Validations:
+
+generate one form and do form Validations  for different fields rather than name,mobile no,password and emails generate different forms  and validate usings functions.
+
+
+
+19/03/2025:
+
+
+AJAX: Asynchronous Javascript & XML(old format ) (JSON current used format) .
+
+
+>HTTP:hyper text transfer protocol. which is used communicate from frontend to backend application viceversa.it send  Request frrom our browser to server and server to browser..
+
+>AJAX is a wrapper of HTTP protocol.
+
+> In backend we gonna write ResttAPI,s nothing but urls which are meant for CRUD operations.
+
+JSON.strinigfy() - Converts Array/Object to  JSON string format. (when request comes from the user (frontend to backend) it converts array or object into string.)
+
+JSON.parse() - Converts string into array / object format.(when response  comes from the (backend to frontend) it converts string  into array or objects.)
+
+
+
+Postman -  postman is a dummy frontend application ,It's a tool used to test apis written in backend app.
+
+CRUD Operations
+
+C - Create - POST
+R - Read - GET
+U - Update - PUT
+D - Delete - DELETE
+
+(POST,GET,PUT,DELETE are the predefined methods of http protocol.) this method names will be decided by the backend developer.
+
+backend developers will give:
+
+1.API Url
+
+2.HTTP Method
+
+3.HTTP Status Codes
+
+100 - 600
+
+Success Scenarios
+1xx - Informational Scenarios.
+2xx - Success Scenarios.
+
+    200 - OK (this code is used while retrieving the data.)
+    201 - Created (while registering into any application.)
+    204 - No Content(dont want to any response from the api. if the response empty we use 204 code.)
+
+3xx - Redirection (navigating from one page to another page)
+
+Failure Scenarios
+4xx - Client Errors (frontend errors)
+
+    400 - Bad Request (if we wont pass valid format we will get this error. not entering valid format for mobile,email etc..)
+
+    >many applications are validated both frontend and backend side.
+
+    401 - Unauthorized (if a particular person is not having Authorization to application we get 401 error.)
+    403 - Forbidden (whe we try to access resources like images audio where they doesnot have access to access it.)
+    404 - Not Found ()
+
+5xx - Server Errors (backend errors)
+
+    500 - Internal Server Error (if some mistakes are happening from the server we will get this error.)
+
+    502 - Bad Gateway (usually we get this error when server is down due to more traffic on the server if we unable to handle it then we get this error).
+
+
+    http://localhost:4000/groceries/vegetables/vegetables?category=vegetables
+
+
+    > To pass the information from frontend to backend we have few possible ways.
+
+    Url parameters:
+
+            1. Route Parameters (it is one way of passing the information).
+
+                http://localhost:4000/api-name/routeParamValue1/routeParamValue2
+
+            2. Query Parameters 
+
+                http://localhost:4000/api-name/routeParamValue1/routeParamValue2?queryParam1=value1&queryParam2=value2
+
+
+                > to segregate one queryParam1 and queryParam2 we use &. (queryParam1=value1&queryParam2=value2)
+
+                >usually we will pass the parameters in both frontend and backend.
+
+
+    Registration:
+
+        10 Form Fields
+
+
+        > if we have more information to pass  like we need to pass the parameters fro 10 different form in Registration form then we go for Request Body:
+
+    3. Request Body:
+
+        {
+
+        }
+
+    POST & PUT - Request Body (while creation and updation we need to pass so many parameters then we use Request Body).
+
+    GET & DELETE - No Request Body (while read and delete we need not to pass so many parameters then No Request Body).
+
+    >> Request Body: to pass the information from frontend to backend we go for Request Body.
+
+    
+
+   >> Response Body  :to get the response from backend to frontend   we go for Response Body.
+
+   Authorization:for every page we require Authorization ,authentication indicates entering the credentials while Authorization indicates passing the token.
+
+   > while login to any application we enter credentials call authentication.
+
+   > once the user is logged in backend will generate one token(usually we call as JWT(JSON web token) .
+   
+   ) its a random token acts like a frontend user,means it acts like a proxy user to navigate into different pages without entering credentials all the time.
+
+    >Authorization helps in validating everytime in everypage.acts as a proxy user.
+ 
+
+    XMLHttpRequest:
+
+
+    20.03.2025:
+
+    AJAX:
+
+     syntax:
+
+            const httpRequest = new XMLHttpRequest();
+
+            //XMLHttpRequest() is a predefined function using that we are creating a object with the help of new keyword. that object we are storing  in the httpRequest variable.
+
+            httpRequest.onreadystatechange = function(){
+                if(httpRequest.readyState ===4){
+                    httpRequest.responseText  //responseText is a predefined key in the httpRequest object which is going to get the response from the api.
+
+                }
+            }
+
+            httpRequest.open(httpMethod,apiurl);
+
+            httpRequest.setRequestHeader('Content-Type','application/json'); //here by default content type will be plain text we need to specify to application/json because backend compiler wont understand the plain text format.
+
+            httpRequest.send(requestBody);    //requestBody will be optional for GET and DELETE method.
+
+
+> onreadystate is a predefined function which usually triggers on change on readyState value.
+
+> usually readyState value changes from 0-4
+
+        > where 0 indicates request not intialized.
+
+                1 indicates request has been Created (server connection estabished).frontend to backend connection estabished.
+
+                2 - request received in the server.
+
+                3- processing request by the server.
+
+                4 -request finished and response ready.
+                
+                indicates request has been ready for the response.then we will get the response in the frontend.
+
+                JSON- means array of objects.
+
+
+
+  > Base64 :it is a third party tool which will  convert the image into  Base64 string format.    
+
+  > usually image is converted into string format using Base64.      
+
+
+  21.03.2025:
+
+  Fetch Function:
+
+   Promise: A Promise is an object representing the eventual completion(success) or failure of an asynchronous operation (communicating from frontend to backend usually called asynchronous operation).
+     
+     > Promise is going to hold the process until the api call is done then only it is going to call resolve and reject methods.
+
+        Syntax:
+
+                const promiseObj = new Promise(function(resolve, reject) {   //here Promise is a predefined function expecting another function as parameter , in that function it going to expect two parameters (resolve,reject).
+                    For success scenario - resolve(value) //here resolve is a predefined function we can pass some value.
+                    For failure scenario - reject(error); //here reject is a predefined function we can pass error.
+                });
+
+               > here resolve and reject status will be stored in promiseObj.
+               > now we want to consume it 
+
+                ES6:
+
+                promiseObj.then(function(value) {
+                }).catch(function(error) {
+                });
+
+                //here if we call resolve then source code present in the function(value) will be executed.
+                //if we call reject then source code present in the catch block will be executed.
+
+
+            >>>> If we call resolve function, JS Engine will call then block.
+            >>>>If we call reject function, JS Engine will call catch block.
+    
+    Eg.
+        
+        Login: Username & Password - Sign In 
+
+            API Success:
+                Navigate to Dashboard //this logic will be write in then block.
+
+            API Failed:
+                Display error message  //this logic will be write in catch block.
+
+        
+        ES7:
+        function functionName() {
+            try {
+
+            } catch(error) {
+
+            }
+        }
+
+        >>  try - Error causing statements needs to written in it so that it doesnot break our source code.
+
+        >>  catch - Errors are catched in catch block.
+
+
+Fetch: The Fetch API is a modern interface in JavaScript that allows you to make HTTP requests.
+
+> It replaces the older XMLHttpRequest method and provides a cleaner and more flexible way to fetch resources asynchronously. 
+
+> The Fetch API uses Promises, making it easier to work with asynchronous data.
+
+> in Fetch Method no need of waiting for ready state value.it automatically fetch the data from api and displays in the ui.
+
+> fetch method is used to make api calls.
+    Syntax:
+
+    syntax without explanation :
+
+                    Syntax:
+                        fetch(url, options);
+                            option - { 
+                                method: 'GET/POST/PUT/DELETE', 
+                                headers: { 'Content-Type': 'application/json' }, 
+                                body: JSON.stringify(request)
+                            }
+                        fetch(url, options).then(function(value) {
+                            return value.json();
+                        }).then(function(parsedValue) {
+                        }).catch(function(error){
+                        });
+                        async function functionName() {
+                            try {
+                                const response = await fetch(url, options);
+                                const parsedResponse = await response.json();
+                                //
+                            } catch(error) {
+                            }
+                        }
+
+
+        syntax with explanation :
+
+    Syntax:
+
+        fetch(url, options);  //fetch is a predefined function.
+            
+            // here option is nothing but simple object.this object can have multiple parameters.
+
+             option - { 
+                method: 'GET/POST/PUT/DELETE', 
+                headers: { 'Content-Type': 'application/json' }, 
+                body: JSON.stringify(request)  //here body willbe optional because GET and DELETE methods not required any body.
+            }
+
+         //fetch(url, options); is basically a promise instead of creating custome promise we are using already predefined promise.
+
+        fetch(url, options).then(function(value) {
+            return value.json();
+        }).then(function(parsedValue) {
+        }).catch(function(error){
+        });
+
+        async function functionName() {
+            try {
+                const response = await fetch(url, options);
+                const parsedResponse = await response.json();
+                //
+            } catch(error) {
+                //if the backend server is not responding then catch block will be excueted..
+            }
+        }
+
+
+        async - To tell JS Engine, that we are writting asynchronous functionality in it.
+        await - It holds JS Engine, in executing further lines of statements, until it return response(promise ) from API.
+   
+
+
+
+   24/03/25:
+
+   task done :adding tickets using forms and those added tickets displayedin the ui in the form of table.
+
+
+   task to do:create array of objects from amazon application mobiles :
+   >first store tha data in the backend.
+   >each card is one object ,try to store atleast 10-15 array of objects in the backend frst later design the ui dynamically using javascript and display the information.
+   > frst do the api call and add one delete icon we should able to delete it.
+
+   Task: Display mobiles in card format of amazon app and also add delete functionality. using fetch try and catch.
+
+
+
+
+
+25/03/2025:
+
+
+   Storage: Data will be stored in browser.2
+1. Local Storage: Data will be available until be delete it from browser.
+
+    Eg. E-Commerce App (for non banking application we use LocalStorage)
+
+    eg: once we login into gmail account  in the browser that account wnt be until we logout from that gamil account.we can open that gmail N no of times until we logged out from the browser.
+    
+
+    >> localStorage is a predefined object.
+
+    localStorage.setItem(key, value); //here value need to present in the array or object need to converted into string format and stored in the localStorage.
+    
+    localStorage.getItem(key);
+    
+    localStorage.removeItem(key); 
+    
+    localStorage.clear();
+
+    >>difference between remove and clear is since localStorage is an object we can store N no of keys and values if we want remove every key value we use clear  or if we want clear a specific key value we use remove.
+
+
+2. Session Storage: Data will be available until we close the application.
+    Eg. Banking App (for banking application we use sessionStorage)
+    Login
+        token - Session (24 hrs or certain time) + Identifying user.
+   
+    sessionStorage.setItem(key, value);
+    
+    sessionStorage.getItem(key);
+   
+    sessionStorage.removeItem(key);
+    
+    sessionStorage.clear();
+
+
+OOP in JavaScript:
+
+> Objects and Classes
+> Properties and Methods
+> Constructor Functions
+> Getters and Setters
+> Prototypes
+> Inheritance
+
+
+Class: Collection of variables, methods(nothing but functions) & constructor function.
+
+> class is Used to create an object.
+
+    Syntax:
+        class ClassName {
+            constructor(param1, param2, ..., paramN) {   //constructor is a predefined function
+                this.variableName1 = param1; 
+                //when ever we want to create variable in the classs we follow this syntax.
+
+                //here no need of having same name for parameters and variableName.
+                // (here this keyword is used to distinguish between varaible and parameters, and also this keyword will point out to currentclass.)
+
+                this.variableName2 = param2; 
+                //here instead of calling function call we are calling function value that will be stored in variables.
+                this.variableNameN = paramN;
+            }
+            methodName1(param1, param2, ..., paramN) {
+                return value;
+            }
+            methodName2(param1, param2, ..., paramN) {
+                return value;
+            }
+            methodName3(param1, param2, ..., paramN) {
+                return value;
+            }
+        }
+
+        const objName = new ClassName(value1, value2, ..., valueN); //for creating object.
+           
+            Parameters to constructor function (Optional) (if it require we can pass if not required we can ignore it.)
+
+
+1. Camel Case (staring from secondword first letter should be capital.eg:javascript,methodNames)
+
+2. Snake Case (one word need to segregated with another word using _(underscores) and every letter should be lowercase . eg:python)
+
+3. Pascal Case -(starting from first word it should be in capital).(usually classNames will follow pascal case.)
+
+
+26/03/25:
+
+Getter and Setter:
+    Syntax:
+        class ClassName {
+            constructor() {
+            }
+            // Set value to class variable
+            set methodName(param) {
+                this.variableName = param;
+            }
+            // Get value of a class variable.
+            get methodName() {
+                return this.variableName;
+            }
+        }
+        const obj = new ClassName();
+        obj.methodName = value;
+        obj.methodName
+
+Prototype: In JavaScript, objects can inherit features from one another via prototypes. Every object has its 
+own property called a prototype.
+
+> Because the prototype itself is also another object, the prototype has its own prototype. This creates a something called prototype chain. The prototype chain ends when a prototype has null for its own prototype.
+    
+    var arrayName = [90, 67, 45, 12];
+    arrayName.push();
+    const dateObj = new Date();
+    dateObj.getDate();
+
