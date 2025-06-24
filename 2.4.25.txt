@@ -1,0 +1,106 @@
+Class: Collection of objects.
+
+> It's a prototype to create objects.
+    
+    Syntax:
+        class ClassName {
+            constructor() {
+                //initializing the parameters during object creation.
+            }
+            method1(): returnType {
+                return value;
+            }
+            method1(): returnType {
+                return value;
+            }
+        }
+
+Restaurant Ordering System
+
+    //here menu is parameter having object with key and value pairs.
+
+    menu - {
+        "Pizza": 300,
+        "Burger": 250,
+        "Coke": 50,
+        "Pasta": 350
+    }
+
+    displayMenu()
+    takeOrder()
+    calculateBill()
+    printBill()
+
+    
+    
+    
+    import * as readline from "readline"
+
+    >> readline is a predefined package using this readline we get the data from the terminal(means we can enter the value in the terminal and we can read that value.)
+
+    >> in order to read the value we need to create interface first.
+
+            >>basically interface will accept two parameters.
+
+            1.input:process.stdin,(stdin means system in(which means entering data from terminal to programme)).
+
+            2.output:process.stdout(stdout means system out (which means getting data from programme to terminal)).
+
+            syntax:
+
+                const rl = readline.createInterface({
+                    input:process.stdin,
+                    output:process.stdout,
+                });
+
+
+    to enter the questions in the terminal:
+
+            rl.question("Enter Your Name:", (item)=>{
+                console.log(item);
+                const restaurant1 = new RestaurantOrderingSystem();
+
+                rl.close();
+            })
+
+        >>whatever the value we entered that will be come in the form of call back function.inside the call back function we can write the logic.
+
+        For Setting readline package:
+
+            Installation:
+                 
+                 npm install --save-dev @types/node       (readline package is a part on node js)
+
+                 import * as readline from "readline";   (here import is used for importing from one package to another package followed by (as )aliasname , (*)indicates everything ).
+
+                 syntax:
+
+                const rl = readline.createInterface({
+                    input:process.stdin,
+                    output:process.stdout,
+                });
+
+               >> above we are creating an object and storing in rl variable.
+
+               >> to get the data:
+
+                rl.question('Question', function(value){
+
+                });
+
+                rl.question("Enter Your Name:", (item)=>{
+                console.log(item);
+                const restaurant1 = new RestaurantOrderingSystem();
+
+                rl.close();
+            })
+
+
+        question is a predefined function expecting two parameter(Question(which we want to enter) and function(value) call back function and logic inside it.)
+
+
+npm install  @types/node  (once you install this then it is going to download node_modules folder) --node_modules.
+
+>>to keep track of all packages we download it will be maintained package.json (inside this package.json it is going to store package name and version.)
+
+>> package-lock.json - it is meant for storing package names,versions along with dependencies.

@@ -1,0 +1,52 @@
+Interface: Interfaces are a powerful feature that allows developers to define the structure of objects.(interface is nothing but custome datatype.)
+
+    Syntax:
+
+        interface InterfaceName {
+            properties
+            methods declarations
+        }
+        class ClassName implements InterfaceName {    //interface is used for classes.
+       
+        }
+
+        >>InterfaceName Should be pascalCase.(staring from first word first letter capital.)
+
+Union: Using union we can include multiple data types to a variable.
+
+    Syntax:
+    variable: dataType; (its a general Syntax for assigning variable)
+
+    union Syntax:
+
+    variableName: dataType1 | dataType2 | dataType3;
+    usernames: string | Array<string>; (here for user we can pass direct string or array of string).
+
+    id: number | string;
+ 
+Abstract refers to the process of simplifying complex systems or concepts by focusing on 
+essential features and hiding unnecessary details, making them easier to understand and manage.
+
+Abstract Classes: it is mainly used for inheritance.(we can declare the method in the parent class and can be used for child class.)
+
+I
+    Syntax:
+
+        abstract class ClassName { //abstract is a predefined keyword.
+            // Abstract(abstraction indicates declarations) and Non abstract methods(non abstract methods indicates implementations.)
+            abstract methodName(param: datatype): returntype;
+            methodName(param: datatype): returntype {
+                
+            }
+        }
+        class ClassName2 extends ClassName {
+        }
+
+
+        >>in Interface method implementations doesnot work.it can have only method declarations that why interface will have 100% abstraction.
+
+        >> but abstract classes doesnot have 100% abstraction because it has both implementations and declarations.
+
+        >> when we use abstract classes interface doesnot come into picture.
+
+        >>abstraction can be achieved using interface(100% abstraction) and Abstract classes(we can achive 0-100% abstraction)

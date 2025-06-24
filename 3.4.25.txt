@@ -1,0 +1,39 @@
+Inheritance: Inheriting the properties and methods of parent class to child class.
+   
+    Syntax:
+
+        // Parent Class
+
+        class ClassName1 {
+            variableName: datatype = value; // Property
+            variableName: datatype = value; // Property
+        }
+
+        // Child Class (it has prevailages of parents class and it has its own prevailages own methods and own functions.)
+
+        class ClassName2 extends ClassName1 {
+        }
+
+        extends predefined keyword - For extending properties and methods of ClassName1 to ClassName2.
+
+        > Object should be created only for child class.
+
+
+Arrow Function:
+
+    >>Normal function Syntax:
+
+            arrayName.forEach(function() {
+            });
+
+    >>Arrow function Syntax: 
+
+            arrayName.forEach(() => {
+            });
+
+
+Polymorphism: Many Forms
+
+1. Method Overriding (Runtime Polymorphism (while excueting the source code)): Having same method and same parameters in parent class and child class. - Inheritance
+
+2. Method Overloading (Compile-time Polymorphism (while compiling the source code)): Having a same  method with different data types of a parameter or different parameters inside the class.
